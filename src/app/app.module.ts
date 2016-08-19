@@ -27,18 +27,35 @@ import {OverlayModule} from '@angular2-material/core/overlay/overlay-directives'
 import {MdMenuModule} from '@angular2-material/menu/menu';
 import {RtlModule} from '@angular2-material/core/rtl/dir';
 
+// routing
+import { routing,
+         appRoutingProviders } from './app.routing';
 
 import { AppComponent } from './app.component';
 
+// pages *******
+import { HeroesModule } from './heroes/heroes.module';
+import  { CrisisCenterModule } from './crisis-center/crisis-center.module';
+
+import { LoginComponent } from './login.component';
+
+import { DialogService }  from './dialog.service';
+// *************
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent
+    
   ],
   imports: [
     BrowserModule,
     CommonModule,
     FormsModule,
-MdButtonModule,
+    routing,
+    HeroesModule,
+    CrisisCenterModule,
+    MdButtonModule,
     MdButtonToggleModule,
     MdCardModule,
     MdCheckboxModule,
@@ -62,7 +79,7 @@ MdButtonModule,
     RtlModule,
 
   ],
-  providers: [HTTP_PROVIDERS],
+  providers: [HTTP_PROVIDERS, appRoutingProviders, DialogService],
   entryComponents: [AppComponent],
   bootstrap: [AppComponent]
 })
