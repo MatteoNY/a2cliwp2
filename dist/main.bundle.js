@@ -931,7 +931,7 @@ exports.escapeRegExp = escapeRegExp;
 
 "use strict";
 "use strict";
-var root_1 = __webpack_require__(53);
+var root_1 = __webpack_require__(54);
 var toSubscriber_1 = __webpack_require__(677);
 var observable_1 = __webpack_require__(264);
 /**
@@ -7504,7 +7504,7 @@ exports.ActivatedRoute = router_state_1.ActivatedRoute;
 exports.ActivatedRouteSnapshot = router_state_1.ActivatedRouteSnapshot;
 exports.RouterState = router_state_1.RouterState;
 exports.RouterStateSnapshot = router_state_1.RouterStateSnapshot;
-var shared_1 = __webpack_require__(52);
+var shared_1 = __webpack_require__(53);
 exports.PRIMARY_OUTLET = shared_1.PRIMARY_OUTLET;
 var url_tree_1 = __webpack_require__(66);
 exports.DefaultUrlSerializer = url_tree_1.DefaultUrlSerializer;
@@ -8432,6 +8432,25 @@ exports.templateVisitAll = templateVisitAll;
 
 /***/ },
 /* 51 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+"use strict";
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(550));
+//# sourceMappingURL=index.js.map
+
+/***/ },
+/* 52 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -8460,7 +8479,7 @@ exports.MessageBus = MessageBus;
 //# sourceMappingURL=message_bus.js.map
 
 /***/ },
-/* 52 */
+/* 53 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -8482,7 +8501,7 @@ exports.PRIMARY_OUTLET = 'primary';
 //# sourceMappingURL=shared.js.map
 
 /***/ },
-/* 53 */
+/* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8507,12 +8526,12 @@ if (freeGlobal && (freeGlobal.global === freeGlobal || freeGlobal.window === fre
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(815)(module), __webpack_require__(70)))
 
 /***/ },
-/* 54 */,
 /* 55 */,
 /* 56 */,
 /* 57 */,
 /* 58 */,
-/* 59 */
+/* 59 */,
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8543,25 +8562,6 @@ var InterpolationConfig = (function () {
 exports.InterpolationConfig = InterpolationConfig;
 exports.DEFAULT_INTERPOLATION_CONFIG = new InterpolationConfig('{{', '}}');
 //# sourceMappingURL=interpolation_config.js.map
-
-/***/ },
-/* 60 */
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-"use strict";
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(550));
-//# sourceMappingURL=index.js.map
 
 /***/ },
 /* 61 */
@@ -8883,7 +8883,7 @@ var service_message_broker_1 = __webpack_require__(113);
 exports.ReceivedMessage = service_message_broker_1.ReceivedMessage;
 exports.ServiceMessageBroker = service_message_broker_1.ServiceMessageBroker;
 exports.ServiceMessageBrokerFactory = service_message_broker_1.ServiceMessageBrokerFactory;
-__export(__webpack_require__(51));
+__export(__webpack_require__(52));
 var location_providers_1 = __webpack_require__(578);
 exports.WORKER_APP_LOCATION_PROVIDERS = location_providers_1.WORKER_APP_LOCATION_PROVIDERS;
 var location_providers_2 = __webpack_require__(575);
@@ -9001,7 +9001,7 @@ exports.unimplemented = unimplemented;
  * found in the LICENSE file at https://angular.io/license
  */
 "use strict";
-var shared_1 = __webpack_require__(52);
+var shared_1 = __webpack_require__(53);
 var collection_1 = __webpack_require__(67);
 function createEmptyUrlTree() {
     return new UrlTree(new UrlSegmentGroup([], {}), {}, null);
@@ -9458,7 +9458,7 @@ __webpack_require__(643);
 var Observable_1 = __webpack_require__(4);
 var fromPromise_1 = __webpack_require__(261);
 var of_1 = __webpack_require__(120);
-var shared_1 = __webpack_require__(52);
+var shared_1 = __webpack_require__(53);
 function shallowEqualArrays(a, b) {
     if (a.length !== b.length)
         return false;
@@ -10356,7 +10356,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var BehaviorSubject_1 = __webpack_require__(415);
-var shared_1 = __webpack_require__(52);
+var shared_1 = __webpack_require__(53);
 var url_tree_1 = __webpack_require__(66);
 var collection_1 = __webpack_require__(67);
 var tree_1 = __webpack_require__(252);
@@ -10704,7 +10704,9 @@ var MdError = (function (_super) {
     return MdError;
 }(Error));
 exports.MdError = MdError;
+
 //# sourceMappingURL=error.js.map
+
 
 /***/ },
 /* 80 */
@@ -10761,9 +10763,9 @@ exports.TemplatePortalDirective = TemplatePortalDirective;
  */
 var PortalHostDirective = (function (_super) {
     __extends(PortalHostDirective, _super);
-    function PortalHostDirective(_componentResolver, _viewContainerRef) {
+    function PortalHostDirective(_componentFactoryResolver, _viewContainerRef) {
         _super.call(this);
-        this._componentResolver = _componentResolver;
+        this._componentFactoryResolver = _componentFactoryResolver;
         this._viewContainerRef = _viewContainerRef;
     }
     Object.defineProperty(PortalHostDirective.prototype, "portal", {
@@ -10776,20 +10778,18 @@ var PortalHostDirective = (function (_super) {
         enumerable: true,
         configurable: true
     });
-    /** Attach the given ComponentPortal to this PortlHost using the ComponentResolver. */
+    /** Attach the given ComponentPortal to this PortlHost using the ComponentFactoryResolver. */
     PortalHostDirective.prototype.attachComponentPortal = function (portal) {
-        var _this = this;
         portal.setAttachedHost(this);
         // If the portal specifies an origin, use that as the logical location of the component
         // in the application tree. Otherwise use the location of this PortalHost.
         var viewContainerRef = portal.viewContainerRef != null ?
             portal.viewContainerRef :
             this._viewContainerRef;
-        return this._componentResolver.resolveComponent(portal.component).then(function (componentFactory) {
-            var ref = viewContainerRef.createComponent(componentFactory, viewContainerRef.length, portal.injector || viewContainerRef.parentInjector);
-            _this.setDisposeFn(function () { return ref.destroy(); });
-            return ref;
-        });
+        var componentFactory = this._componentFactoryResolver.resolveComponentFactory(portal.component);
+        var ref = viewContainerRef.createComponent(componentFactory, viewContainerRef.length, portal.injector || viewContainerRef.parentInjector);
+        this.setDisposeFn(function () { return ref.destroy(); });
+        return ref;
     };
     /** Attach the given TemplatePortal to this PortlHost as an embedded View. */
     PortalHostDirective.prototype.attachTemplatePortal = function (portal) {
@@ -10798,25 +10798,24 @@ var PortalHostDirective = (function (_super) {
         this._viewContainerRef.createEmbeddedView(portal.templateRef);
         this.setDisposeFn(function () { return _this._viewContainerRef.clear(); });
         // TODO(jelbourn): return locals from view
-        return Promise.resolve(new Map());
+        return new Map();
     };
     /** Detatches the currently attached Portal (if there is one) and attaches the given Portal. */
     PortalHostDirective.prototype._replaceAttachedPortal = function (p) {
-        var _this = this;
-        var maybeDetach = this.hasAttached() ? this.detach() : Promise.resolve(null);
-        maybeDetach.then(function () {
-            if (p) {
-                _this.attach(p);
-                _this._portal = p;
-            }
-        });
+        if (this.hasAttached()) {
+            this.detach();
+        }
+        if (p) {
+            this.attach(p);
+            this._portal = p;
+        }
     };
     PortalHostDirective = __decorate([
         core_1.Directive({
             selector: '[portalHost]',
             inputs: ['portal: portalHost']
         }), 
-        __metadata('design:paramtypes', [core_1.ComponentResolver, core_1.ViewContainerRef])
+        __metadata('design:paramtypes', [core_1.ComponentFactoryResolver, core_1.ViewContainerRef])
     ], PortalHostDirective);
     return PortalHostDirective;
 }(portal_1.BasePortalHost));
@@ -10835,7 +10834,9 @@ var PortalModule = (function () {
     return PortalModule;
 }());
 exports.PortalModule = PortalModule;
+
 //# sourceMappingURL=portal-directives.js.map
+
 
 /***/ },
 /* 81 */,
@@ -11728,6 +11729,8 @@ var _ComponentIndex;
  *     arbitrary strings may still look like path names.
  */
 function _split(uri) {
+    //return uri.match(_splitRe);
+     if (typeof uri === 'string')
     return uri.match(_splitRe);
 }
 /**
@@ -12096,7 +12099,9 @@ function booleanFieldValueFactory() {
     };
 }
 exports.BooleanFieldValue = booleanFieldValueFactory;
+
 //# sourceMappingURL=field-value.js.map
+
 
 /***/ },
 /* 93 */
@@ -13387,7 +13392,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 var core_1 = __webpack_require__(0);
 var collection_1 = __webpack_require__(25);
 var lang_1 = __webpack_require__(10);
-var message_bus_1 = __webpack_require__(51);
+var message_bus_1 = __webpack_require__(52);
 var serializer_1 = __webpack_require__(45);
 /**
  * @experimental WebWorker support in Angular is experimental.
@@ -13640,7 +13645,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 var core_1 = __webpack_require__(0);
 var collection_1 = __webpack_require__(25);
 var lang_1 = __webpack_require__(10);
-var message_bus_1 = __webpack_require__(51);
+var message_bus_1 = __webpack_require__(52);
 var serializer_1 = __webpack_require__(45);
 /**
  * @experimental WebWorker support in Angular is currently experimental.
@@ -13778,7 +13783,7 @@ var resolve_1 = __webpack_require__(589);
 var router_config_loader_1 = __webpack_require__(170);
 var router_outlet_map_1 = __webpack_require__(115);
 var router_state_1 = __webpack_require__(78);
-var shared_1 = __webpack_require__(52);
+var shared_1 = __webpack_require__(53);
 var url_tree_1 = __webpack_require__(66);
 var collection_1 = __webpack_require__(67);
 /**
@@ -14615,7 +14620,9 @@ var MdCoreModule = (function () {
     return MdCoreModule;
 }());
 exports.MdCoreModule = MdCoreModule;
+
 //# sourceMappingURL=core.js.map
+
 
 /***/ },
 /* 117 */
@@ -14689,7 +14696,9 @@ var MdLineModule = (function () {
     return MdLineModule;
 }());
 exports.MdLineModule = MdLineModule;
+
 //# sourceMappingURL=line.js.map
+
 
 /***/ },
 /* 118 */
@@ -14774,7 +14783,9 @@ var RtlModule = (function () {
     return RtlModule;
 }());
 exports.RtlModule = RtlModule;
+
 //# sourceMappingURL=dir.js.map
+
 
 /***/ },
 /* 119 */
@@ -15833,7 +15844,7 @@ exports.XHR = compiler_1.XHR;
 exports.analyzeAppProvidersForDeprecatedConfiguration = compiler_1.analyzeAppProvidersForDeprecatedConfiguration;
 exports.createOfflineCompileUrlResolver = compiler_1.createOfflineCompileUrlResolver;
 exports.platformCoreDynamic = compiler_1.platformCoreDynamic;
-var interpolation_config_1 = __webpack_require__(59);
+var interpolation_config_1 = __webpack_require__(60);
 exports.InterpolationConfig = interpolation_config_1.InterpolationConfig;
 var element_schema_registry_1 = __webpack_require__(99);
 exports.ElementSchemaRegistry = element_schema_registry_1.ElementSchemaRegistry;
@@ -16230,7 +16241,7 @@ function unescape(code) {
 var core_1 = __webpack_require__(0);
 var chars = __webpack_require__(203);
 var lang_1 = __webpack_require__(3);
-var interpolation_config_1 = __webpack_require__(59);
+var interpolation_config_1 = __webpack_require__(60);
 var ast_1 = __webpack_require__(206);
 var lexer_1 = __webpack_require__(134);
 var SplitInterpolation = (function () {
@@ -16980,7 +16991,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var core_1 = __webpack_require__(0);
 var html_tags_1 = __webpack_require__(317);
-var interpolation_config_1 = __webpack_require__(59);
+var interpolation_config_1 = __webpack_require__(60);
 var parser_1 = __webpack_require__(137);
 var parser_2 = __webpack_require__(137);
 exports.ParseTreeResult = parser_2.ParseTreeResult;
@@ -17028,7 +17039,7 @@ var collection_1 = __webpack_require__(7);
 var lang_1 = __webpack_require__(3);
 var parse_util_1 = __webpack_require__(49);
 var html = __webpack_require__(73);
-var interpolation_config_1 = __webpack_require__(59);
+var interpolation_config_1 = __webpack_require__(60);
 var lex = __webpack_require__(507);
 var tags_1 = __webpack_require__(88);
 var TreeError = (function (_super) {
@@ -17413,7 +17424,7 @@ var identifiers_1 = __webpack_require__(21);
 var html = __webpack_require__(73);
 var html_parser_1 = __webpack_require__(136);
 var icu_ast_expander_1 = __webpack_require__(506);
-var interpolation_config_1 = __webpack_require__(59);
+var interpolation_config_1 = __webpack_require__(60);
 var tags_1 = __webpack_require__(88);
 var parse_util_1 = __webpack_require__(49);
 var provider_analyzer_1 = __webpack_require__(320);
@@ -22590,7 +22601,9 @@ var MdUniqueSelectionDispatcher = (function () {
     return MdUniqueSelectionDispatcher;
 }());
 exports.MdUniqueSelectionDispatcher = MdUniqueSelectionDispatcher;
+
 //# sourceMappingURL=unique-selection-dispatcher.js.map
+
 
 /***/ },
 /* 172 */
@@ -22742,7 +22755,6 @@ var BasePortalHost = (function () {
             this._disposeFn();
             this._disposeFn = null;
         }
-        return Promise.resolve(null);
     };
     BasePortalHost.prototype.dispose = function () {
         if (this.hasAttached()) {
@@ -22756,7 +22768,9 @@ var BasePortalHost = (function () {
     return BasePortalHost;
 }());
 exports.BasePortalHost = BasePortalHost;
+
 //# sourceMappingURL=portal.js.map
+
 
 /***/ },
 /* 173 */
@@ -22939,7 +22953,9 @@ var MdRippleModule = (function () {
     return MdRippleModule;
 }());
 exports.MdRippleModule = MdRippleModule;
+
 //# sourceMappingURL=ripple.js.map
+
 
 /***/ },
 /* 174 */
@@ -22960,7 +22976,9 @@ function applyCssTransform(element, transformValue) {
     element.style.webkitTransform = value;
 }
 exports.applyCssTransform = applyCssTransform;
+
 //# sourceMappingURL=apply-transform.js.map
+
 
 /***/ },
 /* 175 */
@@ -23009,7 +23027,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var root_1 = __webpack_require__(53);
+var root_1 = __webpack_require__(54);
 var Observable_1 = __webpack_require__(4);
 /**
  * We need this JSDoc comment for affecting ESDoc.
@@ -23140,7 +23158,7 @@ exports.isArray = Array.isArray || (function (x) { return x && typeof x.length =
 
 "use strict";
 "use strict";
-var root_1 = __webpack_require__(53);
+var root_1 = __webpack_require__(54);
 var isArray_1 = __webpack_require__(177);
 var isPromise_1 = __webpack_require__(430);
 var Observable_1 = __webpack_require__(4);
@@ -25000,7 +25018,7 @@ var exceptions_1 = __webpack_require__(13);
 var lang_1 = __webpack_require__(3);
 var html = __webpack_require__(73);
 var html_parser_1 = __webpack_require__(136);
-var interpolation_config_1 = __webpack_require__(59);
+var interpolation_config_1 = __webpack_require__(60);
 var style_url_resolver_1 = __webpack_require__(323);
 var template_preparser_1 = __webpack_require__(324);
 var url_resolver_1 = __webpack_require__(89);
@@ -33505,17 +33523,14 @@ var ConnectedOverlayDirective = (function () {
     };
     /** Creates an overlay and attaches this directive's template to it. */
     ConnectedOverlayDirective.prototype._createOverlay = function () {
-        var _this = this;
         if (!this.positions || !this.positions.length) {
             this.positions = defaultPositionList;
         }
         var overlayConfig = new overlay_state_1.OverlayState();
         overlayConfig.positionStrategy =
             this._overlay.position().connectedTo(this.origin.elementRef, { originX: this.positions[0].overlayX, originY: this.positions[0].originY }, { overlayX: this.positions[0].overlayX, overlayY: this.positions[0].overlayY });
-        this._overlay.create(overlayConfig).then(function (ref) {
-            _this._overlayRef = ref;
-            _this._overlayRef.attach(_this._templatePortal);
-        });
+        this._overlayRef = this._overlay.create(overlayConfig);
+        this._overlayRef.attach(this._templatePortal);
     };
     /** Destroys the overlay created by this directive. */
     ConnectedOverlayDirective.prototype._destroyOverlay = function () {
@@ -33554,7 +33569,9 @@ var OverlayModule = (function () {
     return OverlayModule;
 }());
 exports.OverlayModule = OverlayModule;
+
 //# sourceMappingURL=overlay-directives.js.map
+
 
 /***/ },
 /* 254 */
@@ -33572,7 +33589,9 @@ var OverlayState = (function () {
     return OverlayState;
 }());
 exports.OverlayState = OverlayState;
+
 //# sourceMappingURL=overlay-state.js.map
+
 
 /***/ },
 /* 255 */
@@ -33619,7 +33638,9 @@ var MdGridListBadRatioError = (function (_super) {
     return MdGridListBadRatioError;
 }(error_1.MdError));
 exports.MdGridListBadRatioError = MdGridListBadRatioError;
+
 //# sourceMappingURL=grid-list-errors.js.map
+
 
 /***/ },
 /* 256 */
@@ -33709,10 +33730,12 @@ var MdMenu = (function () {
         __metadata('design:type', Object)
     ], MdMenu.prototype, "close", void 0);
     MdMenu = __decorate([
-        core_1.Component({            selector: 'md-menu',
+        core_1.Component({
+            moduleId: module.i,
+            selector: 'md-menu',
             host: { 'role': 'menu' },
             template: "<template> <div class=\"md-menu\" [ngClass]=\"_classList\" (click)=\"_emitCloseEvent()\"> <ng-content></ng-content> </div> </template> <div class=\"md-menu-click-catcher\" *ngIf=\"_showClickCatcher\" (click)=\"_emitCloseEvent()\"></div>",
-            styles: ["/** * A collection of mixins and CSS classes that can be used to apply elevation to a material * element. * See: https://www.google.com/design/spec/what-is-material/elevation-shadows.html * Examples: * * * .md-foo { *   @include $md-elevation(2); * *   &:active { *     @include $md-elevation(8); *   } * } * * <div id=\"external-card\" class=\"md-elevation-z2\"><p>Some content</p></div> * * For an explanation of the design behind how elevation is implemented, see the design doc at * https://goo.gl/Kq0k9Z. */ /** * The css property used for elevation. In most cases this should not be changed. It is exposed * as a variable for abstraction / easy use when needing to reference the property directly, for * example in a will-change rule. */ /** The default duration value for elevation transitions. */ /** The default easing value for elevation transitions. */ /** * Applies the correct css rules to an element to give it the elevation specified by $zValue. * The $zValue must be between 0 and 24. */ /** * Returns a string that can be used as the value for a transition property for elevation. * Calling this function directly is useful in situations where a component needs to transition * more than one property. * * .foo { *   transition: md-elevation-transition-property-value(), opacity 100ms ease; *   will-change: $md-elevation-property, opacity; * } */ /** * Applies the correct css rules needed to have an element transition between elevations. * This mixin should be applied to elements whose elevation values will change depending on their * context (e.g. when active or disabled). */ /** * This mixin overrides default button styles like the gray background, * the border, and the outline. */ /* This mixin ensures an element spans the whole viewport.*/ /** * This mixin will ensure that lines that overflow the container will * hide the overflow and truncate neatly with an ellipsis. */ /** * This mixin provides all md-line styles, changing secondary font size * based on whether the list is in dense mode. */ /** * This mixin provides base styles for the wrapper around md-line * elements in a list. */ /** * This mixin normalizes default element styles, e.g. font weight for heading text. */ .md-menu { box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12); min-width: 112px; max-width: 280px; max-height: calc(100vh + 48px); overflow: auto; -webkit-overflow-scrolling: touch; background: white; padding-top: 8px; padding-bottom: 8px; } [md-menu-item] { background: transparent; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; outline: none; border: none; white-space: nowrap; overflow-x: hidden; text-overflow: ellipsis; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-align: center; -ms-flex-align: center; align-items: center; height: 48px; padding: 0 16px; font-size: 16px; font-family: Roboto, \"Helvetica Neue\", sans-serif; text-align: start; text-decoration: none; color: rgba(0, 0, 0, 0.87); } [md-menu-item][disabled] { color: rgba(0, 0, 0, 0.38); cursor: default; } [md-menu-item]:hover:not([disabled]) { background: rgba(0, 0, 0, 0.04); } button[md-menu-item] { width: 100%; } .md-menu-click-catcher { position: fixed; top: 0; left: 0; right: 0; bottom: 0; } "],
+            styles: ["/** * A collection of mixins and CSS classes that can be used to apply elevation to a material * element. * See: https://www.google.com/design/spec/what-is-material/elevation-shadows.html * Examples: * * * .md-foo { *   @include $md-elevation(2); * *   &:active { *     @include $md-elevation(8); *   } * } * * <div id=\"external-card\" class=\"md-elevation-z2\"><p>Some content</p></div> * * For an explanation of the design behind how elevation is implemented, see the design doc at * https://goo.gl/Kq0k9Z. */ /** * The css property used for elevation. In most cases this should not be changed. It is exposed * as a variable for abstraction / easy use when needing to reference the property directly, for * example in a will-change rule. */ /** The default duration value for elevation transitions. */ /** The default easing value for elevation transitions. */ /** * Applies the correct css rules to an element to give it the elevation specified by $zValue. * The $zValue must be between 0 and 24. */ /** * Returns a string that can be used as the value for a transition property for elevation. * Calling this function directly is useful in situations where a component needs to transition * more than one property. * * .foo { *   transition: md-elevation-transition-property-value(), opacity 100ms ease; *   will-change: $md-elevation-property, opacity; * } */ /** * Applies the correct css rules needed to have an element transition between elevations. * This mixin should be applied to elements whose elevation values will change depending on their * context (e.g. when active or disabled). */ /** * This mixin overrides default button styles like the gray background, * the border, and the outline. */ /* This mixin ensures an element spans the whole viewport.*/ /** * This mixin will ensure that lines that overflow the container will * hide the overflow and truncate neatly with an ellipsis. */ /** * This mixin provides all md-line styles, changing secondary font size * based on whether the list is in dense mode. */ /** * This mixin provides base styles for the wrapper around md-line * elements in a list. */ /** * This mixin normalizes default element styles, e.g. font weight for heading text. */ .md-menu { box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12); min-width: 112px; max-width: 280px; max-height: calc(100vh + 48px); overflow: auto; -webkit-overflow-scrolling: touch; background: white; padding-top: 8px; padding-bottom: 8px; } [md-menu-item] { background: transparent; cursor: pointer; user-select: none; outline: none; border: none; white-space: nowrap; overflow-x: hidden; text-overflow: ellipsis; display: flex; flex-direction: row; align-items: center; height: 48px; padding: 0 16px; font-size: 16px; font-family: Roboto, \"Helvetica Neue\", sans-serif; text-align: start; text-decoration: none; color: rgba(0, 0, 0, 0.87); } [md-menu-item][disabled] { color: rgba(0, 0, 0, 0.38); cursor: default; } [md-menu-item]:hover:not([disabled]) { background: rgba(0, 0, 0, 0.04); } button[md-menu-item] { width: 100%; } .md-menu-click-catcher { position: fixed; top: 0; left: 0; right: 0; bottom: 0; } /*# sourceMappingURL=menu.css.map */ "],
             encapsulation: core_1.ViewEncapsulation.None,
             exportAs: 'mdMenu'
         }),
@@ -33723,7 +33746,9 @@ var MdMenu = (function () {
     return MdMenu;
 }());
 exports.MdMenu = MdMenu;
+
 //# sourceMappingURL=menu-directive.js.map
+
 
 /***/ },
 /* 257 */
@@ -33999,7 +34024,7 @@ exports.fromPromise = PromiseObservable_1.PromiseObservable.create;
 
 "use strict";
 "use strict";
-var root_1 = __webpack_require__(53);
+var root_1 = __webpack_require__(54);
 /**
  * @param PromiseCtor
  * @return {Promise<T>}
@@ -34033,7 +34058,7 @@ exports.toPromise = toPromise;
 
 "use strict";
 "use strict";
-var root_1 = __webpack_require__(53);
+var root_1 = __webpack_require__(54);
 var Symbol = root_1.root.Symbol;
 if (typeof Symbol === 'function') {
     if (Symbol.iterator) {
@@ -34071,7 +34096,7 @@ else {
 
 "use strict";
 "use strict";
-var root_1 = __webpack_require__(53);
+var root_1 = __webpack_require__(54);
 function getSymbolObservable(context) {
     var $$observable;
     var Symbol = context.Symbol;
@@ -34099,7 +34124,7 @@ exports.$$observable = getSymbolObservable(root_1.root);
 
 "use strict";
 "use strict";
-var root_1 = __webpack_require__(53);
+var root_1 = __webpack_require__(54);
 var Symbol = root_1.root.Symbol;
 exports.$$rxSubscriber = (typeof Symbol === 'function' && typeof Symbol.for === 'function') ?
     Symbol.for('rxSubscriber') : '@@rxSubscriber';
@@ -50150,7 +50175,7 @@ exports.RouterLinkActive = RouterLinkActive;
 "use strict";
 var core_1 = __webpack_require__(0);
 var router_outlet_map_1 = __webpack_require__(115);
-var shared_1 = __webpack_require__(52);
+var shared_1 = __webpack_require__(53);
 var RouterOutlet = (function () {
     function RouterOutlet(parentOutletMap, location, resolver, name) {
         this.parentOutletMap = parentOutletMap;
@@ -50305,7 +50330,9 @@ var MdLiveAnnouncer = (function () {
     return MdLiveAnnouncer;
 }());
 exports.MdLiveAnnouncer = MdLiveAnnouncer;
+
 //# sourceMappingURL=live-announcer.js.map
+
 
 /***/ },
 /* 391 */
@@ -50345,7 +50372,9 @@ var OverlayContainer = (function () {
     return OverlayContainer;
 }());
 exports.OverlayContainer = OverlayContainer;
+
 //# sourceMappingURL=overlay-container.js.map
+
 
 /***/ },
 /* 392 */
@@ -50364,14 +50393,9 @@ var OverlayRef = (function () {
         this._state = _state;
     }
     OverlayRef.prototype.attach = function (portal) {
-        var _this = this;
-        var attachPromise = this._portalHost.attach(portal);
-        // Don't chain the .then() call in the return because we want the result of portalHost.attach
-        // to be returned from this method.
-        attachPromise.then(function () {
-            _this.updatePosition();
-        });
-        return attachPromise;
+        var attachResult = this._portalHost.attach(portal);
+        this.updatePosition();
+        return attachResult;
     };
     OverlayRef.prototype.detach = function () {
         return this._portalHost.detach();
@@ -50395,7 +50419,9 @@ var OverlayRef = (function () {
     return OverlayRef;
 }());
 exports.OverlayRef = OverlayRef;
+
 //# sourceMappingURL=overlay-ref.js.map
+
 
 /***/ },
 /* 393 */
@@ -50432,9 +50458,9 @@ var defaultState = new overlay_state_1.OverlayState();
  * An overlay *is* a PortalHost, so any kind of Portal can be loaded into one.
  */
 var Overlay = (function () {
-    function Overlay(_overlayContainer, _componentResolver, _positionBuilder) {
+    function Overlay(_overlayContainer, _componentFactoryResolver, _positionBuilder) {
         this._overlayContainer = _overlayContainer;
-        this._componentResolver = _componentResolver;
+        this._componentFactoryResolver = _componentFactoryResolver;
         this._positionBuilder = _positionBuilder;
     }
     /**
@@ -50443,9 +50469,8 @@ var Overlay = (function () {
      * @returns A reference to the created overlay.
      */
     Overlay.prototype.create = function (state) {
-        var _this = this;
         if (state === void 0) { state = defaultState; }
-        return this._createPaneElement().then(function (pane) { return _this._createOverlayRef(pane, state); });
+        return this._createOverlayRef(this._createPaneElement(), state);
     };
     /**
      * Returns a position builder that can be used, via fluent API,
@@ -50463,7 +50488,7 @@ var Overlay = (function () {
         pane.id = "md-overlay-" + nextUniqueId++;
         pane.classList.add('md-overlay-pane');
         this._overlayContainer.getContainerElement().appendChild(pane);
-        return Promise.resolve(pane);
+        return pane;
     };
     /**
      * Create a DomPortalHost into which the overlay content can be loaded.
@@ -50471,7 +50496,7 @@ var Overlay = (function () {
      * @returns A portal host for the given DOM element.
      */
     Overlay.prototype._createPortalHost = function (pane) {
-        return new dom_portal_host_1.DomPortalHost(pane, this._componentResolver);
+        return new dom_portal_host_1.DomPortalHost(pane, this._componentFactoryResolver);
     };
     /**
      * Creates an OverlayRef for an overlay in the given DOM element.
@@ -50484,7 +50509,7 @@ var Overlay = (function () {
     };
     Overlay = __decorate([
         core_1.Injectable(), 
-        __metadata('design:paramtypes', [overlay_container_1.OverlayContainer, core_1.ComponentResolver, overlay_position_builder_1.OverlayPositionBuilder])
+        __metadata('design:paramtypes', [overlay_container_1.OverlayContainer, core_1.ComponentFactoryResolver, overlay_position_builder_1.OverlayPositionBuilder])
     ], Overlay);
     return Overlay;
 }());
@@ -50496,7 +50521,9 @@ exports.OVERLAY_PROVIDERS = [
     Overlay,
     overlay_container_1.OverlayContainer,
 ];
+
 //# sourceMappingURL=overlay.js.map
+
 
 /***/ },
 /* 394 */
@@ -50515,7 +50542,9 @@ var ConnectionPositionPair = (function () {
     return ConnectionPositionPair;
 }());
 exports.ConnectionPositionPair = ConnectionPositionPair;
+
 //# sourceMappingURL=connected-position.js.map
+
 
 /***/ },
 /* 395 */
@@ -50593,7 +50622,9 @@ var ViewportRuler = (function () {
     return ViewportRuler;
 }());
 exports.ViewportRuler = ViewportRuler;
+
 //# sourceMappingURL=viewport-ruler.js.map
+
 
 /***/ },
 /* 396 */
@@ -50616,24 +50647,22 @@ var portal_errors_1 = __webpack_require__(397);
  */
 var DomPortalHost = (function (_super) {
     __extends(DomPortalHost, _super);
-    function DomPortalHost(_hostDomElement, _componentResolver) {
+    function DomPortalHost(_hostDomElement, _componentFactoryResolver) {
         _super.call(this);
         this._hostDomElement = _hostDomElement;
-        this._componentResolver = _componentResolver;
+        this._componentFactoryResolver = _componentFactoryResolver;
     }
-    /** Attach the given ComponentPortal to DOM element using the ComponentResolver. */
+    /** Attach the given ComponentPortal to DOM element using the ComponentFactoryResolver. */
     DomPortalHost.prototype.attachComponentPortal = function (portal) {
-        var _this = this;
         if (portal.viewContainerRef == null) {
             throw new portal_errors_1.MdComponentPortalAttachedToDomWithoutOriginError();
         }
-        return this._componentResolver.resolveComponent(portal.component).then(function (componentFactory) {
-            var ref = portal.viewContainerRef.createComponent(componentFactory, portal.viewContainerRef.length, portal.injector || portal.viewContainerRef.parentInjector);
-            var hostView = ref.hostView;
-            _this._hostDomElement.appendChild(hostView.rootNodes[0]);
-            _this.setDisposeFn(function () { return ref.destroy(); });
-            return ref;
-        });
+        var componentFactory = this._componentFactoryResolver.resolveComponentFactory(portal.component);
+        var ref = portal.viewContainerRef.createComponent(componentFactory, portal.viewContainerRef.length, portal.injector || portal.viewContainerRef.parentInjector);
+        var hostView = ref.hostView;
+        this._hostDomElement.appendChild(hostView.rootNodes[0]);
+        this.setDisposeFn(function () { return ref.destroy(); });
+        return ref;
     };
     DomPortalHost.prototype.attachTemplatePortal = function (portal) {
         var _this = this;
@@ -50647,7 +50676,7 @@ var DomPortalHost = (function (_super) {
             }
         }));
         // TODO(jelbourn): Return locals from view.
-        return Promise.resolve(new Map());
+        return new Map();
     };
     DomPortalHost.prototype.dispose = function () {
         _super.prototype.dispose.call(this);
@@ -50658,7 +50687,9 @@ var DomPortalHost = (function (_super) {
     return DomPortalHost;
 }(portal_1.BasePortalHost));
 exports.DomPortalHost = DomPortalHost;
+
 //# sourceMappingURL=dom-portal-host.js.map
+
 
 /***/ },
 /* 397 */
@@ -50737,7 +50768,9 @@ var MdNoPortalAttachedError = (function (_super) {
     return MdNoPortalAttachedError;
 }(error_1.MdError));
 exports.MdNoPortalAttachedError = MdNoPortalAttachedError;
+
 //# sourceMappingURL=portal-errors.js.map
+
 
 /***/ },
 /* 398 */
@@ -50761,7 +50794,9 @@ function coerceToNumber(value) {
     return typeof value === 'string' ? parseInt(value, 10) : value;
 }
 exports.coerceToNumber = coerceToNumber;
+
 //# sourceMappingURL=grid-list-measure.js.map
+
 
 /***/ },
 /* 399 */
@@ -51145,7 +51180,9 @@ exports.MdIconRegistry = MdIconRegistry;
 function cloneSvg(svg) {
     return svg.cloneNode(true);
 }
+
 //# sourceMappingURL=icon-registry.js.map
+
 
 /***/ },
 /* 400 */
@@ -51194,7 +51231,9 @@ var MdMenuInvalidPositionY = (function (_super) {
     return MdMenuInvalidPositionY;
 }(error_1.MdError));
 exports.MdMenuInvalidPositionY = MdMenuInvalidPositionY;
+
 //# sourceMappingURL=menu-errors.js.map
+
 
 /***/ },
 /* 401 */
@@ -51292,7 +51331,9 @@ var MdMenuAnchor = (function () {
     return MdMenuAnchor;
 }());
 exports.MdMenuAnchor = MdMenuAnchor;
+
 //# sourceMappingURL=menu-item.js.map
+
 
 /***/ },
 /* 402 */
@@ -51341,18 +51382,15 @@ var MdMenuTrigger = (function () {
         return this._menuOpen ? this.closeMenu() : this.openMenu();
     };
     MdMenuTrigger.prototype.openMenu = function () {
-        var _this = this;
-        return this._createOverlay()
-            .then(function () { return _this._overlayRef.attach(_this._portal); })
-            .then(function () { return _this._setIsMenuOpen(true); });
+        this._createOverlay();
+        this._overlayRef.attach(this._portal);
+        this._setIsMenuOpen(true);
     };
     MdMenuTrigger.prototype.closeMenu = function () {
-        var _this = this;
-        if (!this._overlayRef) {
-            return Promise.resolve();
+        if (this._overlayRef) {
+            this._overlayRef.detach();
+            this._setIsMenuOpen(false);
         }
-        return this._overlayRef.detach()
-            .then(function () { return _this._setIsMenuOpen(false); });
     };
     MdMenuTrigger.prototype.destroyMenu = function () {
         if (this._overlayRef) {
@@ -51380,13 +51418,10 @@ var MdMenuTrigger = (function () {
      *  OverlayRef so that it can be attached to the DOM when openMenu is called.
      */
     MdMenuTrigger.prototype._createOverlay = function () {
-        var _this = this;
-        if (this._overlayRef) {
-            return Promise.resolve();
+        if (!this._overlayRef) {
+            this._portal = new core_2.TemplatePortal(this.menu.templateRef, this._viewContainerRef);
+            this._overlayRef = this._overlay.create(this._getOverlayConfig());
         }
-        this._portal = new core_2.TemplatePortal(this.menu.templateRef, this._viewContainerRef);
-        return this._overlay.create(this._getOverlayConfig())
-            .then(function (overlay) { return _this._overlayRef = overlay; });
     };
     /**
      * This method builds the configuration object needed to create the overlay, the OverlayState.
@@ -51423,7 +51458,7 @@ var MdMenuTrigger = (function () {
         core_1.HostListener('click'), 
         __metadata('design:type', Function), 
         __metadata('design:paramtypes', []), 
-        __metadata('design:returntype', Promise)
+        __metadata('design:returntype', void 0)
     ], MdMenuTrigger.prototype, "toggleMenu", null);
     MdMenuTrigger = __decorate([
         core_1.Directive({
@@ -51437,7 +51472,9 @@ var MdMenuTrigger = (function () {
     return MdMenuTrigger;
 }());
 exports.MdMenuTrigger = MdMenuTrigger;
+
 //# sourceMappingURL=menu-trigger.js.map
+
 
 /***/ },
 /* 403 */
@@ -51447,6 +51484,9 @@ exports.MdMenuTrigger = MdMenuTrigger;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core___default = __WEBPACK_IMPORTED_MODULE_0__angular_core__ && __WEBPACK_IMPORTED_MODULE_0__angular_core__.__esModule ? function() { return __WEBPACK_IMPORTED_MODULE_0__angular_core__['default'] } : function() { return __WEBPACK_IMPORTED_MODULE_0__angular_core__; };
 /* harmony import */ __webpack_require__.d(__WEBPACK_IMPORTED_MODULE_0__angular_core___default, 'a', __WEBPACK_IMPORTED_MODULE_0__angular_core___default);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable___default = __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__ && __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__.__esModule ? function() { return __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__['default'] } : function() { return __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__; };
+/* harmony import */ __webpack_require__.d(__WEBPACK_IMPORTED_MODULE_1_rxjs_Observable___default, 'a', __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable___default);
 
 /* harmony export */ __webpack_require__.d(exports, "AppComponent", function() { return AppComponent; });var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -51458,9 +51498,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var AppComponent = (function () {
     function AppComponent() {
         var _this = this;
+        this.tabs = [
+            { label: 'Tab One', content: 'This is the body of the first tab' },
+            { label: 'Tab Two', content: 'This is the body of the second tab' },
+            { label: 'Tab Three', content: 'This is the body of the third tab' },
+        ];
         this.foods = [
             { name: 'Pizza', rating: 'Excellent' },
             { name: 'Burritos', rating: 'Great' },
@@ -51468,6 +51514,11 @@ var AppComponent = (function () {
         ];
         this.progress = 0;
         this.title = 'app works!';
+        this.asyncTabs = __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"].create(function (observer) {
+            setTimeout(function () {
+                observer.next(_this.tabs);
+            }, 1000);
+        });
         // Update the value for the progress-bar on an interval.
         setInterval(function () {
             _this.progress = (_this.progress + Math.floor(Math.random() * 4) + 1) % 100;
@@ -51477,7 +51528,8 @@ var AppComponent = (function () {
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-root',
             template: __webpack_require__(632),
-            styles: [__webpack_require__(631)]
+            styles: [__webpack_require__(631)],
+            encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None,
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
@@ -53464,7 +53516,7 @@ var lexer = __webpack_require__(134);
 var parser = __webpack_require__(135);
 var metadata_resolver = __webpack_require__(207);
 var html_parser = __webpack_require__(136);
-var interpolation_config = __webpack_require__(59);
+var interpolation_config = __webpack_require__(60);
 var ng_module_compiler = __webpack_require__(208);
 var path_util = __webpack_require__(514);
 var ts_emitter = __webpack_require__(318);
@@ -55531,7 +55583,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var chars = __webpack_require__(203);
 var parse_util_1 = __webpack_require__(49);
-var interpolation_config_1 = __webpack_require__(59);
+var interpolation_config_1 = __webpack_require__(60);
 var tags_1 = __webpack_require__(88);
 (function (TokenType) {
     TokenType[TokenType["TAG_OPEN_START"] = 0] = "TAG_OPEN_START";
@@ -63714,7 +63766,7 @@ function initUiLocation(injector) {
 var core_1 = __webpack_require__(0);
 var browser_platform_location_1 = __webpack_require__(165);
 var lang_1 = __webpack_require__(10);
-var message_bus_1 = __webpack_require__(51);
+var message_bus_1 = __webpack_require__(52);
 var messaging_api_1 = __webpack_require__(169);
 var serialized_types_1 = __webpack_require__(249);
 var serializer_1 = __webpack_require__(45);
@@ -63777,7 +63829,7 @@ exports.MessageBasedPlatformLocation = MessageBasedPlatformLocation;
 "use strict";
 var core_1 = __webpack_require__(0);
 var lang_1 = __webpack_require__(10);
-var message_bus_1 = __webpack_require__(51);
+var message_bus_1 = __webpack_require__(52);
 var messaging_api_1 = __webpack_require__(169);
 var render_store_1 = __webpack_require__(112);
 var serializer_1 = __webpack_require__(45);
@@ -63964,7 +64016,7 @@ var collection_1 = __webpack_require__(25);
 var exceptions_1 = __webpack_require__(65);
 var lang_1 = __webpack_require__(10);
 var client_message_broker_1 = __webpack_require__(111);
-var message_bus_1 = __webpack_require__(51);
+var message_bus_1 = __webpack_require__(52);
 var messaging_api_1 = __webpack_require__(169);
 var serialized_types_1 = __webpack_require__(249);
 var serializer_1 = __webpack_require__(45);
@@ -64105,7 +64157,7 @@ var core_1 = __webpack_require__(0);
 var collection_1 = __webpack_require__(25);
 var lang_1 = __webpack_require__(10);
 var client_message_broker_1 = __webpack_require__(111);
-var message_bus_1 = __webpack_require__(51);
+var message_bus_1 = __webpack_require__(52);
 var messaging_api_1 = __webpack_require__(169);
 var render_store_1 = __webpack_require__(112);
 var serializer_1 = __webpack_require__(45);
@@ -64581,7 +64633,7 @@ var browser_1 = __webpack_require__(164);
 var lang_1 = __webpack_require__(10);
 var api_1 = __webpack_require__(385);
 var client_message_broker_1 = __webpack_require__(111);
-var message_bus_1 = __webpack_require__(51);
+var message_bus_1 = __webpack_require__(52);
 var post_message_bus_1 = __webpack_require__(386);
 var render_store_1 = __webpack_require__(112);
 var serializer_1 = __webpack_require__(45);
@@ -64690,7 +64742,7 @@ var shared_styles_host_1 = __webpack_require__(168);
 var exceptions_1 = __webpack_require__(65);
 var api_1 = __webpack_require__(385);
 var client_message_broker_1 = __webpack_require__(111);
-var message_bus_1 = __webpack_require__(51);
+var message_bus_1 = __webpack_require__(52);
 var post_message_bus_1 = __webpack_require__(386);
 var render_store_1 = __webpack_require__(112);
 var serializer_1 = __webpack_require__(45);
@@ -64852,7 +64904,7 @@ var from_1 = __webpack_require__(425);
 var of_1 = __webpack_require__(120);
 var EmptyError_1 = __webpack_require__(266);
 var router_config_loader_1 = __webpack_require__(170);
-var shared_1 = __webpack_require__(52);
+var shared_1 = __webpack_require__(53);
 var url_tree_1 = __webpack_require__(66);
 var collection_1 = __webpack_require__(67);
 var NoMatch = (function () {
@@ -65330,7 +65382,7 @@ function equalRouteSnapshots(a, b) {
  * found in the LICENSE file at https://angular.io/license
  */
 "use strict";
-var shared_1 = __webpack_require__(52);
+var shared_1 = __webpack_require__(53);
 var url_tree_1 = __webpack_require__(66);
 var collection_1 = __webpack_require__(67);
 function createUrlTree(route, urlTree, commands, queryParams, fragment) {
@@ -65612,7 +65664,7 @@ function compare(path, params, segment) {
 var Observable_1 = __webpack_require__(4);
 var of_1 = __webpack_require__(120);
 var router_state_1 = __webpack_require__(78);
-var shared_1 = __webpack_require__(52);
+var shared_1 = __webpack_require__(53);
 var url_tree_1 = __webpack_require__(66);
 var collection_1 = __webpack_require__(67);
 var tree_1 = __webpack_require__(252);
@@ -66088,7 +66140,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var core_1 = __webpack_require__(0);
-var forms_1 = __webpack_require__(60);
+var forms_1 = __webpack_require__(51);
 var Observable_1 = __webpack_require__(4);
 var unique_selection_dispatcher_1 = __webpack_require__(171);
 var field_value_1 = __webpack_require__(92);
@@ -66187,9 +66239,11 @@ var MdButtonToggleGroup = (function () {
     });
     MdButtonToggleGroup.prototype._updateButtonToggleNames = function () {
         var _this = this;
-        (this._buttonToggles || []).forEach(function (toggle) {
-            toggle.name = _this._name;
-        });
+        if (this._buttonToggles) {
+            this._buttonToggles.forEach(function (toggle) {
+                toggle.name = _this._name;
+            });
+        }
     };
     // TODO: Refactor into shared code with radio.
     MdButtonToggleGroup.prototype._updateSelectedButtonToggleFromValue = function () {
@@ -66471,9 +66525,11 @@ var MdButtonToggle = (function () {
         __metadata('design:type', Boolean)
     ], MdButtonToggle.prototype, "disabled", null);
     MdButtonToggle = __decorate([
-        core_1.Component({            selector: 'md-button-toggle',
+        core_1.Component({
+            moduleId: module.i,
+            selector: 'md-button-toggle',
             template: "<label [attr.for]=\"inputId\" class=\"md-button-toggle-label\"> <input #input class=\"md-button-toggle-input\" [type]=\"_type\" [id]=\"inputId\" [checked]=\"checked\" [disabled]=\"disabled\" [name]=\"name\" (change)=\"_onInputChange($event)\" (click)=\"_onInputClick($event)\"> <div class=\"md-button-toggle-label-content\"> <ng-content></ng-content> </div> </label> ",
-            styles: ["/** * A collection of mixins and CSS classes that can be used to apply elevation to a material * element. * See: https://www.google.com/design/spec/what-is-material/elevation-shadows.html * Examples: * * * .md-foo { *   @include $md-elevation(2); * *   &:active { *     @include $md-elevation(8); *   } * } * * <div id=\"external-card\" class=\"md-elevation-z2\"><p>Some content</p></div> * * For an explanation of the design behind how elevation is implemented, see the design doc at * https://goo.gl/Kq0k9Z. */ /** * The css property used for elevation. In most cases this should not be changed. It is exposed * as a variable for abstraction / easy use when needing to reference the property directly, for * example in a will-change rule. */ /** The default duration value for elevation transitions. */ /** The default easing value for elevation transitions. */ /** * Applies the correct css rules to an element to give it the elevation specified by $zValue. * The $zValue must be between 0 and 24. */ /** * Returns a string that can be used as the value for a transition property for elevation. * Calling this function directly is useful in situations where a component needs to transition * more than one property. * * .foo { *   transition: md-elevation-transition-property-value(), opacity 100ms ease; *   will-change: $md-elevation-property, opacity; * } */ /** * Applies the correct css rules needed to have an element transition between elevations. * This mixin should be applied to elements whose elevation values will change depending on their * context (e.g. when active or disabled). */ /** * Mixin that creates a new stacking context. * see https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context */ /** * This mixin hides an element visually. * That means it's still accessible for screen-readers but not visible in view. */ /** * Forces an element to grow to fit floated contents; used as as an alternative to * `overflow: hidden;` because it doesn't cut off contents. */ /** * A mixin, which generates temporary ink ripple on a given component. * When $bindToParent is set to true, it will check for the focused class on the same selector as you included * that mixin. * It is also possible to specify the color palette of the temporary ripple. By default it uses the * accent palette for its background. */ md-button-toggle-group { box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12); position: relative; display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; border-radius: 3px; cursor: pointer; white-space: nowrap; } .md-button-toggle-checked .md-button-toggle-label-content { background-color: #e0e0e0; } .md-button-toggle-disabled .md-button-toggle-label-content { background-color: rgba(0, 0, 0, 0.38); cursor: not-allowed; } md-button-toggle { white-space: nowrap; } .md-button-toggle-input { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; text-transform: none; width: 1px; } .md-button-toggle-label-content { display: inline-block; line-height: 36px; padding: 0 16px; cursor: pointer; } .md-button-toggle-label-content > * { vertical-align: middle; } "],
+            styles: ["/** * A collection of mixins and CSS classes that can be used to apply elevation to a material * element. * See: https://www.google.com/design/spec/what-is-material/elevation-shadows.html * Examples: * * * .md-foo { *   @include $md-elevation(2); * *   &:active { *     @include $md-elevation(8); *   } * } * * <div id=\"external-card\" class=\"md-elevation-z2\"><p>Some content</p></div> * * For an explanation of the design behind how elevation is implemented, see the design doc at * https://goo.gl/Kq0k9Z. */ /** * The css property used for elevation. In most cases this should not be changed. It is exposed * as a variable for abstraction / easy use when needing to reference the property directly, for * example in a will-change rule. */ /** The default duration value for elevation transitions. */ /** The default easing value for elevation transitions. */ /** * Applies the correct css rules to an element to give it the elevation specified by $zValue. * The $zValue must be between 0 and 24. */ /** * Returns a string that can be used as the value for a transition property for elevation. * Calling this function directly is useful in situations where a component needs to transition * more than one property. * * .foo { *   transition: md-elevation-transition-property-value(), opacity 100ms ease; *   will-change: $md-elevation-property, opacity; * } */ /** * Applies the correct css rules needed to have an element transition between elevations. * This mixin should be applied to elements whose elevation values will change depending on their * context (e.g. when active or disabled). */ /** * Mixin that creates a new stacking context. * see https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context */ /** * This mixin hides an element visually. * That means it's still accessible for screen-readers but not visible in view. */ /** * Forces an element to grow to fit floated contents; used as as an alternative to * `overflow: hidden;` because it doesn't cut off contents. */ /** * A mixin, which generates temporary ink ripple on a given component. * When $bindToParent is set to true, it will check for the focused class on the same selector as you included * that mixin. * It is also possible to specify the color palette of the temporary ripple. By default it uses the * accent palette for its background. */ md-button-toggle-group { box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12); position: relative; display: inline-flex; border-radius: 3px; cursor: pointer; white-space: nowrap; } .md-button-toggle-checked .md-button-toggle-label-content { background-color: #e0e0e0; } .md-button-toggle-disabled .md-button-toggle-label-content { background-color: rgba(0, 0, 0, 0.38); cursor: not-allowed; } md-button-toggle { white-space: nowrap; } .md-button-toggle-input { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; text-transform: none; width: 1px; } .md-button-toggle-label-content { display: inline-block; line-height: 36px; padding: 0 16px; cursor: pointer; } .md-button-toggle-label-content > * { vertical-align: middle; } /*# sourceMappingURL=button-toggle.css.map */ "],
             encapsulation: core_1.ViewEncapsulation.None,
         }),
         __param(0, core_1.Optional()),
@@ -66504,7 +66560,9 @@ var MdButtonToggleModule = (function () {
     return MdButtonToggleModule;
 }());
 exports.MdButtonToggleModule = MdButtonToggleModule;
+
 //# sourceMappingURL=button-toggle.js.map
+
 
 /***/ },
 /* 593 */
@@ -66600,7 +66658,9 @@ var MdButton = (function () {
         __metadata('design:type', Boolean)
     ], MdButton.prototype, "disableRipple", void 0);
     MdButton = __decorate([
-        core_1.Component({            selector: 'button[md-button], button[md-raised-button], button[md-icon-button], ' +
+        core_1.Component({
+            moduleId: module.i,
+            selector: 'button[md-button], button[md-raised-button], button[md-icon-button], ' +
                 'button[md-fab], button[md-mini-fab]',
             inputs: ['color'],
             host: {
@@ -66609,8 +66669,8 @@ var MdButton = (function () {
                 '(focus)': '_setKeyboardFocus()',
                 '(blur)': '_removeKeyboardFocus()',
             },
-            template: "<span class=\"md-button-wrapper\"><ng-content></ng-content></span> <div md-ripple *ngIf=\"isRippleEnabled()\" class=\"md-button-ripple\" [class.md-button-ripple-round]=\"isRoundButton()\" [md-ripple-trigger]=\"getHostElement()\" [md-ripple-color]=\"isRoundButton() ? 'rgba(255, 255, 255, 0.2)' : ''\" md-ripple-background-color=\"rgba(0, 0, 0, 0)\"></div> ",
-            styles: ["/** * A collection of mixins and CSS classes that can be used to apply elevation to a material * element. * See: https://www.google.com/design/spec/what-is-material/elevation-shadows.html * Examples: * * * .md-foo { *   @include $md-elevation(2); * *   &:active { *     @include $md-elevation(8); *   } * } * * <div id=\"external-card\" class=\"md-elevation-z2\"><p>Some content</p></div> * * For an explanation of the design behind how elevation is implemented, see the design doc at * https://goo.gl/Kq0k9Z. */ /** * The css property used for elevation. In most cases this should not be changed. It is exposed * as a variable for abstraction / easy use when needing to reference the property directly, for * example in a will-change rule. */ /** The default duration value for elevation transitions. */ /** The default easing value for elevation transitions. */ /** * Applies the correct css rules to an element to give it the elevation specified by $zValue. * The $zValue must be between 0 and 24. */ /** * Returns a string that can be used as the value for a transition property for elevation. * Calling this function directly is useful in situations where a component needs to transition * more than one property. * * .foo { *   transition: md-elevation-transition-property-value(), opacity 100ms ease; *   will-change: $md-elevation-property, opacity; * } */ /** * Applies the correct css rules needed to have an element transition between elevations. * This mixin should be applied to elements whose elevation values will change depending on their * context (e.g. when active or disabled). */ /** * This mixin overrides default button styles like the gray background, * the border, and the outline. */ /** Applies a property to an md-button element for each of the supported palettes. */ /** Applies a focus style to an md-button element for each of the supported palettes. */ [md-raised-button], [md-fab], [md-mini-fab], [md-button], [md-icon-button] { box-sizing: border-box; position: relative; background: transparent; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; outline: none; border: none; display: inline-block; white-space: nowrap; text-decoration: none; vertical-align: baseline; font-size: 14px; font-family: Roboto, \"Helvetica Neue\", sans-serif; font-weight: 500; color: currentColor; text-align: center; margin: 0; min-width: 88px; line-height: 36px; padding: 0 16px; border-radius: 3px; } .md-primary[md-raised-button], .md-primary[md-fab], .md-primary[md-mini-fab], .md-primary[md-button], .md-primary[md-icon-button] { color: #009688; } .md-accent[md-raised-button], .md-accent[md-fab], .md-accent[md-mini-fab], .md-accent[md-button], .md-accent[md-icon-button] { color: #9c27b0; } .md-warn[md-raised-button], .md-warn[md-fab], .md-warn[md-mini-fab], .md-warn[md-button], .md-warn[md-icon-button] { color: #f44336; } .md-primary[disabled][md-raised-button], .md-primary[disabled][md-fab], .md-primary[disabled][md-mini-fab], .md-primary[disabled][md-button], .md-primary[disabled][md-icon-button], .md-accent[disabled][md-raised-button], .md-accent[disabled][md-fab], .md-accent[disabled][md-mini-fab], .md-accent[disabled][md-button], .md-accent[disabled][md-icon-button], .md-warn[disabled][md-raised-button], .md-warn[disabled][md-fab], .md-warn[disabled][md-mini-fab], .md-warn[disabled][md-button], .md-warn[disabled][md-icon-button], [disabled][disabled][md-raised-button], [disabled][disabled][md-fab], [disabled][disabled][md-mini-fab], [disabled][disabled][md-button], [disabled][disabled][md-icon-button] { color: rgba(0, 0, 0, 0.38); } [disabled][md-raised-button], [disabled][md-fab], [disabled][md-mini-fab], [disabled][md-button], [disabled][md-icon-button] { cursor: default; } .md-button-focus[md-raised-button]::after, .md-button-focus[md-fab]::after, .md-button-focus[md-mini-fab]::after, .md-button-focus[md-button]::after, .md-button-focus[md-icon-button]::after { position: absolute; top: 0; left: 0; bottom: 0; right: 0; content: ''; background-color: rgba(0, 0, 0, 0.12); border-radius: inherit; pointer-events: none; } .md-button-focus.md-primary[md-raised-button]::after, .md-button-focus.md-primary[md-fab]::after, .md-button-focus.md-primary[md-mini-fab]::after, .md-button-focus.md-primary[md-button]::after, .md-button-focus.md-primary[md-icon-button]::after { background-color: rgba(0, 150, 136, 0.12); } .md-button-focus.md-accent[md-raised-button]::after, .md-button-focus.md-accent[md-fab]::after, .md-button-focus.md-accent[md-mini-fab]::after, .md-button-focus.md-accent[md-button]::after, .md-button-focus.md-accent[md-icon-button]::after { background-color: rgba(156, 39, 176, 0.12); } .md-button-focus.md-warn[md-raised-button]::after, .md-button-focus.md-warn[md-fab]::after, .md-button-focus.md-warn[md-mini-fab]::after, .md-button-focus.md-warn[md-button]::after, .md-button-focus.md-warn[md-icon-button]::after { background-color: rgba(244, 67, 54, 0.12); } [md-raised-button], [md-fab], [md-mini-fab] { box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12); background-color: #fafafa; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); -webkit-transition: background 400ms cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1); transition: background 400ms cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1); } .md-primary[md-raised-button], .md-primary[md-fab], .md-primary[md-mini-fab] { color: white; } .md-accent[md-raised-button], .md-accent[md-fab], .md-accent[md-mini-fab] { color: rgba(255, 255, 255, 0.870588); } .md-warn[md-raised-button], .md-warn[md-fab], .md-warn[md-mini-fab] { color: white; } .md-primary[disabled][md-raised-button], .md-primary[disabled][md-fab], .md-primary[disabled][md-mini-fab], .md-accent[disabled][md-raised-button], .md-accent[disabled][md-fab], .md-accent[disabled][md-mini-fab], .md-warn[disabled][md-raised-button], .md-warn[disabled][md-fab], .md-warn[disabled][md-mini-fab], [disabled][disabled][md-raised-button], [disabled][disabled][md-fab], [disabled][disabled][md-mini-fab] { color: rgba(0, 0, 0, 0.38); } .md-primary[md-raised-button], .md-primary[md-fab], .md-primary[md-mini-fab] { background-color: #009688; } .md-accent[md-raised-button], .md-accent[md-fab], .md-accent[md-mini-fab] { background-color: #9c27b0; } .md-warn[md-raised-button], .md-warn[md-fab], .md-warn[md-mini-fab] { background-color: #f44336; } .md-primary[disabled][md-raised-button], .md-primary[disabled][md-fab], .md-primary[disabled][md-mini-fab], .md-accent[disabled][md-raised-button], .md-accent[disabled][md-fab], .md-accent[disabled][md-mini-fab], .md-warn[disabled][md-raised-button], .md-warn[disabled][md-fab], .md-warn[disabled][md-mini-fab], [disabled][disabled][md-raised-button], [disabled][disabled][md-fab], [disabled][disabled][md-mini-fab] { background-color: rgba(0, 0, 0, 0.12); } [md-raised-button]:active, [md-fab]:active, [md-mini-fab]:active { box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12); } [disabled][md-raised-button], [disabled][md-fab], [disabled][md-mini-fab] { box-shadow: none; } [md-button][disabled]:hover.md-primary, [md-button][disabled]:hover.md-accent, [md-button][disabled]:hover.md-warn, [md-button][disabled]:hover:hover { background-color: transparent; } [md-fab] { min-width: 0; border-radius: 50%; background-color: #9c27b0; color: rgba(255, 255, 255, 0.870588); width: 56px; height: 56px; padding: 0; } [md-fab] i, [md-fab] md-icon { padding: 16px 0; } [md-mini-fab] { min-width: 0; border-radius: 50%; background-color: #9c27b0; color: rgba(255, 255, 255, 0.870588); width: 40px; height: 40px; padding: 0; } [md-mini-fab] i, [md-mini-fab] md-icon { padding: 8px 0; } [md-icon-button] { min-width: 0; padding: 0; width: 40px; height: 40px; line-height: 24px; border-radius: 50%; } [md-icon-button] .md-button-wrapper > * { vertical-align: middle; } .md-button-ripple { position: absolute; top: 0; left: 0; bottom: 0; right: 0; } .md-button-ripple-round { border-radius: 50%; z-index: 1; } [md-button]:hover::after, [md-icon-button]:hover::after { position: absolute; top: 0; left: 0; bottom: 0; right: 0; content: ''; background-color: rgba(0, 0, 0, 0.12); border-radius: inherit; pointer-events: none; } [md-button]:hover.md-primary::after, [md-icon-button]:hover.md-primary::after { background-color: rgba(0, 150, 136, 0.12); } [md-button]:hover.md-accent::after, [md-icon-button]:hover.md-accent::after { background-color: rgba(156, 39, 176, 0.12); } [md-button]:hover.md-warn::after, [md-icon-button]:hover.md-warn::after { background-color: rgba(244, 67, 54, 0.12); } @media screen and (-ms-high-contrast: active) { .md-raised-button, .md-fab, .md-mini-fab { border: 1px solid #fff; } } "],
+            template: "<span class=\"md-button-wrapper\"><ng-content></ng-content></span> ",
+            styles: ["/** * A collection of mixins and CSS classes that can be used to apply elevation to a material * element. * See: https://www.google.com/design/spec/what-is-material/elevation-shadows.html * Examples: * * * .md-foo { *   @include $md-elevation(2); * *   &:active { *     @include $md-elevation(8); *   } * } * * <div id=\"external-card\" class=\"md-elevation-z2\"><p>Some content</p></div> * * For an explanation of the design behind how elevation is implemented, see the design doc at * https://goo.gl/Kq0k9Z. */ /** * The css property used for elevation. In most cases this should not be changed. It is exposed * as a variable for abstraction / easy use when needing to reference the property directly, for * example in a will-change rule. */ /** The default duration value for elevation transitions. */ /** The default easing value for elevation transitions. */ /** * Applies the correct css rules to an element to give it the elevation specified by $zValue. * The $zValue must be between 0 and 24. */ /** * Returns a string that can be used as the value for a transition property for elevation. * Calling this function directly is useful in situations where a component needs to transition * more than one property. * * .foo { *   transition: md-elevation-transition-property-value(), opacity 100ms ease; *   will-change: $md-elevation-property, opacity; * } */ /** * Applies the correct css rules needed to have an element transition between elevations. * This mixin should be applied to elements whose elevation values will change depending on their * context (e.g. when active or disabled). */ /** * This mixin overrides default button styles like the gray background, * the border, and the outline. */ /** Applies a property to an md-button element for each of the supported palettes. */ /** Applies a focus style to an md-button element for each of the supported palettes. */ [md-raised-button], [md-fab], [md-mini-fab], [md-button], [md-icon-button] { box-sizing: border-box; position: relative; background: transparent; cursor: pointer; user-select: none; outline: none; border: none; display: inline-block; white-space: nowrap; text-decoration: none; vertical-align: baseline; font-size: 14px; font-family: Roboto, \"Helvetica Neue\", sans-serif; font-weight: 500; color: currentColor; text-align: center; margin: 0; min-width: 88px; line-height: 36px; padding: 0 16px; border-radius: 3px; } .md-primary[md-raised-button], .md-primary[md-fab], .md-primary[md-mini-fab], .md-primary[md-button], .md-primary[md-icon-button] { color: #009688; } .md-accent[md-raised-button], .md-accent[md-fab], .md-accent[md-mini-fab], .md-accent[md-button], .md-accent[md-icon-button] { color: #9c27b0; } .md-warn[md-raised-button], .md-warn[md-fab], .md-warn[md-mini-fab], .md-warn[md-button], .md-warn[md-icon-button] { color: #f44336; } .md-primary[disabled][md-raised-button], .md-primary[disabled][md-fab], .md-primary[disabled][md-mini-fab], .md-primary[disabled][md-button], .md-primary[disabled][md-icon-button], .md-accent[disabled][md-raised-button], .md-accent[disabled][md-fab], .md-accent[disabled][md-mini-fab], .md-accent[disabled][md-button], .md-accent[disabled][md-icon-button], .md-warn[disabled][md-raised-button], .md-warn[disabled][md-fab], .md-warn[disabled][md-mini-fab], .md-warn[disabled][md-button], .md-warn[disabled][md-icon-button], [disabled][disabled][md-raised-button], [disabled][disabled][md-fab], [disabled][disabled][md-mini-fab], [disabled][disabled][md-button], [disabled][disabled][md-icon-button] { color: rgba(0, 0, 0, 0.38); } [disabled][md-raised-button], [disabled][md-fab], [disabled][md-mini-fab], [disabled][md-button], [disabled][md-icon-button] { cursor: default; } .md-button-focus[md-raised-button]::after, .md-button-focus[md-fab]::after, .md-button-focus[md-mini-fab]::after, .md-button-focus[md-button]::after, .md-button-focus[md-icon-button]::after { position: absolute; top: 0; left: 0; bottom: 0; right: 0; content: ''; background-color: rgba(0, 0, 0, 0.12); border-radius: inherit; pointer-events: none; } .md-button-focus.md-primary[md-raised-button]::after, .md-button-focus.md-primary[md-fab]::after, .md-button-focus.md-primary[md-mini-fab]::after, .md-button-focus.md-primary[md-button]::after, .md-button-focus.md-primary[md-icon-button]::after { background-color: rgba(0, 150, 136, 0.12); } .md-button-focus.md-accent[md-raised-button]::after, .md-button-focus.md-accent[md-fab]::after, .md-button-focus.md-accent[md-mini-fab]::after, .md-button-focus.md-accent[md-button]::after, .md-button-focus.md-accent[md-icon-button]::after { background-color: rgba(156, 39, 176, 0.12); } .md-button-focus.md-warn[md-raised-button]::after, .md-button-focus.md-warn[md-fab]::after, .md-button-focus.md-warn[md-mini-fab]::after, .md-button-focus.md-warn[md-button]::after, .md-button-focus.md-warn[md-icon-button]::after { background-color: rgba(244, 67, 54, 0.12); } [md-raised-button], [md-fab], [md-mini-fab] { box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12); background-color: #fafafa; transform: translate3d(0, 0, 0); transition: background 400ms cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1); } .md-primary[md-raised-button], .md-primary[md-fab], .md-primary[md-mini-fab] { color: white; } .md-accent[md-raised-button], .md-accent[md-fab], .md-accent[md-mini-fab] { color: rgba(255, 255, 255, 0.870588); } .md-warn[md-raised-button], .md-warn[md-fab], .md-warn[md-mini-fab] { color: white; } .md-primary[disabled][md-raised-button], .md-primary[disabled][md-fab], .md-primary[disabled][md-mini-fab], .md-accent[disabled][md-raised-button], .md-accent[disabled][md-fab], .md-accent[disabled][md-mini-fab], .md-warn[disabled][md-raised-button], .md-warn[disabled][md-fab], .md-warn[disabled][md-mini-fab], [disabled][disabled][md-raised-button], [disabled][disabled][md-fab], [disabled][disabled][md-mini-fab] { color: rgba(0, 0, 0, 0.38); } .md-primary[md-raised-button], .md-primary[md-fab], .md-primary[md-mini-fab] { background-color: #009688; } .md-accent[md-raised-button], .md-accent[md-fab], .md-accent[md-mini-fab] { background-color: #9c27b0; } .md-warn[md-raised-button], .md-warn[md-fab], .md-warn[md-mini-fab] { background-color: #f44336; } .md-primary[disabled][md-raised-button], .md-primary[disabled][md-fab], .md-primary[disabled][md-mini-fab], .md-accent[disabled][md-raised-button], .md-accent[disabled][md-fab], .md-accent[disabled][md-mini-fab], .md-warn[disabled][md-raised-button], .md-warn[disabled][md-fab], .md-warn[disabled][md-mini-fab], [disabled][disabled][md-raised-button], [disabled][disabled][md-fab], [disabled][disabled][md-mini-fab] { background-color: rgba(0, 0, 0, 0.12); } [md-raised-button]:active, [md-fab]:active, [md-mini-fab]:active { box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12); } [disabled][md-raised-button], [disabled][md-fab], [disabled][md-mini-fab] { box-shadow: none; } [md-button]:hover::after, [md-icon-button]:hover::after { position: absolute; top: 0; left: 0; bottom: 0; right: 0; content: ''; background-color: rgba(0, 0, 0, 0.12); border-radius: inherit; pointer-events: none; } [md-button]:hover.md-primary::after, [md-icon-button]:hover.md-primary::after { background-color: rgba(0, 150, 136, 0.12); } [md-button]:hover.md-accent::after, [md-icon-button]:hover.md-accent::after { background-color: rgba(156, 39, 176, 0.12); } [md-button]:hover.md-warn::after, [md-icon-button]:hover.md-warn::after { background-color: rgba(244, 67, 54, 0.12); } [md-button][disabled]:hover.md-primary, [md-button][disabled]:hover.md-accent, [md-button][disabled]:hover.md-warn, [md-button][disabled]:hover::after, [md-icon-button][disabled]:hover.md-primary, [md-icon-button][disabled]:hover.md-accent, [md-icon-button][disabled]:hover.md-warn, [md-icon-button][disabled]:hover::after { background-color: transparent; } [md-fab] { min-width: 0; border-radius: 50%; background-color: #9c27b0; color: rgba(255, 255, 255, 0.870588); width: 56px; height: 56px; padding: 0; } [md-fab] i, [md-fab] md-icon { padding: 16px 0; } [md-mini-fab] { min-width: 0; border-radius: 50%; background-color: #9c27b0; color: rgba(255, 255, 255, 0.870588); width: 40px; height: 40px; padding: 0; } [md-mini-fab] i, [md-mini-fab] md-icon { padding: 8px 0; } [md-icon-button] { min-width: 0; padding: 0; width: 40px; height: 40px; line-height: 24px; border-radius: 50%; } [md-icon-button] .md-button-wrapper > * { vertical-align: middle; } .md-button-ripple { position: absolute; top: 0; left: 0; bottom: 0; right: 0; } .md-button-ripple-round { border-radius: 50%; z-index: 1; } @media screen and (-ms-high-contrast: active) { .md-raised-button, .md-fab, .md-mini-fab { border: 1px solid #fff; } } /*# sourceMappingURL=button.css.map */ "],
             encapsulation: core_1.ViewEncapsulation.None,
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
         }), 
@@ -66669,7 +66729,9 @@ var MdAnchor = (function (_super) {
         __metadata('design:type', Object)
     ], MdAnchor.prototype, "disabled", null);
     MdAnchor = __decorate([
-        core_1.Component({            selector: 'a[md-button], a[md-raised-button], a[md-icon-button], a[md-fab], a[md-mini-fab]',
+        core_1.Component({
+            moduleId: module.i,
+            selector: 'a[md-button], a[md-raised-button], a[md-icon-button], a[md-fab], a[md-mini-fab]',
             inputs: ['color'],
             host: {
                 '[class.md-button-focus]': '_isKeyboardFocused',
@@ -66678,8 +66740,8 @@ var MdAnchor = (function (_super) {
                 '(blur)': '_removeKeyboardFocus()',
                 '(click)': '_haltDisabledEvents($event)',
             },
-            template: "<span class=\"md-button-wrapper\"><ng-content></ng-content></span> <div md-ripple *ngIf=\"isRippleEnabled()\" class=\"md-button-ripple\" [class.md-button-ripple-round]=\"isRoundButton()\" [md-ripple-trigger]=\"getHostElement()\" [md-ripple-color]=\"isRoundButton() ? 'rgba(255, 255, 255, 0.2)' : ''\" md-ripple-background-color=\"rgba(0, 0, 0, 0)\"></div> ",
-            styles: ["/** * A collection of mixins and CSS classes that can be used to apply elevation to a material * element. * See: https://www.google.com/design/spec/what-is-material/elevation-shadows.html * Examples: * * * .md-foo { *   @include $md-elevation(2); * *   &:active { *     @include $md-elevation(8); *   } * } * * <div id=\"external-card\" class=\"md-elevation-z2\"><p>Some content</p></div> * * For an explanation of the design behind how elevation is implemented, see the design doc at * https://goo.gl/Kq0k9Z. */ /** * The css property used for elevation. In most cases this should not be changed. It is exposed * as a variable for abstraction / easy use when needing to reference the property directly, for * example in a will-change rule. */ /** The default duration value for elevation transitions. */ /** The default easing value for elevation transitions. */ /** * Applies the correct css rules to an element to give it the elevation specified by $zValue. * The $zValue must be between 0 and 24. */ /** * Returns a string that can be used as the value for a transition property for elevation. * Calling this function directly is useful in situations where a component needs to transition * more than one property. * * .foo { *   transition: md-elevation-transition-property-value(), opacity 100ms ease; *   will-change: $md-elevation-property, opacity; * } */ /** * Applies the correct css rules needed to have an element transition between elevations. * This mixin should be applied to elements whose elevation values will change depending on their * context (e.g. when active or disabled). */ /** * This mixin overrides default button styles like the gray background, * the border, and the outline. */ /** Applies a property to an md-button element for each of the supported palettes. */ /** Applies a focus style to an md-button element for each of the supported palettes. */ [md-raised-button], [md-fab], [md-mini-fab], [md-button], [md-icon-button] { box-sizing: border-box; position: relative; background: transparent; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; outline: none; border: none; display: inline-block; white-space: nowrap; text-decoration: none; vertical-align: baseline; font-size: 14px; font-family: Roboto, \"Helvetica Neue\", sans-serif; font-weight: 500; color: currentColor; text-align: center; margin: 0; min-width: 88px; line-height: 36px; padding: 0 16px; border-radius: 3px; } .md-primary[md-raised-button], .md-primary[md-fab], .md-primary[md-mini-fab], .md-primary[md-button], .md-primary[md-icon-button] { color: #009688; } .md-accent[md-raised-button], .md-accent[md-fab], .md-accent[md-mini-fab], .md-accent[md-button], .md-accent[md-icon-button] { color: #9c27b0; } .md-warn[md-raised-button], .md-warn[md-fab], .md-warn[md-mini-fab], .md-warn[md-button], .md-warn[md-icon-button] { color: #f44336; } .md-primary[disabled][md-raised-button], .md-primary[disabled][md-fab], .md-primary[disabled][md-mini-fab], .md-primary[disabled][md-button], .md-primary[disabled][md-icon-button], .md-accent[disabled][md-raised-button], .md-accent[disabled][md-fab], .md-accent[disabled][md-mini-fab], .md-accent[disabled][md-button], .md-accent[disabled][md-icon-button], .md-warn[disabled][md-raised-button], .md-warn[disabled][md-fab], .md-warn[disabled][md-mini-fab], .md-warn[disabled][md-button], .md-warn[disabled][md-icon-button], [disabled][disabled][md-raised-button], [disabled][disabled][md-fab], [disabled][disabled][md-mini-fab], [disabled][disabled][md-button], [disabled][disabled][md-icon-button] { color: rgba(0, 0, 0, 0.38); } [disabled][md-raised-button], [disabled][md-fab], [disabled][md-mini-fab], [disabled][md-button], [disabled][md-icon-button] { cursor: default; } .md-button-focus[md-raised-button]::after, .md-button-focus[md-fab]::after, .md-button-focus[md-mini-fab]::after, .md-button-focus[md-button]::after, .md-button-focus[md-icon-button]::after { position: absolute; top: 0; left: 0; bottom: 0; right: 0; content: ''; background-color: rgba(0, 0, 0, 0.12); border-radius: inherit; pointer-events: none; } .md-button-focus.md-primary[md-raised-button]::after, .md-button-focus.md-primary[md-fab]::after, .md-button-focus.md-primary[md-mini-fab]::after, .md-button-focus.md-primary[md-button]::after, .md-button-focus.md-primary[md-icon-button]::after { background-color: rgba(0, 150, 136, 0.12); } .md-button-focus.md-accent[md-raised-button]::after, .md-button-focus.md-accent[md-fab]::after, .md-button-focus.md-accent[md-mini-fab]::after, .md-button-focus.md-accent[md-button]::after, .md-button-focus.md-accent[md-icon-button]::after { background-color: rgba(156, 39, 176, 0.12); } .md-button-focus.md-warn[md-raised-button]::after, .md-button-focus.md-warn[md-fab]::after, .md-button-focus.md-warn[md-mini-fab]::after, .md-button-focus.md-warn[md-button]::after, .md-button-focus.md-warn[md-icon-button]::after { background-color: rgba(244, 67, 54, 0.12); } [md-raised-button], [md-fab], [md-mini-fab] { box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12); background-color: #fafafa; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); -webkit-transition: background 400ms cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1); transition: background 400ms cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1); } .md-primary[md-raised-button], .md-primary[md-fab], .md-primary[md-mini-fab] { color: white; } .md-accent[md-raised-button], .md-accent[md-fab], .md-accent[md-mini-fab] { color: rgba(255, 255, 255, 0.870588); } .md-warn[md-raised-button], .md-warn[md-fab], .md-warn[md-mini-fab] { color: white; } .md-primary[disabled][md-raised-button], .md-primary[disabled][md-fab], .md-primary[disabled][md-mini-fab], .md-accent[disabled][md-raised-button], .md-accent[disabled][md-fab], .md-accent[disabled][md-mini-fab], .md-warn[disabled][md-raised-button], .md-warn[disabled][md-fab], .md-warn[disabled][md-mini-fab], [disabled][disabled][md-raised-button], [disabled][disabled][md-fab], [disabled][disabled][md-mini-fab] { color: rgba(0, 0, 0, 0.38); } .md-primary[md-raised-button], .md-primary[md-fab], .md-primary[md-mini-fab] { background-color: #009688; } .md-accent[md-raised-button], .md-accent[md-fab], .md-accent[md-mini-fab] { background-color: #9c27b0; } .md-warn[md-raised-button], .md-warn[md-fab], .md-warn[md-mini-fab] { background-color: #f44336; } .md-primary[disabled][md-raised-button], .md-primary[disabled][md-fab], .md-primary[disabled][md-mini-fab], .md-accent[disabled][md-raised-button], .md-accent[disabled][md-fab], .md-accent[disabled][md-mini-fab], .md-warn[disabled][md-raised-button], .md-warn[disabled][md-fab], .md-warn[disabled][md-mini-fab], [disabled][disabled][md-raised-button], [disabled][disabled][md-fab], [disabled][disabled][md-mini-fab] { background-color: rgba(0, 0, 0, 0.12); } [md-raised-button]:active, [md-fab]:active, [md-mini-fab]:active { box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12); } [disabled][md-raised-button], [disabled][md-fab], [disabled][md-mini-fab] { box-shadow: none; } [md-button][disabled]:hover.md-primary, [md-button][disabled]:hover.md-accent, [md-button][disabled]:hover.md-warn, [md-button][disabled]:hover:hover { background-color: transparent; } [md-fab] { min-width: 0; border-radius: 50%; background-color: #9c27b0; color: rgba(255, 255, 255, 0.870588); width: 56px; height: 56px; padding: 0; } [md-fab] i, [md-fab] md-icon { padding: 16px 0; } [md-mini-fab] { min-width: 0; border-radius: 50%; background-color: #9c27b0; color: rgba(255, 255, 255, 0.870588); width: 40px; height: 40px; padding: 0; } [md-mini-fab] i, [md-mini-fab] md-icon { padding: 8px 0; } [md-icon-button] { min-width: 0; padding: 0; width: 40px; height: 40px; line-height: 24px; border-radius: 50%; } [md-icon-button] .md-button-wrapper > * { vertical-align: middle; } .md-button-ripple { position: absolute; top: 0; left: 0; bottom: 0; right: 0; } .md-button-ripple-round { border-radius: 50%; z-index: 1; } [md-button]:hover::after, [md-icon-button]:hover::after { position: absolute; top: 0; left: 0; bottom: 0; right: 0; content: ''; background-color: rgba(0, 0, 0, 0.12); border-radius: inherit; pointer-events: none; } [md-button]:hover.md-primary::after, [md-icon-button]:hover.md-primary::after { background-color: rgba(0, 150, 136, 0.12); } [md-button]:hover.md-accent::after, [md-icon-button]:hover.md-accent::after { background-color: rgba(156, 39, 176, 0.12); } [md-button]:hover.md-warn::after, [md-icon-button]:hover.md-warn::after { background-color: rgba(244, 67, 54, 0.12); } @media screen and (-ms-high-contrast: active) { .md-raised-button, .md-fab, .md-mini-fab { border: 1px solid #fff; } } "],
+            template: "<span class=\"md-button-wrapper\"><ng-content></ng-content></span> ",
+            styles: ["/** * A collection of mixins and CSS classes that can be used to apply elevation to a material * element. * See: https://www.google.com/design/spec/what-is-material/elevation-shadows.html * Examples: * * * .md-foo { *   @include $md-elevation(2); * *   &:active { *     @include $md-elevation(8); *   } * } * * <div id=\"external-card\" class=\"md-elevation-z2\"><p>Some content</p></div> * * For an explanation of the design behind how elevation is implemented, see the design doc at * https://goo.gl/Kq0k9Z. */ /** * The css property used for elevation. In most cases this should not be changed. It is exposed * as a variable for abstraction / easy use when needing to reference the property directly, for * example in a will-change rule. */ /** The default duration value for elevation transitions. */ /** The default easing value for elevation transitions. */ /** * Applies the correct css rules to an element to give it the elevation specified by $zValue. * The $zValue must be between 0 and 24. */ /** * Returns a string that can be used as the value for a transition property for elevation. * Calling this function directly is useful in situations where a component needs to transition * more than one property. * * .foo { *   transition: md-elevation-transition-property-value(), opacity 100ms ease; *   will-change: $md-elevation-property, opacity; * } */ /** * Applies the correct css rules needed to have an element transition between elevations. * This mixin should be applied to elements whose elevation values will change depending on their * context (e.g. when active or disabled). */ /** * This mixin overrides default button styles like the gray background, * the border, and the outline. */ /** Applies a property to an md-button element for each of the supported palettes. */ /** Applies a focus style to an md-button element for each of the supported palettes. */ [md-raised-button], [md-fab], [md-mini-fab], [md-button], [md-icon-button] { box-sizing: border-box; position: relative; background: transparent; cursor: pointer; user-select: none; outline: none; border: none; display: inline-block; white-space: nowrap; text-decoration: none; vertical-align: baseline; font-size: 14px; font-family: Roboto, \"Helvetica Neue\", sans-serif; font-weight: 500; color: currentColor; text-align: center; margin: 0; min-width: 88px; line-height: 36px; padding: 0 16px; border-radius: 3px; } .md-primary[md-raised-button], .md-primary[md-fab], .md-primary[md-mini-fab], .md-primary[md-button], .md-primary[md-icon-button] { color: #009688; } .md-accent[md-raised-button], .md-accent[md-fab], .md-accent[md-mini-fab], .md-accent[md-button], .md-accent[md-icon-button] { color: #9c27b0; } .md-warn[md-raised-button], .md-warn[md-fab], .md-warn[md-mini-fab], .md-warn[md-button], .md-warn[md-icon-button] { color: #f44336; } .md-primary[disabled][md-raised-button], .md-primary[disabled][md-fab], .md-primary[disabled][md-mini-fab], .md-primary[disabled][md-button], .md-primary[disabled][md-icon-button], .md-accent[disabled][md-raised-button], .md-accent[disabled][md-fab], .md-accent[disabled][md-mini-fab], .md-accent[disabled][md-button], .md-accent[disabled][md-icon-button], .md-warn[disabled][md-raised-button], .md-warn[disabled][md-fab], .md-warn[disabled][md-mini-fab], .md-warn[disabled][md-button], .md-warn[disabled][md-icon-button], [disabled][disabled][md-raised-button], [disabled][disabled][md-fab], [disabled][disabled][md-mini-fab], [disabled][disabled][md-button], [disabled][disabled][md-icon-button] { color: rgba(0, 0, 0, 0.38); } [disabled][md-raised-button], [disabled][md-fab], [disabled][md-mini-fab], [disabled][md-button], [disabled][md-icon-button] { cursor: default; } .md-button-focus[md-raised-button]::after, .md-button-focus[md-fab]::after, .md-button-focus[md-mini-fab]::after, .md-button-focus[md-button]::after, .md-button-focus[md-icon-button]::after { position: absolute; top: 0; left: 0; bottom: 0; right: 0; content: ''; background-color: rgba(0, 0, 0, 0.12); border-radius: inherit; pointer-events: none; } .md-button-focus.md-primary[md-raised-button]::after, .md-button-focus.md-primary[md-fab]::after, .md-button-focus.md-primary[md-mini-fab]::after, .md-button-focus.md-primary[md-button]::after, .md-button-focus.md-primary[md-icon-button]::after { background-color: rgba(0, 150, 136, 0.12); } .md-button-focus.md-accent[md-raised-button]::after, .md-button-focus.md-accent[md-fab]::after, .md-button-focus.md-accent[md-mini-fab]::after, .md-button-focus.md-accent[md-button]::after, .md-button-focus.md-accent[md-icon-button]::after { background-color: rgba(156, 39, 176, 0.12); } .md-button-focus.md-warn[md-raised-button]::after, .md-button-focus.md-warn[md-fab]::after, .md-button-focus.md-warn[md-mini-fab]::after, .md-button-focus.md-warn[md-button]::after, .md-button-focus.md-warn[md-icon-button]::after { background-color: rgba(244, 67, 54, 0.12); } [md-raised-button], [md-fab], [md-mini-fab] { box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12); background-color: #fafafa; transform: translate3d(0, 0, 0); transition: background 400ms cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1); } .md-primary[md-raised-button], .md-primary[md-fab], .md-primary[md-mini-fab] { color: white; } .md-accent[md-raised-button], .md-accent[md-fab], .md-accent[md-mini-fab] { color: rgba(255, 255, 255, 0.870588); } .md-warn[md-raised-button], .md-warn[md-fab], .md-warn[md-mini-fab] { color: white; } .md-primary[disabled][md-raised-button], .md-primary[disabled][md-fab], .md-primary[disabled][md-mini-fab], .md-accent[disabled][md-raised-button], .md-accent[disabled][md-fab], .md-accent[disabled][md-mini-fab], .md-warn[disabled][md-raised-button], .md-warn[disabled][md-fab], .md-warn[disabled][md-mini-fab], [disabled][disabled][md-raised-button], [disabled][disabled][md-fab], [disabled][disabled][md-mini-fab] { color: rgba(0, 0, 0, 0.38); } .md-primary[md-raised-button], .md-primary[md-fab], .md-primary[md-mini-fab] { background-color: #009688; } .md-accent[md-raised-button], .md-accent[md-fab], .md-accent[md-mini-fab] { background-color: #9c27b0; } .md-warn[md-raised-button], .md-warn[md-fab], .md-warn[md-mini-fab] { background-color: #f44336; } .md-primary[disabled][md-raised-button], .md-primary[disabled][md-fab], .md-primary[disabled][md-mini-fab], .md-accent[disabled][md-raised-button], .md-accent[disabled][md-fab], .md-accent[disabled][md-mini-fab], .md-warn[disabled][md-raised-button], .md-warn[disabled][md-fab], .md-warn[disabled][md-mini-fab], [disabled][disabled][md-raised-button], [disabled][disabled][md-fab], [disabled][disabled][md-mini-fab] { background-color: rgba(0, 0, 0, 0.12); } [md-raised-button]:active, [md-fab]:active, [md-mini-fab]:active { box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12); } [disabled][md-raised-button], [disabled][md-fab], [disabled][md-mini-fab] { box-shadow: none; } [md-button]:hover::after, [md-icon-button]:hover::after { position: absolute; top: 0; left: 0; bottom: 0; right: 0; content: ''; background-color: rgba(0, 0, 0, 0.12); border-radius: inherit; pointer-events: none; } [md-button]:hover.md-primary::after, [md-icon-button]:hover.md-primary::after { background-color: rgba(0, 150, 136, 0.12); } [md-button]:hover.md-accent::after, [md-icon-button]:hover.md-accent::after { background-color: rgba(156, 39, 176, 0.12); } [md-button]:hover.md-warn::after, [md-icon-button]:hover.md-warn::after { background-color: rgba(244, 67, 54, 0.12); } [md-button][disabled]:hover.md-primary, [md-button][disabled]:hover.md-accent, [md-button][disabled]:hover.md-warn, [md-button][disabled]:hover::after, [md-icon-button][disabled]:hover.md-primary, [md-icon-button][disabled]:hover.md-accent, [md-icon-button][disabled]:hover.md-warn, [md-icon-button][disabled]:hover::after { background-color: transparent; } [md-fab] { min-width: 0; border-radius: 50%; background-color: #9c27b0; color: rgba(255, 255, 255, 0.870588); width: 56px; height: 56px; padding: 0; } [md-fab] i, [md-fab] md-icon { padding: 16px 0; } [md-mini-fab] { min-width: 0; border-radius: 50%; background-color: #9c27b0; color: rgba(255, 255, 255, 0.870588); width: 40px; height: 40px; padding: 0; } [md-mini-fab] i, [md-mini-fab] md-icon { padding: 8px 0; } [md-icon-button] { min-width: 0; padding: 0; width: 40px; height: 40px; line-height: 24px; border-radius: 50%; } [md-icon-button] .md-button-wrapper > * { vertical-align: middle; } .md-button-ripple { position: absolute; top: 0; left: 0; bottom: 0; right: 0; } .md-button-ripple-round { border-radius: 50%; z-index: 1; } @media screen and (-ms-high-contrast: active) { .md-raised-button, .md-fab, .md-mini-fab { border: 1px solid #fff; } } /*# sourceMappingURL=button.css.map */ "],
             encapsulation: core_1.ViewEncapsulation.None
         }), 
         __metadata('design:paramtypes', [core_1.ElementRef, core_1.Renderer])
@@ -66703,7 +66765,9 @@ var MdButtonModule = (function () {
     return MdButtonModule;
 }());
 exports.MdButtonModule = MdButtonModule;
+
 //# sourceMappingURL=button.js.map
+
 
 /***/ },
 /* 594 */
@@ -66743,9 +66807,11 @@ var MdCard = (function () {
     function MdCard() {
     }
     MdCard = __decorate([
-        core_1.Component({            selector: 'md-card',
-            template: "<div class=\"md-card\"> <ng-content></ng-content> </div> ",
-            styles: ["/** * A collection of mixins and CSS classes that can be used to apply elevation to a material * element. * See: https://www.google.com/design/spec/what-is-material/elevation-shadows.html * Examples: * * * .md-foo { *   @include $md-elevation(2); * *   &:active { *     @include $md-elevation(8); *   } * } * * <div id=\"external-card\" class=\"md-elevation-z2\"><p>Some content</p></div> * * For an explanation of the design behind how elevation is implemented, see the design doc at * https://goo.gl/Kq0k9Z. */ /** * The css property used for elevation. In most cases this should not be changed. It is exposed * as a variable for abstraction / easy use when needing to reference the property directly, for * example in a will-change rule. */ /** The default duration value for elevation transitions. */ /** The default easing value for elevation transitions. */ /** * Applies the correct css rules to an element to give it the elevation specified by $zValue. * The $zValue must be between 0 and 24. */ /** * Returns a string that can be used as the value for a transition property for elevation. * Calling this function directly is useful in situations where a component needs to transition * more than one property. * * .foo { *   transition: md-elevation-transition-property-value(), opacity 100ms ease; *   will-change: $md-elevation-property, opacity; * } */ /** * Applies the correct css rules needed to have an element transition between elevations. * This mixin should be applied to elements whose elevation values will change depending on their * context (e.g. when active or disabled). */ md-card { box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); -webkit-transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1); transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1); will-change: box-shadow; display: block; position: relative; padding: 24px; border-radius: 2px; font-family: Roboto, \"Helvetica Neue\", sans-serif; background: white; color: black; } md-card:hover { box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12); } .md-card-flat { box-shadow: none; } md-card-title, md-card-subtitle, md-card-content, md-card-actions { display: block; margin-bottom: 16px; } md-card-title { font-size: 24px; font-weight: 400; } md-card-subtitle { font-size: 14px; color: rgba(0, 0, 0, 0.54); } md-card-content { font-size: 14px; } md-card-actions { margin-left: -16px; margin-right: -16px; padding: 8px 0; } md-card-actions[align='end'] { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; } [md-card-image] { width: calc(100% + 48px); margin: 0 -24px 16px -24px; } [md-card-xl-image] { width: 240px; height: 240px; margin: -8px; } md-card-footer { position: absolute; bottom: 0; } md-card-actions [md-button], md-card-actions [md-raised-button] { margin: 0 4px; } /* HEADER STYLES */ md-card-header { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; height: 40px; margin: -8px 0 16px 0; } .md-card-header-text { height: 40px; margin: 0 8px; } [md-card-avatar] { height: 40px; width: 40px; border-radius: 50%; } md-card-header md-card-title { font-size: 14px; } /* TITLE-GROUP STYLES */ [md-card-sm-image], [md-card-md-image], [md-card-lg-image] { margin: -8px 0; } md-card-title-group { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; margin: 0 -8px; } [md-card-sm-image] { width: 80px; height: 80px; } [md-card-md-image] { width: 112px; height: 112px; } [md-card-lg-image] { width: 152px; height: 152px; } /* MEDIA QUERIES */ @media (max-width: 600px) { md-card { padding: 24px 16px; } [md-card-image] { width: calc(100% + 32px); margin: 16px -16px; } md-card-title-group { margin: 0; } [md-card-xl-image] { margin-left: 0; margin-right: 0; } md-card-header { margin: -8px 0 0 0; } } /* FIRST/LAST CHILD ADJUSTMENTS */ .md-card > :first-child, md-card-content > :first-child { margin-top: 0; } .md-card > :last-child, md-card-content > :last-child { margin-bottom: 0; } [md-card-image]:first-child { margin-top: -24px; } .md-card > md-card-actions:last-child { margin-bottom: -16px; padding-bottom: 0; } md-card-actions [md-button]:first-child, md-card-actions [md-raised-button]:first-child { margin-left: 0; margin-right: 0; } md-card-title:not(:first-child), md-card-subtitle:not(:first-child) { margin-top: -4px; } md-card-header md-card-subtitle:not(:first-child) { margin-top: -8px; } .md-card > [md-card-xl-image]:first-child { margin-top: -8px; } .md-card > [md-card-xl-image]:last-child { margin-bottom: -8px; } "],
+        core_1.Component({
+            moduleId: module.i,
+            selector: 'md-card',
+            template: "<ng-content></ng-content> ",
+            styles: ["/** * A collection of mixins and CSS classes that can be used to apply elevation to a material * element. * See: https://www.google.com/design/spec/what-is-material/elevation-shadows.html * Examples: * * * .md-foo { *   @include $md-elevation(2); * *   &:active { *     @include $md-elevation(8); *   } * } * * <div id=\"external-card\" class=\"md-elevation-z2\"><p>Some content</p></div> * * For an explanation of the design behind how elevation is implemented, see the design doc at * https://goo.gl/Kq0k9Z. */ /** * The css property used for elevation. In most cases this should not be changed. It is exposed * as a variable for abstraction / easy use when needing to reference the property directly, for * example in a will-change rule. */ /** The default duration value for elevation transitions. */ /** The default easing value for elevation transitions. */ /** * Applies the correct css rules to an element to give it the elevation specified by $zValue. * The $zValue must be between 0 and 24. */ /** * Returns a string that can be used as the value for a transition property for elevation. * Calling this function directly is useful in situations where a component needs to transition * more than one property. * * .foo { *   transition: md-elevation-transition-property-value(), opacity 100ms ease; *   will-change: $md-elevation-property, opacity; * } */ /** * Applies the correct css rules needed to have an element transition between elevations. * This mixin should be applied to elements whose elevation values will change depending on their * context (e.g. when active or disabled). */ md-card { box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1); will-change: box-shadow; display: block; position: relative; padding: 24px; border-radius: 2px; font-family: Roboto, \"Helvetica Neue\", sans-serif; background: white; color: black; } md-card:hover { box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12); } .md-card-flat { box-shadow: none; } md-card-title, md-card-subtitle, md-card-content, md-card-actions { display: block; margin-bottom: 16px; } md-card-title { font-size: 24px; font-weight: 400; } md-card-subtitle { font-size: 14px; color: rgba(0, 0, 0, 0.54); } md-card-content { font-size: 14px; } md-card-actions { margin-left: -16px; margin-right: -16px; padding: 8px 0; } md-card-actions[align='end'] { display: flex; justify-content: flex-end; } [md-card-image] { width: calc(100% + 48px); margin: 0 -24px 16px -24px; } [md-card-xl-image] { width: 240px; height: 240px; margin: -8px; } md-card-footer { position: absolute; bottom: 0; } md-card-actions [md-button], md-card-actions [md-raised-button] { margin: 0 4px; } /* HEADER STYLES */ md-card-header { display: flex; flex-direction: row; height: 40px; margin: -8px 0 16px 0; } .md-card-header-text { height: 40px; margin: 0 8px; } [md-card-avatar] { height: 40px; width: 40px; border-radius: 50%; } md-card-header md-card-title { font-size: 14px; } /* TITLE-GROUP STYLES */ [md-card-sm-image], [md-card-md-image], [md-card-lg-image] { margin: -8px 0; } md-card-title-group { display: flex; justify-content: space-between; margin: 0 -8px; } [md-card-sm-image] { width: 80px; height: 80px; } [md-card-md-image] { width: 112px; height: 112px; } [md-card-lg-image] { width: 152px; height: 152px; } /* MEDIA QUERIES */ @media (max-width: 600px) { md-card { padding: 24px 16px; } [md-card-image] { width: calc(100% + 32px); margin: 16px -16px; } md-card-title-group { margin: 0; } [md-card-xl-image] { margin-left: 0; margin-right: 0; } md-card-header { margin: -8px 0 0 0; } } /* FIRST/LAST CHILD ADJUSTMENTS */ md-card > :first-child, md-card-content > :first-child { margin-top: 0; } md-card > :last-child, md-card-content > :last-child { margin-bottom: 0; } [md-card-image]:first-child { margin-top: -24px; } md-card > md-card-actions:last-child { margin-bottom: -16px; padding-bottom: 0; } md-card-actions [md-button]:first-child, md-card-actions [md-raised-button]:first-child { margin-left: 0; margin-right: 0; } md-card-title:not(:first-child), md-card-subtitle:not(:first-child) { margin-top: -4px; } md-card-header md-card-subtitle:not(:first-child) { margin-top: -8px; } md-card > [md-card-xl-image]:first-child { margin-top: -8px; } md-card > [md-card-xl-image]:last-child { margin-bottom: -8px; } /*# sourceMappingURL=card.css.map */ "],
             encapsulation: core_1.ViewEncapsulation.None,
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
         }), 
@@ -66771,7 +66837,9 @@ var MdCardHeader = (function () {
     function MdCardHeader() {
     }
     MdCardHeader = __decorate([
-        core_1.Component({            selector: 'md-card-header',
+        core_1.Component({
+            moduleId: module.i,
+            selector: 'md-card-header',
             template: "<ng-content select=\"[md-card-avatar]\"></ng-content> <div class=\"md-card-header-text\"> <ng-content select=\"md-card-title, md-card-subtitle\"></ng-content> </div> <ng-content></ng-content> ",
             encapsulation: core_1.ViewEncapsulation.None,
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
@@ -66795,7 +66863,9 @@ var MdCardTitleGroup = (function () {
     function MdCardTitleGroup() {
     }
     MdCardTitleGroup = __decorate([
-        core_1.Component({            selector: 'md-card-title-group',
+        core_1.Component({
+            moduleId: module.i,
+            selector: 'md-card-title-group',
             template: "<div> <ng-content select=\"md-card-title, md-card-subtitle\"></ng-content> </div> <ng-content select=\"img\"></ng-content> <ng-content></ng-content> ",
             encapsulation: core_1.ViewEncapsulation.None,
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
@@ -66820,7 +66890,9 @@ var MdCardModule = (function () {
     return MdCardModule;
 }());
 exports.MdCardModule = MdCardModule;
+
 //# sourceMappingURL=card.js.map
+
 
 /***/ },
 /* 595 */
@@ -66838,7 +66910,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = __webpack_require__(0);
-var forms_1 = __webpack_require__(60);
+var forms_1 = __webpack_require__(51);
 /**
  * Monotonically increasing integer used to auto-generate unique ids for checkbox components.
  */
@@ -67127,9 +67199,11 @@ var MdCheckbox = (function () {
         __metadata('design:type', Object)
     ], MdCheckbox.prototype, "indeterminate", null);
     MdCheckbox = __decorate([
-        core_1.Component({            selector: 'md-checkbox',
+        core_1.Component({
+            moduleId: module.i,
+            selector: 'md-checkbox',
             template: "<label class=\"md-checkbox-layout\"> <div class=\"md-checkbox-inner-container\"> <input class=\"md-checkbox-input\" type=\"checkbox\" [id]=\"inputId\" [checked]=\"checked\" [disabled]=\"disabled\" [name]=\"name\" [tabIndex]=\"tabindex\" [indeterminate]=\"indeterminate\" [attr.aria-label]=\"ariaLabel\" [attr.aria-labelledby]=\"ariaLabelledby\" (focus)=\"_onInputFocus()\" (blur)=\"_onInputBlur()\" (change)=\"_onInteractionEvent($event)\" (click)=\"_onInputClick($event)\"> <div class=\"md-ink-ripple\"></div> <div class=\"md-checkbox-frame\"></div> <div class=\"md-checkbox-background\"> <svg version=\"1.1\" class=\"md-checkbox-checkmark\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" xml:space=\"preserve\"> <path class=\"md-checkbox-checkmark-path\" fill=\"none\" stroke=\"white\" d=\"M4.1,12.7 9,17.6 20.3,6.3\"/> </svg> <!-- Element for rendering the indeterminate state checkbox. --> <div class=\"md-checkbox-mixedmark\"></div> </div> </div> <span class=\"md-checkbox-label\"> <ng-content></ng-content> </span> </label> ",
-            styles: ["/** * Mixin that creates a new stacking context. * see https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context */ /** * This mixin hides an element visually. * That means it's still accessible for screen-readers but not visible in view. */ /** * Forces an element to grow to fit floated contents; used as as an alternative to * `overflow: hidden;` because it doesn't cut off contents. */ /** * A mixin, which generates temporary ink ripple on a given component. * When $bindToParent is set to true, it will check for the focused class on the same selector as you included * that mixin. * It is also possible to specify the color palette of the temporary ripple. By default it uses the * accent palette for its background. */ /** The width/height of the checkbox element. */ /** The width of the line used to draw the checkmark / mixedmark. */ /** The width of the checkbox border shown when the checkbox is unchecked. */ /** The color of the checkbox border. */ /** The color of the checkbox's checkmark / mixedmark. */ /** The color that is used as the checkbox background when it is checked. */ /** The base duration used for the majority of transitions for the checkbox. */ /** The amount of spacing between the checkbox and its label. */ /** * Fades in the background of the checkbox when it goes from unchecked -> {checked,indeterminate}. */ @-webkit-keyframes md-checkbox-fade-in-background { 0% { opacity: 0; } 50% { opacity: 1; } } @keyframes md-checkbox-fade-in-background { 0% { opacity: 0; } 50% { opacity: 1; } } /** * Fades out the background of the checkbox when it goes from {checked,indeterminate} -> unchecked. */ @-webkit-keyframes md-checkbox-fade-out-background { 0%, 50% { opacity: 1; } 100% { opacity: 0; } } @keyframes md-checkbox-fade-out-background { 0%, 50% { opacity: 1; } 100% { opacity: 0; } } /** * \"Draws\" in the checkmark when the checkbox goes from unchecked -> checked. */ @-webkit-keyframes md-checkbox-unchecked-checked-checkmark-path { 0%, 50% { stroke-dashoffset: 22.91026; } 50% { -webkit-animation-timing-function: cubic-bezier(0, 0, 0.2, 0.1); animation-timing-function: cubic-bezier(0, 0, 0.2, 0.1); } 100% { stroke-dashoffset: 0; } } @keyframes md-checkbox-unchecked-checked-checkmark-path { 0%, 50% { stroke-dashoffset: 22.91026; } 50% { -webkit-animation-timing-function: cubic-bezier(0, 0, 0.2, 0.1); animation-timing-function: cubic-bezier(0, 0, 0.2, 0.1); } 100% { stroke-dashoffset: 0; } } /** * Horizontally expands the mixedmark when the checkbox goes from unchecked -> indeterminate. */ @-webkit-keyframes md-checkbox-unchecked-indeterminate-mixedmark { 0%, 68.2% { -webkit-transform: scaleX(0); transform: scaleX(0); } 68.2% { -webkit-animation-timing-function: cubic-bezier(0, 0, 0, 1); animation-timing-function: cubic-bezier(0, 0, 0, 1); } 100% { -webkit-transform: scaleX(1); transform: scaleX(1); } } @keyframes md-checkbox-unchecked-indeterminate-mixedmark { 0%, 68.2% { -webkit-transform: scaleX(0); transform: scaleX(0); } 68.2% { -webkit-animation-timing-function: cubic-bezier(0, 0, 0, 1); animation-timing-function: cubic-bezier(0, 0, 0, 1); } 100% { -webkit-transform: scaleX(1); transform: scaleX(1); } } /** * \"Erases\" the checkmark when the checkbox goes from checked -> unchecked. */ @-webkit-keyframes md-checkbox-checked-unchecked-checkmark-path { from { -webkit-animation-timing-function: cubic-bezier(0.4, 0, 1, 1); animation-timing-function: cubic-bezier(0.4, 0, 1, 1); stroke-dashoffset: 0; } to { stroke-dashoffset: -22.91026; } } @keyframes md-checkbox-checked-unchecked-checkmark-path { from { -webkit-animation-timing-function: cubic-bezier(0.4, 0, 1, 1); animation-timing-function: cubic-bezier(0.4, 0, 1, 1); stroke-dashoffset: 0; } to { stroke-dashoffset: -22.91026; } } /** * Rotates and fades out the checkmark when the checkbox goes from checked -> indeterminate. This * animation helps provide the illusion of the checkmark \"morphing\" into the mixedmark. */ @-webkit-keyframes md-checkbox-checked-indeterminate-checkmark { from { -webkit-animation-timing-function: cubic-bezier(0, 0, 0.2, 0.1); animation-timing-function: cubic-bezier(0, 0, 0.2, 0.1); opacity: 1; -webkit-transform: rotate(0deg); transform: rotate(0deg); } to { opacity: 0; -webkit-transform: rotate(45deg); transform: rotate(45deg); } } @keyframes md-checkbox-checked-indeterminate-checkmark { from { -webkit-animation-timing-function: cubic-bezier(0, 0, 0.2, 0.1); animation-timing-function: cubic-bezier(0, 0, 0.2, 0.1); opacity: 1; -webkit-transform: rotate(0deg); transform: rotate(0deg); } to { opacity: 0; -webkit-transform: rotate(45deg); transform: rotate(45deg); } } /** * Rotates and fades the checkmark back into position when the checkbox goes from indeterminate -> * checked. This animation helps provide the illusion that the mixedmark is \"morphing\" into the * checkmark. */ @-webkit-keyframes md-checkbox-indeterminate-checked-checkmark { from { -webkit-animation-timing-function: cubic-bezier(0.14, 0, 0, 1); animation-timing-function: cubic-bezier(0.14, 0, 0, 1); opacity: 0; -webkit-transform: rotate(45deg); transform: rotate(45deg); } to { opacity: 1; -webkit-transform: rotate(360deg); transform: rotate(360deg); } } @keyframes md-checkbox-indeterminate-checked-checkmark { from { -webkit-animation-timing-function: cubic-bezier(0.14, 0, 0, 1); animation-timing-function: cubic-bezier(0.14, 0, 0, 1); opacity: 0; -webkit-transform: rotate(45deg); transform: rotate(45deg); } to { opacity: 1; -webkit-transform: rotate(360deg); transform: rotate(360deg); } } /** * Rotates and fades in the mixedmark when the checkbox goes from checked -> indeterminate. This * animation, similar to md-checkbox-checked-indeterminate-checkmark, helps provide an illusion * of \"morphing\" from checkmark -> mixedmark. */ @-webkit-keyframes md-checkbox-checked-indeterminate-mixedmark { from { -webkit-animation-timing-function: cubic-bezier(0, 0, 0.2, 0.1); animation-timing-function: cubic-bezier(0, 0, 0.2, 0.1); opacity: 0; -webkit-transform: rotate(-45deg); transform: rotate(-45deg); } to { opacity: 1; -webkit-transform: rotate(0deg); transform: rotate(0deg); } } @keyframes md-checkbox-checked-indeterminate-mixedmark { from { -webkit-animation-timing-function: cubic-bezier(0, 0, 0.2, 0.1); animation-timing-function: cubic-bezier(0, 0, 0.2, 0.1); opacity: 0; -webkit-transform: rotate(-45deg); transform: rotate(-45deg); } to { opacity: 1; -webkit-transform: rotate(0deg); transform: rotate(0deg); } } /** * Rotates and fades out the mixedmark when the checkbox goes from indeterminate -> checked. This * animation, similar to md-checkbox-indeterminate-checked-checkmark, helps provide an illusion * of \"morphing\" from mixedmark -> checkmark. */ @-webkit-keyframes md-checkbox-indeterminate-checked-mixedmark { from { -webkit-animation-timing-function: cubic-bezier(0.14, 0, 0, 1); animation-timing-function: cubic-bezier(0.14, 0, 0, 1); opacity: 1; -webkit-transform: rotate(0deg); transform: rotate(0deg); } to { opacity: 0; -webkit-transform: rotate(315deg); transform: rotate(315deg); } } @keyframes md-checkbox-indeterminate-checked-mixedmark { from { -webkit-animation-timing-function: cubic-bezier(0.14, 0, 0, 1); animation-timing-function: cubic-bezier(0.14, 0, 0, 1); opacity: 1; -webkit-transform: rotate(0deg); transform: rotate(0deg); } to { opacity: 0; -webkit-transform: rotate(315deg); transform: rotate(315deg); } } /** * Horizontally collapses and fades out the mixedmark when the checkbox goes from indeterminate -> * unchecked. */ @-webkit-keyframes md-checkbox-indeterminate-unchecked-mixedmark { 0% { -webkit-animation-timing-function: linear; animation-timing-function: linear; opacity: 1; -webkit-transform: scaleX(1); transform: scaleX(1); } 32.8%, 100% { opacity: 0; -webkit-transform: scaleX(0); transform: scaleX(0); } } @keyframes md-checkbox-indeterminate-unchecked-mixedmark { 0% { -webkit-animation-timing-function: linear; animation-timing-function: linear; opacity: 1; -webkit-transform: scaleX(1); transform: scaleX(1); } 32.8%, 100% { opacity: 0; -webkit-transform: scaleX(0); transform: scaleX(0); } } /** * Applied to elements that cover the checkbox's entire inner container. */ .md-checkbox-frame, .md-checkbox-background, .md-checkbox-checkmark { bottom: 0; left: 0; position: absolute; right: 0; top: 0; } /** * Applied to elements that are considered \"marks\" within the checkbox, e.g. the checkmark and * the mixedmark. */ .md-checkbox-checkmark, .md-checkbox-mixedmark { width: calc(100% - 4px); } /** * Applied to elements that appear to make up the outer box of the checkmark, such as the frame * that contains the border and the actual background element that contains the marks. */ .md-checkbox-frame, .md-checkbox-background { border-radius: 2px; box-sizing: border-box; pointer-events: none; } md-checkbox { cursor: pointer; } .md-checkbox-layout { cursor: inherit; -webkit-box-align: baseline; -ms-flex-align: baseline; align-items: baseline; display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; } .md-checkbox-inner-container { display: inline-block; height: 20px; line-height: 0; margin: auto; margin-right: 8px; -webkit-box-ordinal-group: 1; -ms-flex-order: 0; order: 0; position: relative; vertical-align: middle; white-space: nowrap; width: 20px; } [dir='rtl'] .md-checkbox-inner-container { margin-left: 8px; margin-right: auto; } .md-checkbox-layout .md-checkbox-label { line-height: 24px; } .md-checkbox-frame { background-color: transparent; border: 2px solid rgba(0, 0, 0, 0.54); -webkit-transition: border-color 90ms cubic-bezier(0, 0, 0.2, 0.1); transition: border-color 90ms cubic-bezier(0, 0, 0.2, 0.1); will-change: border-color; } .md-checkbox-background { -webkit-box-align: center; -ms-flex-align: center; align-items: center; display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-transition: background-color 90ms cubic-bezier(0, 0, 0.2, 0.1), opacity 90ms cubic-bezier(0, 0, 0.2, 0.1); transition: background-color 90ms cubic-bezier(0, 0, 0.2, 0.1), opacity 90ms cubic-bezier(0, 0, 0.2, 0.1); will-change: background-color, opacity; } .md-checkbox-checkmark { fill: #fafafa; width: 100%; } .md-checkbox-checkmark-path { stroke: #fafafa !important; stroke-dashoffset: 22.91026; stroke-dasharray: 22.91026; stroke-width: 2.66667px; } .md-checkbox-mixedmark { background-color: #fafafa; height: 2px; opacity: 0; -webkit-transform: scaleX(0) rotate(0deg); transform: scaleX(0) rotate(0deg); } .md-checkbox-align-end .md-checkbox-inner-container { -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; margin-left: 8px; margin-right: auto; } [dir='rtl'] .md-checkbox-align-end .md-checkbox-inner-container { margin-left: auto; margin-right: 8px; } .md-checkbox-checked .md-checkbox-checkmark { opacity: 1; } .md-checkbox-checked .md-checkbox-checkmark-path { stroke-dashoffset: 0; } .md-checkbox-checked .md-checkbox-mixedmark { -webkit-transform: scaleX(1) rotate(-45deg); transform: scaleX(1) rotate(-45deg); } .md-checkbox-checked .md-checkbox-background { background-color: #9c27b0; } .md-checkbox-indeterminate .md-checkbox-background { background-color: #9c27b0; } .md-checkbox-indeterminate .md-checkbox-checkmark { opacity: 0; -webkit-transform: rotate(45deg); transform: rotate(45deg); } .md-checkbox-indeterminate .md-checkbox-checkmark-path { stroke-dashoffset: 0; } .md-checkbox-indeterminate .md-checkbox-mixedmark { opacity: 1; -webkit-transform: scaleX(1) rotate(0deg); transform: scaleX(1) rotate(0deg); } .md-checkbox-unchecked .md-checkbox-background { background-color: transparent; } .md-checkbox-disabled { cursor: default; } .md-checkbox-disabled.md-checkbox-checked .md-checkbox-background, .md-checkbox-disabled.md-checkbox-indeterminate .md-checkbox-background { background-color: #b0b0b0; } .md-checkbox-disabled:not(.md-checkbox-checked) .md-checkbox-frame { border-color: #b0b0b0; } .md-checkbox-anim-unchecked-checked .md-checkbox-background { -webkit-animation: 180ms linear 0ms md-checkbox-fade-in-background; animation: 180ms linear 0ms md-checkbox-fade-in-background; } .md-checkbox-anim-unchecked-checked .md-checkbox-checkmark-path { -webkit-animation: 180ms linear 0ms md-checkbox-unchecked-checked-checkmark-path; animation: 180ms linear 0ms md-checkbox-unchecked-checked-checkmark-path; } .md-checkbox-anim-unchecked-indeterminate .md-checkbox-background { -webkit-animation: 180ms linear 0ms md-checkbox-fade-in-background; animation: 180ms linear 0ms md-checkbox-fade-in-background; } .md-checkbox-anim-unchecked-indeterminate .md-checkbox-mixedmark { -webkit-animation: 90ms linear 0ms md-checkbox-unchecked-indeterminate-mixedmark; animation: 90ms linear 0ms md-checkbox-unchecked-indeterminate-mixedmark; } .md-checkbox-anim-checked-unchecked .md-checkbox-background { -webkit-animation: 180ms linear 0ms md-checkbox-fade-out-background; animation: 180ms linear 0ms md-checkbox-fade-out-background; } .md-checkbox-anim-checked-unchecked .md-checkbox-checkmark-path { -webkit-animation: 90ms linear 0ms md-checkbox-checked-unchecked-checkmark-path; animation: 90ms linear 0ms md-checkbox-checked-unchecked-checkmark-path; } .md-checkbox-anim-checked-indeterminate .md-checkbox-checkmark { -webkit-animation: 90ms linear 0ms md-checkbox-checked-indeterminate-checkmark; animation: 90ms linear 0ms md-checkbox-checked-indeterminate-checkmark; } .md-checkbox-anim-checked-indeterminate .md-checkbox-mixedmark { -webkit-animation: 90ms linear 0ms md-checkbox-checked-indeterminate-mixedmark; animation: 90ms linear 0ms md-checkbox-checked-indeterminate-mixedmark; } .md-checkbox-anim-indeterminate-checked .md-checkbox-checkmark { -webkit-animation: 500ms linear 0ms md-checkbox-indeterminate-checked-checkmark; animation: 500ms linear 0ms md-checkbox-indeterminate-checked-checkmark; } .md-checkbox-anim-indeterminate-checked .md-checkbox-mixedmark { -webkit-animation: 500ms linear 0ms md-checkbox-indeterminate-checked-mixedmark; animation: 500ms linear 0ms md-checkbox-indeterminate-checked-mixedmark; } .md-checkbox-anim-indeterminate-unchecked .md-checkbox-background { -webkit-animation: 180ms linear 0ms md-checkbox-fade-out-background; animation: 180ms linear 0ms md-checkbox-fade-out-background; } .md-checkbox-anim-indeterminate-unchecked .md-checkbox-mixedmark { -webkit-animation: 300ms linear 0ms md-checkbox-indeterminate-unchecked-mixedmark; animation: 300ms linear 0ms md-checkbox-indeterminate-unchecked-mixedmark; } .md-checkbox-input { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; text-transform: none; width: 1px; } .md-ink-ripple { border-radius: 50%; opacity: 0; height: 48px; left: 50%; overflow: hidden; pointer-events: none; position: absolute; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); -webkit-transition: opacity ease 280ms, background-color ease 280ms; transition: opacity ease 280ms, background-color ease 280ms; width: 48px; } .md-checkbox-focused .md-ink-ripple { opacity: 1; background-color: rgba(156, 39, 176, 0.26); } .md-checkbox-disabled .md-ink-ripple { background-color: #000; } "],
+            styles: ["/** * Mixin that creates a new stacking context. * see https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context */ /** * This mixin hides an element visually. * That means it's still accessible for screen-readers but not visible in view. */ /** * Forces an element to grow to fit floated contents; used as as an alternative to * `overflow: hidden;` because it doesn't cut off contents. */ /** * A mixin, which generates temporary ink ripple on a given component. * When $bindToParent is set to true, it will check for the focused class on the same selector as you included * that mixin. * It is also possible to specify the color palette of the temporary ripple. By default it uses the * accent palette for its background. */ /** The width/height of the checkbox element. */ /** The width of the line used to draw the checkmark / mixedmark. */ /** The width of the checkbox border shown when the checkbox is unchecked. */ /** The color of the checkbox border. */ /** The color of the checkbox's checkmark / mixedmark. */ /** The color that is used as the checkbox background when it is checked. */ /** The base duration used for the majority of transitions for the checkbox. */ /** The amount of spacing between the checkbox and its label. */ /** * Fades in the background of the checkbox when it goes from unchecked -> {checked,indeterminate}. */ @keyframes md-checkbox-fade-in-background { 0% { opacity: 0; } 50% { opacity: 1; } } /** * Fades out the background of the checkbox when it goes from {checked,indeterminate} -> unchecked. */ @keyframes md-checkbox-fade-out-background { 0%, 50% { opacity: 1; } 100% { opacity: 0; } } /** * \"Draws\" in the checkmark when the checkbox goes from unchecked -> checked. */ @keyframes md-checkbox-unchecked-checked-checkmark-path { 0%, 50% { stroke-dashoffset: 22.91026; } 50% { animation-timing-function: cubic-bezier(0, 0, 0.2, 0.1); } 100% { stroke-dashoffset: 0; } } /** * Horizontally expands the mixedmark when the checkbox goes from unchecked -> indeterminate. */ @keyframes md-checkbox-unchecked-indeterminate-mixedmark { 0%, 68.2% { transform: scaleX(0); } 68.2% { animation-timing-function: cubic-bezier(0, 0, 0, 1); } 100% { transform: scaleX(1); } } /** * \"Erases\" the checkmark when the checkbox goes from checked -> unchecked. */ @keyframes md-checkbox-checked-unchecked-checkmark-path { from { animation-timing-function: cubic-bezier(0.4, 0, 1, 1); stroke-dashoffset: 0; } to { stroke-dashoffset: -22.91026; } } /** * Rotates and fades out the checkmark when the checkbox goes from checked -> indeterminate. This * animation helps provide the illusion of the checkmark \"morphing\" into the mixedmark. */ @keyframes md-checkbox-checked-indeterminate-checkmark { from { animation-timing-function: cubic-bezier(0, 0, 0.2, 0.1); opacity: 1; transform: rotate(0deg); } to { opacity: 0; transform: rotate(45deg); } } /** * Rotates and fades the checkmark back into position when the checkbox goes from indeterminate -> * checked. This animation helps provide the illusion that the mixedmark is \"morphing\" into the * checkmark. */ @keyframes md-checkbox-indeterminate-checked-checkmark { from { animation-timing-function: cubic-bezier(0.14, 0, 0, 1); opacity: 0; transform: rotate(45deg); } to { opacity: 1; transform: rotate(360deg); } } /** * Rotates and fades in the mixedmark when the checkbox goes from checked -> indeterminate. This * animation, similar to md-checkbox-checked-indeterminate-checkmark, helps provide an illusion * of \"morphing\" from checkmark -> mixedmark. */ @keyframes md-checkbox-checked-indeterminate-mixedmark { from { animation-timing-function: cubic-bezier(0, 0, 0.2, 0.1); opacity: 0; transform: rotate(-45deg); } to { opacity: 1; transform: rotate(0deg); } } /** * Rotates and fades out the mixedmark when the checkbox goes from indeterminate -> checked. This * animation, similar to md-checkbox-indeterminate-checked-checkmark, helps provide an illusion * of \"morphing\" from mixedmark -> checkmark. */ @keyframes md-checkbox-indeterminate-checked-mixedmark { from { animation-timing-function: cubic-bezier(0.14, 0, 0, 1); opacity: 1; transform: rotate(0deg); } to { opacity: 0; transform: rotate(315deg); } } /** * Horizontally collapses and fades out the mixedmark when the checkbox goes from indeterminate -> * unchecked. */ @keyframes md-checkbox-indeterminate-unchecked-mixedmark { 0% { animation-timing-function: linear; opacity: 1; transform: scaleX(1); } 32.8%, 100% { opacity: 0; transform: scaleX(0); } } /** * Applied to elements that cover the checkbox's entire inner container. */ .md-checkbox-frame, .md-checkbox-background, .md-checkbox-checkmark { bottom: 0; left: 0; position: absolute; right: 0; top: 0; } /** * Applied to elements that are considered \"marks\" within the checkbox, e.g. the checkmark and * the mixedmark. */ .md-checkbox-checkmark, .md-checkbox-mixedmark { width: calc(100% - 4px); } /** * Applied to elements that appear to make up the outer box of the checkmark, such as the frame * that contains the border and the actual background element that contains the marks. */ .md-checkbox-frame, .md-checkbox-background { border-radius: 2px; box-sizing: border-box; pointer-events: none; } md-checkbox { cursor: pointer; } .md-checkbox-layout { cursor: inherit; align-items: baseline; display: inline-flex; } .md-checkbox-inner-container { display: inline-block; height: 20px; line-height: 0; margin: auto; margin-right: 8px; order: 0; position: relative; vertical-align: middle; white-space: nowrap; width: 20px; } [dir='rtl'] .md-checkbox-inner-container { margin-left: 8px; margin-right: auto; } .md-checkbox-layout .md-checkbox-label { line-height: 24px; } .md-checkbox-frame { background-color: transparent; border: 2px solid rgba(0, 0, 0, 0.54); transition: border-color 90ms cubic-bezier(0, 0, 0.2, 0.1); will-change: border-color; } .md-checkbox-background { align-items: center; display: inline-flex; justify-content: center; transition: background-color 90ms cubic-bezier(0, 0, 0.2, 0.1), opacity 90ms cubic-bezier(0, 0, 0.2, 0.1); will-change: background-color, opacity; } .md-checkbox-checkmark { fill: #fafafa; width: 100%; } .md-checkbox-checkmark-path { stroke: #fafafa !important; stroke-dashoffset: 22.91026; stroke-dasharray: 22.91026; stroke-width: 2.66667px; } .md-checkbox-mixedmark { background-color: #fafafa; height: 2px; opacity: 0; transform: scaleX(0) rotate(0deg); } .md-checkbox-align-end .md-checkbox-inner-container { order: 1; margin-left: 8px; margin-right: auto; } [dir='rtl'] .md-checkbox-align-end .md-checkbox-inner-container { margin-left: auto; margin-right: 8px; } .md-checkbox-checked .md-checkbox-checkmark { opacity: 1; } .md-checkbox-checked .md-checkbox-checkmark-path { stroke-dashoffset: 0; } .md-checkbox-checked .md-checkbox-mixedmark { transform: scaleX(1) rotate(-45deg); } .md-checkbox-checked .md-checkbox-background { background-color: #9c27b0; } .md-checkbox-indeterminate .md-checkbox-background { background-color: #9c27b0; } .md-checkbox-indeterminate .md-checkbox-checkmark { opacity: 0; transform: rotate(45deg); } .md-checkbox-indeterminate .md-checkbox-checkmark-path { stroke-dashoffset: 0; } .md-checkbox-indeterminate .md-checkbox-mixedmark { opacity: 1; transform: scaleX(1) rotate(0deg); } .md-checkbox-unchecked .md-checkbox-background { background-color: transparent; } .md-checkbox-disabled { cursor: default; } .md-checkbox-disabled.md-checkbox-checked .md-checkbox-background, .md-checkbox-disabled.md-checkbox-indeterminate .md-checkbox-background { background-color: #b0b0b0; } .md-checkbox-disabled:not(.md-checkbox-checked) .md-checkbox-frame { border-color: #b0b0b0; } .md-checkbox-anim-unchecked-checked .md-checkbox-background { animation: 180ms linear 0ms md-checkbox-fade-in-background; } .md-checkbox-anim-unchecked-checked .md-checkbox-checkmark-path { animation: 180ms linear 0ms md-checkbox-unchecked-checked-checkmark-path; } .md-checkbox-anim-unchecked-indeterminate .md-checkbox-background { animation: 180ms linear 0ms md-checkbox-fade-in-background; } .md-checkbox-anim-unchecked-indeterminate .md-checkbox-mixedmark { animation: 90ms linear 0ms md-checkbox-unchecked-indeterminate-mixedmark; } .md-checkbox-anim-checked-unchecked .md-checkbox-background { animation: 180ms linear 0ms md-checkbox-fade-out-background; } .md-checkbox-anim-checked-unchecked .md-checkbox-checkmark-path { animation: 90ms linear 0ms md-checkbox-checked-unchecked-checkmark-path; } .md-checkbox-anim-checked-indeterminate .md-checkbox-checkmark { animation: 90ms linear 0ms md-checkbox-checked-indeterminate-checkmark; } .md-checkbox-anim-checked-indeterminate .md-checkbox-mixedmark { animation: 90ms linear 0ms md-checkbox-checked-indeterminate-mixedmark; } .md-checkbox-anim-indeterminate-checked .md-checkbox-checkmark { animation: 500ms linear 0ms md-checkbox-indeterminate-checked-checkmark; } .md-checkbox-anim-indeterminate-checked .md-checkbox-mixedmark { animation: 500ms linear 0ms md-checkbox-indeterminate-checked-mixedmark; } .md-checkbox-anim-indeterminate-unchecked .md-checkbox-background { animation: 180ms linear 0ms md-checkbox-fade-out-background; } .md-checkbox-anim-indeterminate-unchecked .md-checkbox-mixedmark { animation: 300ms linear 0ms md-checkbox-indeterminate-unchecked-mixedmark; } .md-checkbox-input { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; text-transform: none; width: 1px; } .md-ink-ripple { border-radius: 50%; opacity: 0; height: 48px; left: 50%; overflow: hidden; pointer-events: none; position: absolute; top: 50%; transform: translate(-50%, -50%); transition: opacity ease 280ms, background-color ease 280ms; width: 48px; } .md-checkbox-focused .md-ink-ripple { opacity: 1; background-color: rgba(156, 39, 176, 0.26); } .md-checkbox-disabled .md-ink-ripple { background-color: #000; } /*# sourceMappingURL=checkbox.css.map */ "],
             host: {
                 '[class.md-checkbox-indeterminate]': 'indeterminate',
                 '[class.md-checkbox-checked]': 'checked',
@@ -67161,7 +67235,9 @@ var MdCheckboxModule = (function () {
     return MdCheckboxModule;
 }());
 exports.MdCheckboxModule = MdCheckboxModule;
+
 //# sourceMappingURL=checkbox.js.map
+
 
 /***/ },
 /* 596 */
@@ -67180,7 +67256,9 @@ var PromiseCompleter = (function () {
     return PromiseCompleter;
 }());
 exports.PromiseCompleter = PromiseCompleter;
+
 //# sourceMappingURL=promise-completer.js.map
+
 
 /***/ },
 /* 597 */
@@ -67271,7 +67349,9 @@ var MdGestureConfig = (function (_super) {
     return MdGestureConfig;
 }(platform_browser_1.HammerGestureConfig));
 exports.MdGestureConfig = MdGestureConfig;
+
 //# sourceMappingURL=MdGestureConfig.js.map
+
 
 /***/ },
 /* 598 */
@@ -67442,7 +67522,9 @@ var ConnectedPositionStrategy = (function () {
     return ConnectedPositionStrategy;
 }());
 exports.ConnectedPositionStrategy = ConnectedPositionStrategy;
+
 //# sourceMappingURL=connected-position-strategy.js.map
+
 
 /***/ },
 /* 599 */
@@ -67551,7 +67633,9 @@ var GlobalPositionStrategy = (function () {
     return GlobalPositionStrategy;
 }());
 exports.GlobalPositionStrategy = GlobalPositionStrategy;
+
 //# sourceMappingURL=global-position-strategy.js.map
+
 
 /***/ },
 /* 600 */
@@ -67592,7 +67676,9 @@ var OverlayPositionBuilder = (function () {
     return OverlayPositionBuilder;
 }());
 exports.OverlayPositionBuilder = OverlayPositionBuilder;
+
 //# sourceMappingURL=overlay-position-builder.js.map
+
 
 /***/ },
 /* 601 */
@@ -67749,7 +67835,9 @@ var RippleRenderer = (function () {
     return RippleRenderer;
 }());
 exports.RippleRenderer = RippleRenderer;
+
 //# sourceMappingURL=ripple-renderer.js.map
+
 
 /***/ },
 /* 602 */
@@ -67892,9 +67980,11 @@ var MdGridList = (function () {
         __metadata('design:paramtypes', [Object])
     ], MdGridList.prototype, "rowHeight", null);
     MdGridList = __decorate([
-        core_1.Component({            selector: 'md-grid-list',
+        core_1.Component({
+            moduleId: module.i,
+            selector: 'md-grid-list',
             template: "<div class=\"md-grid-list\"> <ng-content></ng-content> </div>",
-            styles: ["/** * This mixin will ensure that lines that overflow the container will * hide the overflow and truncate neatly with an ellipsis. */ /** * This mixin provides all md-line styles, changing secondary font size * based on whether the list is in dense mode. */ /** * This mixin provides base styles for the wrapper around md-line * elements in a list. */ /** * This mixin normalizes default element styles, e.g. font weight for heading text. */ /* height of tile header or footer if it has one line */ /* height of tile header or footer if it has two lines */ /* side padding for text in tile headers and footers */ /* font styles for text in tile headers and footers */ md-grid-list { display: block; position: relative; } md-grid-tile { display: block; position: absolute; } md-grid-tile figure { display: -webkit-box; display: -ms-flexbox; display: flex; position: absolute; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; height: 100%; top: 0; right: 0; bottom: 0; left: 0; padding: 0; margin: 0; } md-grid-tile md-grid-tile-header, md-grid-tile md-grid-tile-footer { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; height: 48px; color: #fff; background: rgba(0, 0, 0, 0.18); overflow: hidden; padding: 0 16px; font-size: 16px; position: absolute; left: 0; right: 0; } md-grid-tile md-grid-tile-header [md-line], md-grid-tile md-grid-tile-footer [md-line] { white-space: nowrap; overflow-x: hidden; text-overflow: ellipsis; display: block; box-sizing: border-box; } md-grid-tile md-grid-tile-header [md-line]:nth-child(n+2), md-grid-tile md-grid-tile-footer [md-line]:nth-child(n+2) { font-size: 12px; } md-grid-tile md-grid-tile-header > *, md-grid-tile md-grid-tile-footer > * { margin: 0; padding: 0; font-weight: normal; font-size: inherit; } md-grid-tile md-grid-tile-header.md-2-line, md-grid-tile md-grid-tile-footer.md-2-line { height: 68px; } md-grid-tile .md-grid-list-text { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; width: 100%; box-sizing: border-box; overflow: hidden; } md-grid-tile .md-grid-list-text > * { margin: 0; padding: 0; font-weight: normal; font-size: inherit; } md-grid-tile .md-grid-list-text:empty { display: none; } md-grid-tile md-grid-tile-header { top: 0; } md-grid-tile md-grid-tile-footer { bottom: 0; } md-grid-tile [md-grid-avatar] { padding-right: 16px; } [dir='rtl'] md-grid-tile [md-grid-avatar] { padding-right: 0; padding-left: 16px; } md-grid-tile [md-grid-avatar]:empty { display: none; } "],
+            styles: ["/** * This mixin will ensure that lines that overflow the container will * hide the overflow and truncate neatly with an ellipsis. */ /** * This mixin provides all md-line styles, changing secondary font size * based on whether the list is in dense mode. */ /** * This mixin provides base styles for the wrapper around md-line * elements in a list. */ /** * This mixin normalizes default element styles, e.g. font weight for heading text. */ /* height of tile header or footer if it has one line */ /* height of tile header or footer if it has two lines */ /* side padding for text in tile headers and footers */ /* font styles for text in tile headers and footers */ md-grid-list { display: block; position: relative; } md-grid-tile { display: block; position: absolute; } md-grid-tile figure { display: flex; position: absolute; align-items: center; justify-content: center; height: 100%; top: 0; right: 0; bottom: 0; left: 0; padding: 0; margin: 0; } md-grid-tile md-grid-tile-header, md-grid-tile md-grid-tile-footer { display: flex; align-items: center; height: 48px; color: #fff; background: rgba(0, 0, 0, 0.18); overflow: hidden; padding: 0 16px; font-size: 16px; position: absolute; left: 0; right: 0; } md-grid-tile md-grid-tile-header [md-line], md-grid-tile md-grid-tile-footer [md-line] { white-space: nowrap; overflow-x: hidden; text-overflow: ellipsis; display: block; box-sizing: border-box; } md-grid-tile md-grid-tile-header [md-line]:nth-child(n+2), md-grid-tile md-grid-tile-footer [md-line]:nth-child(n+2) { font-size: 12px; } md-grid-tile md-grid-tile-header > *, md-grid-tile md-grid-tile-footer > * { margin: 0; padding: 0; font-weight: normal; font-size: inherit; } md-grid-tile md-grid-tile-header.md-2-line, md-grid-tile md-grid-tile-footer.md-2-line { height: 68px; } md-grid-tile .md-grid-list-text { display: flex; flex-direction: column; width: 100%; box-sizing: border-box; overflow: hidden; } md-grid-tile .md-grid-list-text > * { margin: 0; padding: 0; font-weight: normal; font-size: inherit; } md-grid-tile .md-grid-list-text:empty { display: none; } md-grid-tile md-grid-tile-header { top: 0; } md-grid-tile md-grid-tile-footer { bottom: 0; } md-grid-tile [md-grid-avatar] { padding-right: 16px; } [dir='rtl'] md-grid-tile [md-grid-avatar] { padding-right: 0; padding-left: 16px; } md-grid-tile [md-grid-avatar]:empty { display: none; } /*# sourceMappingURL=grid-list.css.map */ "],
             encapsulation: core_1.ViewEncapsulation.None,
         }),
         __param(2, core_1.Optional()), 
@@ -67919,7 +68009,9 @@ var MdGridListModule = (function () {
     return MdGridListModule;
 }());
 exports.MdGridListModule = MdGridListModule;
+
 //# sourceMappingURL=grid-list.js.map
+
 
 /***/ },
 /* 603 */
@@ -67982,10 +68074,12 @@ var MdGridTile = (function () {
         __metadata('design:type', Object)
     ], MdGridTile.prototype, "colspan", null);
     MdGridTile = __decorate([
-        core_1.Component({            selector: 'md-grid-tile',
+        core_1.Component({
+            moduleId: module.i,
+            selector: 'md-grid-tile',
             host: { 'role': 'listitem' },
             template: "<!-- TODO(kara): Revisit why this is a figure.--> <figure> <ng-content></ng-content> </figure>",
-            styles: ["/** * This mixin will ensure that lines that overflow the container will * hide the overflow and truncate neatly with an ellipsis. */ /** * This mixin provides all md-line styles, changing secondary font size * based on whether the list is in dense mode. */ /** * This mixin provides base styles for the wrapper around md-line * elements in a list. */ /** * This mixin normalizes default element styles, e.g. font weight for heading text. */ /* height of tile header or footer if it has one line */ /* height of tile header or footer if it has two lines */ /* side padding for text in tile headers and footers */ /* font styles for text in tile headers and footers */ md-grid-list { display: block; position: relative; } md-grid-tile { display: block; position: absolute; } md-grid-tile figure { display: -webkit-box; display: -ms-flexbox; display: flex; position: absolute; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; height: 100%; top: 0; right: 0; bottom: 0; left: 0; padding: 0; margin: 0; } md-grid-tile md-grid-tile-header, md-grid-tile md-grid-tile-footer { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; height: 48px; color: #fff; background: rgba(0, 0, 0, 0.18); overflow: hidden; padding: 0 16px; font-size: 16px; position: absolute; left: 0; right: 0; } md-grid-tile md-grid-tile-header [md-line], md-grid-tile md-grid-tile-footer [md-line] { white-space: nowrap; overflow-x: hidden; text-overflow: ellipsis; display: block; box-sizing: border-box; } md-grid-tile md-grid-tile-header [md-line]:nth-child(n+2), md-grid-tile md-grid-tile-footer [md-line]:nth-child(n+2) { font-size: 12px; } md-grid-tile md-grid-tile-header > *, md-grid-tile md-grid-tile-footer > * { margin: 0; padding: 0; font-weight: normal; font-size: inherit; } md-grid-tile md-grid-tile-header.md-2-line, md-grid-tile md-grid-tile-footer.md-2-line { height: 68px; } md-grid-tile .md-grid-list-text { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; width: 100%; box-sizing: border-box; overflow: hidden; } md-grid-tile .md-grid-list-text > * { margin: 0; padding: 0; font-weight: normal; font-size: inherit; } md-grid-tile .md-grid-list-text:empty { display: none; } md-grid-tile md-grid-tile-header { top: 0; } md-grid-tile md-grid-tile-footer { bottom: 0; } md-grid-tile [md-grid-avatar] { padding-right: 16px; } [dir='rtl'] md-grid-tile [md-grid-avatar] { padding-right: 0; padding-left: 16px; } md-grid-tile [md-grid-avatar]:empty { display: none; } "],
+            styles: ["/** * This mixin will ensure that lines that overflow the container will * hide the overflow and truncate neatly with an ellipsis. */ /** * This mixin provides all md-line styles, changing secondary font size * based on whether the list is in dense mode. */ /** * This mixin provides base styles for the wrapper around md-line * elements in a list. */ /** * This mixin normalizes default element styles, e.g. font weight for heading text. */ /* height of tile header or footer if it has one line */ /* height of tile header or footer if it has two lines */ /* side padding for text in tile headers and footers */ /* font styles for text in tile headers and footers */ md-grid-list { display: block; position: relative; } md-grid-tile { display: block; position: absolute; } md-grid-tile figure { display: flex; position: absolute; align-items: center; justify-content: center; height: 100%; top: 0; right: 0; bottom: 0; left: 0; padding: 0; margin: 0; } md-grid-tile md-grid-tile-header, md-grid-tile md-grid-tile-footer { display: flex; align-items: center; height: 48px; color: #fff; background: rgba(0, 0, 0, 0.18); overflow: hidden; padding: 0 16px; font-size: 16px; position: absolute; left: 0; right: 0; } md-grid-tile md-grid-tile-header [md-line], md-grid-tile md-grid-tile-footer [md-line] { white-space: nowrap; overflow-x: hidden; text-overflow: ellipsis; display: block; box-sizing: border-box; } md-grid-tile md-grid-tile-header [md-line]:nth-child(n+2), md-grid-tile md-grid-tile-footer [md-line]:nth-child(n+2) { font-size: 12px; } md-grid-tile md-grid-tile-header > *, md-grid-tile md-grid-tile-footer > * { margin: 0; padding: 0; font-weight: normal; font-size: inherit; } md-grid-tile md-grid-tile-header.md-2-line, md-grid-tile md-grid-tile-footer.md-2-line { height: 68px; } md-grid-tile .md-grid-list-text { display: flex; flex-direction: column; width: 100%; box-sizing: border-box; overflow: hidden; } md-grid-tile .md-grid-list-text > * { margin: 0; padding: 0; font-weight: normal; font-size: inherit; } md-grid-tile .md-grid-list-text:empty { display: none; } md-grid-tile md-grid-tile-header { top: 0; } md-grid-tile md-grid-tile-footer { bottom: 0; } md-grid-tile [md-grid-avatar] { padding-right: 16px; } [dir='rtl'] md-grid-tile [md-grid-avatar] { padding-right: 0; padding-left: 16px; } md-grid-tile [md-grid-avatar]:empty { display: none; } /*# sourceMappingURL=grid-list.css.map */ "],
             encapsulation: core_1.ViewEncapsulation.None,
         }), 
         __metadata('design:paramtypes', [core_1.Renderer, core_1.ElementRef])
@@ -68006,7 +68100,9 @@ var MdGridTileText = (function () {
         __metadata('design:type', core_1.QueryList)
     ], MdGridTileText.prototype, "_lines", void 0);
     MdGridTileText = __decorate([
-        core_1.Component({            selector: 'md-grid-tile-header, md-grid-tile-footer',
+        core_1.Component({
+            moduleId: module.i,
+            selector: 'md-grid-tile-header, md-grid-tile-footer',
             template: "<ng-content select=\"[md-grid-avatar]\"></ng-content> <div class=\"md-grid-list-text\"><ng-content select=\"[md-line]\"></ng-content></div> <ng-content></ng-content>"
         }), 
         __metadata('design:paramtypes', [core_1.Renderer, core_1.ElementRef])
@@ -68014,7 +68110,9 @@ var MdGridTileText = (function () {
     return MdGridTileText;
 }());
 exports.MdGridTileText = MdGridTileText;
+
 //# sourceMappingURL=grid-tile.js.map
+
 
 /***/ },
 /* 604 */
@@ -68146,7 +68244,9 @@ var TilePosition = (function () {
     return TilePosition;
 }());
 exports.TilePosition = TilePosition;
+
 //# sourceMappingURL=tile-coordinator.js.map
+
 
 /***/ },
 /* 605 */
@@ -68346,7 +68446,9 @@ function calc(exp) { return "calc(" + exp + ")"; }
 function normalizeUnits(value) {
     return (value.match(/px|em|rem/)) ? value : value + 'px';
 }
+
 //# sourceMappingURL=tile-styler.js.map
+
 
 /***/ },
 /* 606 */
@@ -68574,9 +68676,11 @@ var MdIcon = (function () {
         __metadata('design:type', String)
     ], MdIcon.prototype, "hostAriaLabel", void 0);
     MdIcon = __decorate([
-        core_1.Component({            template: '<ng-content></ng-content>',
+        core_1.Component({
+            moduleId: module.i,
+            template: '<ng-content></ng-content>',
             selector: 'md-icon',
-            styles: ["/** The width/height of the icon element. */ /** This works because we're using ViewEncapsulation.None. If we used the default encapsulation, the selector would need to be \":host\". */ md-icon { background-repeat: no-repeat; display: inline-block; fill: currentColor; height: 24px; width: 24px; } "],
+            styles: ["/** The width/height of the icon element. */ /** This works because we're using ViewEncapsulation.None. If we used the default encapsulation, the selector would need to be \":host\". */ md-icon { background-repeat: no-repeat; display: inline-block; fill: currentColor; height: 24px; width: 24px; } /*# sourceMappingURL=icon.css.map */ "],
             host: {
                 'role': 'img',
             },
@@ -68605,7 +68709,9 @@ var MdIconModule = (function () {
     return MdIconModule;
 }());
 exports.MdIconModule = MdIconModule;
+
 //# sourceMappingURL=icon.js.map
+
 
 /***/ },
 /* 607 */
@@ -68628,7 +68734,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = __webpack_require__(0);
-var forms_1 = __webpack_require__(60);
+var forms_1 = __webpack_require__(51);
 var common_1 = __webpack_require__(19);
 var field_value_1 = __webpack_require__(92);
 var error_1 = __webpack_require__(79);
@@ -68728,20 +68834,20 @@ var MdInput = (function () {
         this.dividerColor = 'primary';
         this.floatingPlaceholder = true;
         this.hintLabel = '';
-        this.autoFocus = false;
+        this.autofocus = false;
         this.disabled = false;
         this.id = "md-input-" + nextUniqueId++;
         this.list = null;
         this.max = null;
-        this.maxLength = null;
+        this.maxlength = null;
         this.min = null;
-        this.minLength = null;
+        this.minlength = null;
         this.placeholder = null;
-        this.readOnly = false;
+        this.readonly = false;
         this.required = false;
-        this.spellCheck = false;
+        this.spellcheck = false;
         this.step = null;
-        this.tabIndex = null;
+        this.tabindex = null;
         this.type = 'text';
         this.name = null;
         this._blurEmitter = new core_1.EventEmitter();
@@ -68959,20 +69065,20 @@ var MdInput = (function () {
     __decorate([
         core_1.Input(), 
         __metadata('design:type', String)
-    ], MdInput.prototype, "autoComplete", void 0);
+    ], MdInput.prototype, "autocomplete", void 0);
     __decorate([
         core_1.Input(), 
         __metadata('design:type', String)
-    ], MdInput.prototype, "autoCorrect", void 0);
+    ], MdInput.prototype, "autocorrect", void 0);
     __decorate([
         core_1.Input(), 
         __metadata('design:type', String)
-    ], MdInput.prototype, "autoCapitalize", void 0);
+    ], MdInput.prototype, "autocapitalize", void 0);
     __decorate([
         core_1.Input(),
         field_value_1.BooleanFieldValue(), 
         __metadata('design:type', Boolean)
-    ], MdInput.prototype, "autoFocus", void 0);
+    ], MdInput.prototype, "autofocus", void 0);
     __decorate([
         core_1.Input(),
         field_value_1.BooleanFieldValue(), 
@@ -68993,7 +69099,7 @@ var MdInput = (function () {
     __decorate([
         core_1.Input(), 
         __metadata('design:type', Number)
-    ], MdInput.prototype, "maxLength", void 0);
+    ], MdInput.prototype, "maxlength", void 0);
     __decorate([
         core_1.Input(), 
         __metadata('design:type', Object)
@@ -69001,7 +69107,7 @@ var MdInput = (function () {
     __decorate([
         core_1.Input(), 
         __metadata('design:type', Number)
-    ], MdInput.prototype, "minLength", void 0);
+    ], MdInput.prototype, "minlength", void 0);
     __decorate([
         core_1.Input(), 
         __metadata('design:type', String)
@@ -69010,7 +69116,7 @@ var MdInput = (function () {
         core_1.Input(),
         field_value_1.BooleanFieldValue(), 
         __metadata('design:type', Boolean)
-    ], MdInput.prototype, "readOnly", void 0);
+    ], MdInput.prototype, "readonly", void 0);
     __decorate([
         core_1.Input(),
         field_value_1.BooleanFieldValue(), 
@@ -69020,7 +69126,7 @@ var MdInput = (function () {
         core_1.Input(),
         field_value_1.BooleanFieldValue(), 
         __metadata('design:type', Boolean)
-    ], MdInput.prototype, "spellCheck", void 0);
+    ], MdInput.prototype, "spellcheck", void 0);
     __decorate([
         core_1.Input(), 
         __metadata('design:type', Number)
@@ -69028,7 +69134,7 @@ var MdInput = (function () {
     __decorate([
         core_1.Input(), 
         __metadata('design:type', Number)
-    ], MdInput.prototype, "tabIndex", void 0);
+    ], MdInput.prototype, "tabindex", void 0);
     __decorate([
         core_1.Input(), 
         __metadata('design:type', String)
@@ -69058,9 +69164,11 @@ var MdInput = (function () {
         __metadata('design:type', core_1.ElementRef)
     ], MdInput.prototype, "_inputElement", void 0);
     MdInput = __decorate([
-        core_1.Component({            selector: 'md-input',
-            template: "<div class=\"md-input-wrapper\"> <div class=\"md-input-table\"> <div class=\"md-input-prefix\"><ng-content select=\"[md-prefix]\"></ng-content></div> <div class=\"md-input-infix\"> <input #input aria-target class=\"md-input-element\" [class.md-end]=\"align == 'end'\" [attr.aria-label]=\"ariaLabel\" [attr.aria-labelledby]=\"ariaLabelledBy\" [attr.aria-disabled]=\"ariaDisabled\" [attr.aria-required]=\"ariaRequired\" [attr.aria-invalid]=\"ariaInvalid\" [attr.autocomplete]=\"autoComplete\" [attr.autocorrect]=\"autoCorrect\" [attr.autocapitalize]=\"autoCapitalize\" [autofocus]=\"autoFocus\" [disabled]=\"disabled\" [id]=\"inputId\" [attr.list]=\"list\" [attr.max]=\"max\" [attr.maxlength]=\"maxLength\" [attr.min]=\"min\" [attr.minlength]=\"minLength\" [readonly]=\"readOnly\" [required]=\"required\" [spellcheck]=\"spellCheck\" [attr.step]=\"step\" [attr.tabindex]=\"tabIndex\" [type]=\"type\" [attr.name]=\"name\" (focus)=\"_handleFocus($event)\" (blur)=\"_handleBlur($event)\" [(ngModel)]=\"value\" (change)=\"_handleChange($event)\"> <label class=\"md-input-placeholder\" [attr.for]=\"inputId\" [class.md-empty]=\"empty\" [class.md-focused]=\"focused\" [class.md-float]=\"floatingPlaceholder\" [class.md-accent]=\"dividerColor == 'accent'\" [class.md-warn]=\"dividerColor == 'warn'\" *ngIf=\"_hasPlaceholder()\"> <ng-content select=\"md-placeholder\"></ng-content> {{placeholder}} <span class=\"md-placeholder-required\" *ngIf=\"required\">*</span> </label> </div> <div class=\"md-input-suffix\"><ng-content select=\"[md-suffix]\"></ng-content></div> </div> <div class=\"md-input-underline\" [class.md-disabled]=\"disabled\"> <span class=\"md-input-ripple\" [class.md-focused]=\"focused\" [class.md-accent]=\"dividerColor == 'accent'\" [class.md-warn]=\"dividerColor == 'warn'\"></span> </div> <div *ngIf=\"hintLabel != ''\" class=\"md-hint\">{{hintLabel}}</div> <ng-content select=\"md-hint\"></ng-content> </div> ",
-            styles: ["/** * Mixin that creates a new stacking context. * see https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context */ /** * This mixin hides an element visually. * That means it's still accessible for screen-readers but not visible in view. */ /** * Forces an element to grow to fit floated contents; used as as an alternative to * `overflow: hidden;` because it doesn't cut off contents. */ /** * A mixin, which generates temporary ink ripple on a given component. * When $bindToParent is set to true, it will check for the focused class on the same selector as you included * that mixin. * It is also possible to specify the color palette of the temporary ripple. By default it uses the * accent palette for its background. */ /** * Undo the red box-shadow glow added by Firefox on invalid inputs. * See https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-ui-invalid */ :-moz-ui-invalid { box-shadow: none; } /** * Applies a floating placeholder above the input itself. */ :host { display: inline-block; position: relative; font-family: Roboto, \"Helvetica Neue\", sans-serif; text-align: left; } :host .md-input-wrapper { margin: 16px 0; } :host .md-input-table { display: inline-table; -ms-flex-flow: column; flex-flow: column; vertical-align: bottom; width: 100%; } :host .md-input-table > * { display: table-cell; } :host .md-input-element { font: inherit; background: transparent; border: none; outline: none; padding: 0; width: 100%; } :host .md-input-element.md-end { text-align: right; } :host .md-input-infix { position: relative; } :host .md-input-placeholder { position: absolute; left: 0; top: 0; font-size: 100%; pointer-events: none; color: rgba(0, 0, 0, 0.38); z-index: 1; width: 100%; display: none; white-space: nowrap; text-overflow: ellipsis; overflow-x: hidden; -webkit-transform: translateY(0); transform: translateY(0); -webkit-transform-origin: bottom left; transform-origin: bottom left; -webkit-transition: scale 400ms cubic-bezier(0.25, 0.8, 0.25, 1), color 400ms cubic-bezier(0.25, 0.8, 0.25, 1), width 400ms cubic-bezier(0.25, 0.8, 0.25, 1), -webkit-transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1); transition: scale 400ms cubic-bezier(0.25, 0.8, 0.25, 1), color 400ms cubic-bezier(0.25, 0.8, 0.25, 1), width 400ms cubic-bezier(0.25, 0.8, 0.25, 1), -webkit-transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1); transition: transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1), scale 400ms cubic-bezier(0.25, 0.8, 0.25, 1), color 400ms cubic-bezier(0.25, 0.8, 0.25, 1), width 400ms cubic-bezier(0.25, 0.8, 0.25, 1); transition: transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1), scale 400ms cubic-bezier(0.25, 0.8, 0.25, 1), color 400ms cubic-bezier(0.25, 0.8, 0.25, 1), width 400ms cubic-bezier(0.25, 0.8, 0.25, 1), -webkit-transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1); } :host .md-input-placeholder.md-empty { display: block; cursor: text; } :host .md-input-placeholder.md-float:not(.md-empty), :host .md-input-placeholder.md-float.md-focused { display: block; padding-bottom: 5px; -webkit-transform: translateY(-100%) scale(0.75); transform: translateY(-100%) scale(0.75); width: 133.33333%; } :host .md-input-placeholder.md-float:not(.md-empty) .md-placeholder-required, :host .md-input-placeholder.md-float.md-focused .md-placeholder-required { color: #9c27b0; } :host .md-input-placeholder.md-focused { color: #009688; } :host .md-input-placeholder.md-focused.md-accent { color: #9c27b0; } :host .md-input-placeholder.md-focused.md-warn { color: #f44336; } :host input:-webkit-autofill + .md-input-placeholder { display: block; padding-bottom: 5px; -webkit-transform: translateY(-100%) scale(0.75); transform: translateY(-100%) scale(0.75); width: 133.33333%; } :host input:-webkit-autofill + .md-input-placeholder .md-placeholder-required { color: #9c27b0; } :host .md-input-underline { position: absolute; height: 1px; width: 100%; margin-top: 4px; border-top: 1px solid rgba(0, 0, 0, 0.38); } :host .md-input-underline.md-disabled { border-top: 0; background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.26) 0%, rgba(0, 0, 0, 0.26) 33%, transparent 0%); background-image: linear-gradient(to right, rgba(0, 0, 0, 0.26) 0%, rgba(0, 0, 0, 0.26) 33%, transparent 0%); background-position: 0; background-size: 4px 1px; background-repeat: repeat-x; } :host .md-input-underline .md-input-ripple { position: absolute; height: 2px; z-index: 1; background-color: #009688; top: -1px; width: 100%; -webkit-transform-origin: top; transform-origin: top; opacity: 0; -webkit-transform: scaleY(0); transform: scaleY(0); -webkit-transition: opacity 400ms cubic-bezier(0.25, 0.8, 0.25, 1), -webkit-transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1); transition: opacity 400ms cubic-bezier(0.25, 0.8, 0.25, 1), -webkit-transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1); transition: transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1), opacity 400ms cubic-bezier(0.25, 0.8, 0.25, 1); transition: transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1), opacity 400ms cubic-bezier(0.25, 0.8, 0.25, 1), -webkit-transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1); } :host .md-input-underline .md-input-ripple.md-accent { background-color: #9c27b0; } :host .md-input-underline .md-input-ripple.md-warn { background-color: #f44336; } :host .md-input-underline .md-input-ripple.md-focused { opacity: 1; -webkit-transform: scaleY(1); transform: scaleY(1); } :host .md-hint { position: absolute; font-size: 75%; bottom: -0.5em; } :host .md-hint.md-right { right: 0; } :host-context([dir='rtl']) { text-align: right; } :host-context([dir='rtl']) .md-input-placeholder { -webkit-transform-origin: bottom right; transform-origin: bottom right; } :host-context([dir='rtl']) .md-input-element.md-end { text-align: left; } :host-context([dir='rtl']) .md-hint { right: 0; left: auto; } :host-context([dir='rtl']) .md-hint.md-right { right: auto; left: 0; } "],
+        core_1.Component({
+            moduleId: module.i,
+            selector: 'md-input',
+            template: "<div class=\"md-input-wrapper\"> <div class=\"md-input-table\"> <div class=\"md-input-prefix\"><ng-content select=\"[md-prefix]\"></ng-content></div> <div class=\"md-input-infix\"> <input #input aria-target class=\"md-input-element\" [class.md-end]=\"align == 'end'\" [attr.aria-label]=\"ariaLabel\" [attr.aria-labelledby]=\"ariaLabelledBy\" [attr.aria-disabled]=\"ariaDisabled\" [attr.aria-required]=\"ariaRequired\" [attr.aria-invalid]=\"ariaInvalid\" [attr.autocomplete]=\"autocomplete\" [attr.autocorrect]=\"autocorrect\" [attr.autocapitalize]=\"autocapitalize\" [autofocus]=\"autofocus\" [disabled]=\"disabled\" [id]=\"inputId\" [attr.list]=\"list\" [attr.max]=\"max\" [attr.maxlength]=\"maxlength\" [attr.min]=\"min\" [attr.minlength]=\"minlength\" [readonly]=\"readonly\" [required]=\"required\" [spellcheck]=\"spellcheck\" [attr.step]=\"step\" [attr.tabindex]=\"tabindex\" [type]=\"type\" [attr.name]=\"name\" (focus)=\"_handleFocus($event)\" (blur)=\"_handleBlur($event)\" [(ngModel)]=\"value\" (change)=\"_handleChange($event)\"> <label class=\"md-input-placeholder\" [attr.for]=\"inputId\" [class.md-empty]=\"empty\" [class.md-focused]=\"focused\" [class.md-float]=\"floatingPlaceholder\" [class.md-accent]=\"dividerColor == 'accent'\" [class.md-warn]=\"dividerColor == 'warn'\" *ngIf=\"_hasPlaceholder()\"> <ng-content select=\"md-placeholder\"></ng-content> {{placeholder}} <span class=\"md-placeholder-required\" *ngIf=\"required\">*</span> </label> </div> <div class=\"md-input-suffix\"><ng-content select=\"[md-suffix]\"></ng-content></div> </div> <div class=\"md-input-underline\" [class.md-disabled]=\"disabled\"> <span class=\"md-input-ripple\" [class.md-focused]=\"focused\" [class.md-accent]=\"dividerColor == 'accent'\" [class.md-warn]=\"dividerColor == 'warn'\"></span> </div> <div *ngIf=\"hintLabel != ''\" class=\"md-hint\">{{hintLabel}}</div> <ng-content select=\"md-hint\"></ng-content> </div> ",
+            styles: ["/** * Mixin that creates a new stacking context. * see https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context */ /** * This mixin hides an element visually. * That means it's still accessible for screen-readers but not visible in view. */ /** * Forces an element to grow to fit floated contents; used as as an alternative to * `overflow: hidden;` because it doesn't cut off contents. */ /** * A mixin, which generates temporary ink ripple on a given component. * When $bindToParent is set to true, it will check for the focused class on the same selector as you included * that mixin. * It is also possible to specify the color palette of the temporary ripple. By default it uses the * accent palette for its background. */ /** * Undo the red box-shadow glow added by Firefox on invalid inputs. * See https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-ui-invalid */ :-moz-ui-invalid { box-shadow: none; } /** * Applies a floating placeholder above the input itself. */ :host { display: inline-block; position: relative; font-family: Roboto, \"Helvetica Neue\", sans-serif; text-align: left; } :host .md-input-wrapper { margin: 16px 0; } :host .md-input-table { display: inline-table; flex-flow: column; vertical-align: bottom; width: 100%; } :host .md-input-table > * { display: table-cell; } :host .md-input-element { font: inherit; background: transparent; border: none; outline: none; padding: 0; width: 100%; } :host .md-input-element.md-end { text-align: right; } :host .md-input-infix { position: relative; } :host .md-input-placeholder { position: absolute; left: 0; top: 0; font-size: 100%; pointer-events: none; color: rgba(0, 0, 0, 0.38); z-index: 1; width: 100%; display: none; white-space: nowrap; text-overflow: ellipsis; overflow-x: hidden; transform: translateY(0); transform-origin: bottom left; transition: transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1), scale 400ms cubic-bezier(0.25, 0.8, 0.25, 1), color 400ms cubic-bezier(0.25, 0.8, 0.25, 1), width 400ms cubic-bezier(0.25, 0.8, 0.25, 1); } :host .md-input-placeholder.md-empty { display: block; cursor: text; } :host .md-input-placeholder.md-float:not(.md-empty), :host .md-input-placeholder.md-float.md-focused { display: block; padding-bottom: 5px; transform: translateY(-100%) scale(0.75); width: 133.33333%; } :host .md-input-placeholder.md-float:not(.md-empty) .md-placeholder-required, :host .md-input-placeholder.md-float.md-focused .md-placeholder-required { color: #9c27b0; } :host .md-input-placeholder.md-focused { color: #009688; } :host .md-input-placeholder.md-focused.md-accent { color: #9c27b0; } :host .md-input-placeholder.md-focused.md-warn { color: #f44336; } :host input:-webkit-autofill + .md-input-placeholder { display: block; padding-bottom: 5px; transform: translateY(-100%) scale(0.75); width: 133.33333%; } :host input:-webkit-autofill + .md-input-placeholder .md-placeholder-required { color: #9c27b0; } :host .md-input-underline { position: absolute; height: 1px; width: 100%; margin-top: 4px; border-top: 1px solid rgba(0, 0, 0, 0.38); } :host .md-input-underline.md-disabled { border-top: 0; background-image: linear-gradient(to right, rgba(0, 0, 0, 0.26) 0%, rgba(0, 0, 0, 0.26) 33%, transparent 0%); background-position: 0; background-size: 4px 1px; background-repeat: repeat-x; } :host .md-input-underline .md-input-ripple { position: absolute; height: 2px; z-index: 1; background-color: #009688; top: -1px; width: 100%; transform-origin: top; opacity: 0; transform: scaleY(0); transition: transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1), opacity 400ms cubic-bezier(0.25, 0.8, 0.25, 1); } :host .md-input-underline .md-input-ripple.md-accent { background-color: #9c27b0; } :host .md-input-underline .md-input-ripple.md-warn { background-color: #f44336; } :host .md-input-underline .md-input-ripple.md-focused { opacity: 1; transform: scaleY(1); } :host .md-hint { position: absolute; font-size: 75%; bottom: -0.5em; } :host .md-hint.md-right { right: 0; } :host-context([dir='rtl']) { text-align: right; } :host-context([dir='rtl']) .md-input-placeholder { transform-origin: bottom right; } :host-context([dir='rtl']) .md-input-element.md-end { text-align: left; } :host-context([dir='rtl']) .md-hint { right: 0; left: auto; } :host-context([dir='rtl']) .md-hint.md-right { right: auto; left: 0; } /*# sourceMappingURL=input.css.map */ "],
             providers: [exports.MD_INPUT_CONTROL_VALUE_ACCESSOR],
             host: { '(click)': 'focus()' }
         }), 
@@ -69085,7 +69193,9 @@ var MdInputModule = (function () {
     return MdInputModule;
 }());
 exports.MdInputModule = MdInputModule;
+
 //# sourceMappingURL=input.js.map
+
 
 /***/ },
 /* 608 */
@@ -69108,10 +69218,12 @@ var MdList = (function () {
     function MdList() {
     }
     MdList = __decorate([
-        core_1.Component({            selector: 'md-list, md-nav-list',
+        core_1.Component({
+            moduleId: module.i,
+            selector: 'md-list, md-nav-list',
             host: { 'role': 'list' },
             template: '<ng-content></ng-content>',
-            styles: ["/** * This mixin will ensure that lines that overflow the container will * hide the overflow and truncate neatly with an ellipsis. */ /** * This mixin provides all md-line styles, changing secondary font size * based on whether the list is in dense mode. */ /** * This mixin provides base styles for the wrapper around md-line * elements in a list. */ /** * This mixin normalizes default element styles, e.g. font weight for heading text. */ /*  Normal list variables */ /* Dense list variables */ /* This mixin provides all list-item styles, changing font size and height based on whether the list is in dense mode. */ /* This mixin provides all subheader styles, adjusting heights and padding based on whether the list is in dense mode. */ md-list, md-nav-list { padding-top: 8px; display: block; } md-list [md-subheader], md-nav-list [md-subheader] { display: block; box-sizing: border-box; height: 48px; padding: 16px; margin: 0; font-size: 14px; font-weight: 500; color: rgba(0, 0, 0, 0.54); } md-list [md-subheader]:first-child, md-nav-list [md-subheader]:first-child { margin-top: -8px; } md-list md-list-item .md-list-item, md-list a[md-list-item] .md-list-item, md-nav-list md-list-item .md-list-item, md-nav-list a[md-list-item] .md-list-item { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-align: center; -ms-flex-align: center; align-items: center; font-family: Roboto, \"Helvetica Neue\", sans-serif; box-sizing: border-box; font-size: 16px; height: 48px; padding: 0 16px; color: black; } md-list md-list-item.md-list-avatar .md-list-item, md-list a[md-list-item].md-list-avatar .md-list-item, md-nav-list md-list-item.md-list-avatar .md-list-item, md-nav-list a[md-list-item].md-list-avatar .md-list-item { height: 56px; } md-list md-list-item.md-2-line .md-list-item, md-list a[md-list-item].md-2-line .md-list-item, md-nav-list md-list-item.md-2-line .md-list-item, md-nav-list a[md-list-item].md-2-line .md-list-item { height: 72px; } md-list md-list-item.md-3-line .md-list-item, md-list a[md-list-item].md-3-line .md-list-item, md-nav-list md-list-item.md-3-line .md-list-item, md-nav-list a[md-list-item].md-3-line .md-list-item { height: 88px; } md-list md-list-item .md-list-text, md-list a[md-list-item] .md-list-text, md-nav-list md-list-item .md-list-text, md-nav-list a[md-list-item] .md-list-text { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; width: 100%; box-sizing: border-box; overflow: hidden; padding: 0 16px; } md-list md-list-item .md-list-text > *, md-list a[md-list-item] .md-list-text > *, md-nav-list md-list-item .md-list-text > *, md-nav-list a[md-list-item] .md-list-text > * { margin: 0; padding: 0; font-weight: normal; font-size: inherit; } md-list md-list-item .md-list-text:empty, md-list a[md-list-item] .md-list-text:empty, md-nav-list md-list-item .md-list-text:empty, md-nav-list a[md-list-item] .md-list-text:empty { display: none; } md-list md-list-item .md-list-text:first-child, md-list a[md-list-item] .md-list-text:first-child, md-nav-list md-list-item .md-list-text:first-child, md-nav-list a[md-list-item] .md-list-text:first-child { padding: 0; } md-list md-list-item [md-list-avatar], md-list a[md-list-item] [md-list-avatar], md-nav-list md-list-item [md-list-avatar], md-nav-list a[md-list-item] [md-list-avatar] { width: 40px; height: 40px; border-radius: 50%; } md-list md-list-item [md-list-icon], md-list a[md-list-item] [md-list-icon], md-nav-list md-list-item [md-list-icon], md-nav-list a[md-list-item] [md-list-icon] { width: 24px; height: 24px; border-radius: 50%; padding: 4px; } md-list md-list-item [md-line], md-list a[md-list-item] [md-line], md-nav-list md-list-item [md-line], md-nav-list a[md-list-item] [md-line] { white-space: nowrap; overflow-x: hidden; text-overflow: ellipsis; display: block; box-sizing: border-box; } md-list md-list-item [md-line]:nth-child(n+2), md-list a[md-list-item] [md-line]:nth-child(n+2), md-nav-list md-list-item [md-line]:nth-child(n+2), md-nav-list a[md-list-item] [md-line]:nth-child(n+2) { font-size: 14px; } md-list[dense], md-nav-list[dense] { padding-top: 4px; display: block; } md-list[dense] [md-subheader], md-nav-list[dense] [md-subheader] { display: block; box-sizing: border-box; height: 40px; padding: 16px; margin: 0; font-size: 13px; font-weight: 500; color: rgba(0, 0, 0, 0.54); } md-list[dense] [md-subheader]:first-child, md-nav-list[dense] [md-subheader]:first-child { margin-top: -4px; } md-list[dense] md-list-item .md-list-item, md-list[dense] a[md-list-item] .md-list-item, md-nav-list[dense] md-list-item .md-list-item, md-nav-list[dense] a[md-list-item] .md-list-item { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-align: center; -ms-flex-align: center; align-items: center; font-family: Roboto, \"Helvetica Neue\", sans-serif; box-sizing: border-box; font-size: 13px; height: 40px; padding: 0 16px; color: black; } md-list[dense] md-list-item.md-list-avatar .md-list-item, md-list[dense] a[md-list-item].md-list-avatar .md-list-item, md-nav-list[dense] md-list-item.md-list-avatar .md-list-item, md-nav-list[dense] a[md-list-item].md-list-avatar .md-list-item { height: 48px; } md-list[dense] md-list-item.md-2-line .md-list-item, md-list[dense] a[md-list-item].md-2-line .md-list-item, md-nav-list[dense] md-list-item.md-2-line .md-list-item, md-nav-list[dense] a[md-list-item].md-2-line .md-list-item { height: 60px; } md-list[dense] md-list-item.md-3-line .md-list-item, md-list[dense] a[md-list-item].md-3-line .md-list-item, md-nav-list[dense] md-list-item.md-3-line .md-list-item, md-nav-list[dense] a[md-list-item].md-3-line .md-list-item { height: 76px; } md-list[dense] md-list-item .md-list-text, md-list[dense] a[md-list-item] .md-list-text, md-nav-list[dense] md-list-item .md-list-text, md-nav-list[dense] a[md-list-item] .md-list-text { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; width: 100%; box-sizing: border-box; overflow: hidden; padding: 0 16px; } md-list[dense] md-list-item .md-list-text > *, md-list[dense] a[md-list-item] .md-list-text > *, md-nav-list[dense] md-list-item .md-list-text > *, md-nav-list[dense] a[md-list-item] .md-list-text > * { margin: 0; padding: 0; font-weight: normal; font-size: inherit; } md-list[dense] md-list-item .md-list-text:empty, md-list[dense] a[md-list-item] .md-list-text:empty, md-nav-list[dense] md-list-item .md-list-text:empty, md-nav-list[dense] a[md-list-item] .md-list-text:empty { display: none; } md-list[dense] md-list-item .md-list-text:first-child, md-list[dense] a[md-list-item] .md-list-text:first-child, md-nav-list[dense] md-list-item .md-list-text:first-child, md-nav-list[dense] a[md-list-item] .md-list-text:first-child { padding: 0; } md-list[dense] md-list-item [md-list-avatar], md-list[dense] a[md-list-item] [md-list-avatar], md-nav-list[dense] md-list-item [md-list-avatar], md-nav-list[dense] a[md-list-item] [md-list-avatar] { width: 40px; height: 40px; border-radius: 50%; } md-list[dense] md-list-item [md-list-icon], md-list[dense] a[md-list-item] [md-list-icon], md-nav-list[dense] md-list-item [md-list-icon], md-nav-list[dense] a[md-list-item] [md-list-icon] { width: 24px; height: 24px; border-radius: 50%; padding: 4px; } md-list[dense] md-list-item [md-line], md-list[dense] a[md-list-item] [md-line], md-nav-list[dense] md-list-item [md-line], md-nav-list[dense] a[md-list-item] [md-line] { white-space: nowrap; overflow-x: hidden; text-overflow: ellipsis; display: block; box-sizing: border-box; } md-list[dense] md-list-item [md-line]:nth-child(n+2), md-list[dense] a[md-list-item] [md-line]:nth-child(n+2), md-nav-list[dense] md-list-item [md-line]:nth-child(n+2), md-nav-list[dense] a[md-list-item] [md-line]:nth-child(n+2) { font-size: 13px; } md-divider { display: block; border-top: 1px solid rgba(0, 0, 0, 0.12); margin: 0; } md-nav-list a { text-decoration: none; color: inherit; } md-nav-list .md-list-item { cursor: pointer; } md-nav-list .md-list-item:hover, md-nav-list .md-list-item.md-list-item-focus { outline: none; background: rgba(0, 0, 0, 0.04); } "],
+            styles: ["/** * This mixin will ensure that lines that overflow the container will * hide the overflow and truncate neatly with an ellipsis. */ /** * This mixin provides all md-line styles, changing secondary font size * based on whether the list is in dense mode. */ /** * This mixin provides base styles for the wrapper around md-line * elements in a list. */ /** * This mixin normalizes default element styles, e.g. font weight for heading text. */ /*  Normal list variables */ /* Dense list variables */ /* This mixin provides all list-item styles, changing font size and height based on whether the list is in dense mode. */ /* This mixin provides all subheader styles, adjusting heights and padding based on whether the list is in dense mode. */ md-list, md-nav-list { padding-top: 8px; display: block; } md-list [md-subheader], md-nav-list [md-subheader] { display: block; box-sizing: border-box; height: 48px; padding: 16px; margin: 0; font-size: 14px; font-weight: 500; color: rgba(0, 0, 0, 0.54); } md-list [md-subheader]:first-child, md-nav-list [md-subheader]:first-child { margin-top: -8px; } md-list md-list-item .md-list-item, md-list a[md-list-item] .md-list-item, md-nav-list md-list-item .md-list-item, md-nav-list a[md-list-item] .md-list-item { display: flex; flex-direction: row; align-items: center; font-family: Roboto, \"Helvetica Neue\", sans-serif; box-sizing: border-box; font-size: 16px; height: 48px; padding: 0 16px; color: black; } md-list md-list-item.md-list-avatar .md-list-item, md-list a[md-list-item].md-list-avatar .md-list-item, md-nav-list md-list-item.md-list-avatar .md-list-item, md-nav-list a[md-list-item].md-list-avatar .md-list-item { height: 56px; } md-list md-list-item.md-2-line .md-list-item, md-list a[md-list-item].md-2-line .md-list-item, md-nav-list md-list-item.md-2-line .md-list-item, md-nav-list a[md-list-item].md-2-line .md-list-item { height: 72px; } md-list md-list-item.md-3-line .md-list-item, md-list a[md-list-item].md-3-line .md-list-item, md-nav-list md-list-item.md-3-line .md-list-item, md-nav-list a[md-list-item].md-3-line .md-list-item { height: 88px; } md-list md-list-item .md-list-text, md-list a[md-list-item] .md-list-text, md-nav-list md-list-item .md-list-text, md-nav-list a[md-list-item] .md-list-text { display: flex; flex-direction: column; width: 100%; box-sizing: border-box; overflow: hidden; padding: 0 16px; } md-list md-list-item .md-list-text > *, md-list a[md-list-item] .md-list-text > *, md-nav-list md-list-item .md-list-text > *, md-nav-list a[md-list-item] .md-list-text > * { margin: 0; padding: 0; font-weight: normal; font-size: inherit; } md-list md-list-item .md-list-text:empty, md-list a[md-list-item] .md-list-text:empty, md-nav-list md-list-item .md-list-text:empty, md-nav-list a[md-list-item] .md-list-text:empty { display: none; } md-list md-list-item .md-list-text:first-child, md-list a[md-list-item] .md-list-text:first-child, md-nav-list md-list-item .md-list-text:first-child, md-nav-list a[md-list-item] .md-list-text:first-child { padding: 0; } md-list md-list-item [md-list-avatar], md-list a[md-list-item] [md-list-avatar], md-nav-list md-list-item [md-list-avatar], md-nav-list a[md-list-item] [md-list-avatar] { width: 40px; height: 40px; border-radius: 50%; } md-list md-list-item [md-list-icon], md-list a[md-list-item] [md-list-icon], md-nav-list md-list-item [md-list-icon], md-nav-list a[md-list-item] [md-list-icon] { width: 24px; height: 24px; border-radius: 50%; padding: 4px; } md-list md-list-item [md-line], md-list a[md-list-item] [md-line], md-nav-list md-list-item [md-line], md-nav-list a[md-list-item] [md-line] { white-space: nowrap; overflow-x: hidden; text-overflow: ellipsis; display: block; box-sizing: border-box; } md-list md-list-item [md-line]:nth-child(n+2), md-list a[md-list-item] [md-line]:nth-child(n+2), md-nav-list md-list-item [md-line]:nth-child(n+2), md-nav-list a[md-list-item] [md-line]:nth-child(n+2) { font-size: 14px; } md-list[dense], md-nav-list[dense] { padding-top: 4px; display: block; } md-list[dense] [md-subheader], md-nav-list[dense] [md-subheader] { display: block; box-sizing: border-box; height: 40px; padding: 16px; margin: 0; font-size: 13px; font-weight: 500; color: rgba(0, 0, 0, 0.54); } md-list[dense] [md-subheader]:first-child, md-nav-list[dense] [md-subheader]:first-child { margin-top: -4px; } md-list[dense] md-list-item .md-list-item, md-list[dense] a[md-list-item] .md-list-item, md-nav-list[dense] md-list-item .md-list-item, md-nav-list[dense] a[md-list-item] .md-list-item { display: flex; flex-direction: row; align-items: center; font-family: Roboto, \"Helvetica Neue\", sans-serif; box-sizing: border-box; font-size: 13px; height: 40px; padding: 0 16px; color: black; } md-list[dense] md-list-item.md-list-avatar .md-list-item, md-list[dense] a[md-list-item].md-list-avatar .md-list-item, md-nav-list[dense] md-list-item.md-list-avatar .md-list-item, md-nav-list[dense] a[md-list-item].md-list-avatar .md-list-item { height: 48px; } md-list[dense] md-list-item.md-2-line .md-list-item, md-list[dense] a[md-list-item].md-2-line .md-list-item, md-nav-list[dense] md-list-item.md-2-line .md-list-item, md-nav-list[dense] a[md-list-item].md-2-line .md-list-item { height: 60px; } md-list[dense] md-list-item.md-3-line .md-list-item, md-list[dense] a[md-list-item].md-3-line .md-list-item, md-nav-list[dense] md-list-item.md-3-line .md-list-item, md-nav-list[dense] a[md-list-item].md-3-line .md-list-item { height: 76px; } md-list[dense] md-list-item .md-list-text, md-list[dense] a[md-list-item] .md-list-text, md-nav-list[dense] md-list-item .md-list-text, md-nav-list[dense] a[md-list-item] .md-list-text { display: flex; flex-direction: column; width: 100%; box-sizing: border-box; overflow: hidden; padding: 0 16px; } md-list[dense] md-list-item .md-list-text > *, md-list[dense] a[md-list-item] .md-list-text > *, md-nav-list[dense] md-list-item .md-list-text > *, md-nav-list[dense] a[md-list-item] .md-list-text > * { margin: 0; padding: 0; font-weight: normal; font-size: inherit; } md-list[dense] md-list-item .md-list-text:empty, md-list[dense] a[md-list-item] .md-list-text:empty, md-nav-list[dense] md-list-item .md-list-text:empty, md-nav-list[dense] a[md-list-item] .md-list-text:empty { display: none; } md-list[dense] md-list-item .md-list-text:first-child, md-list[dense] a[md-list-item] .md-list-text:first-child, md-nav-list[dense] md-list-item .md-list-text:first-child, md-nav-list[dense] a[md-list-item] .md-list-text:first-child { padding: 0; } md-list[dense] md-list-item [md-list-avatar], md-list[dense] a[md-list-item] [md-list-avatar], md-nav-list[dense] md-list-item [md-list-avatar], md-nav-list[dense] a[md-list-item] [md-list-avatar] { width: 40px; height: 40px; border-radius: 50%; } md-list[dense] md-list-item [md-list-icon], md-list[dense] a[md-list-item] [md-list-icon], md-nav-list[dense] md-list-item [md-list-icon], md-nav-list[dense] a[md-list-item] [md-list-icon] { width: 24px; height: 24px; border-radius: 50%; padding: 4px; } md-list[dense] md-list-item [md-line], md-list[dense] a[md-list-item] [md-line], md-nav-list[dense] md-list-item [md-line], md-nav-list[dense] a[md-list-item] [md-line] { white-space: nowrap; overflow-x: hidden; text-overflow: ellipsis; display: block; box-sizing: border-box; } md-list[dense] md-list-item [md-line]:nth-child(n+2), md-list[dense] a[md-list-item] [md-line]:nth-child(n+2), md-nav-list[dense] md-list-item [md-line]:nth-child(n+2), md-nav-list[dense] a[md-list-item] [md-line]:nth-child(n+2) { font-size: 13px; } md-divider { display: block; border-top: 1px solid rgba(0, 0, 0, 0.12); margin: 0; } md-nav-list a { text-decoration: none; color: inherit; } md-nav-list .md-list-item { cursor: pointer; } md-nav-list .md-list-item:hover, md-nav-list .md-list-item.md-list-item-focus { outline: none; background: rgba(0, 0, 0, 0.04); } /*# sourceMappingURL=list.css.map */ "],
             encapsulation: core_1.ViewEncapsulation.None
         }), 
         __metadata('design:paramtypes', [])
@@ -69163,7 +69275,9 @@ var MdListItem = (function () {
         __metadata('design:paramtypes', [MdListAvatar])
     ], MdListItem.prototype, "_hasAvatar", null);
     MdListItem = __decorate([
-        core_1.Component({            selector: 'md-list-item, a[md-list-item]',
+        core_1.Component({
+            moduleId: module.i,
+            selector: 'md-list-item, a[md-list-item]',
             host: {
                 'role': 'listitem',
                 '(focus)': '_handleFocus()',
@@ -69193,7 +69307,9 @@ var MdListModule = (function () {
     return MdListModule;
 }());
 exports.MdListModule = MdListModule;
+
 //# sourceMappingURL=list.js.map
+
 
 /***/ },
 /* 609 */
@@ -69239,7 +69355,9 @@ var MdMenuModule = (function () {
     return MdMenuModule;
 }());
 exports.MdMenuModule = MdMenuModule;
+
 //# sourceMappingURL=menu.js.map
+
 
 /***/ },
 /* 610 */
@@ -69328,14 +69446,16 @@ var MdProgressBar = (function () {
         __metadata('design:type', Object)
     ], MdProgressBar.prototype, "mode", void 0);
     MdProgressBar = __decorate([
-        core_1.Component({            selector: 'md-progress-bar',
+        core_1.Component({
+            moduleId: module.i,
+            selector: 'md-progress-bar',
             host: {
                 'role': 'progressbar',
                 'aria-valuemin': '0',
                 'aria-valuemax': '100',
             },
             template: "<!-- The background div is named as such because it appears below the other divs and is not sized based on values. --> <div class=\"md-progress-bar-background\"></div> <div class=\"md-progress-bar-buffer\" [ngStyle]=\"_bufferTransform()\"></div> <div class=\"md-progress-bar-primary md-progress-bar-fill\" [ngStyle]=\"_primaryTransform()\"></div> <div class=\"md-progress-bar-secondary md-progress-bar-fill\"></div> ",
-            styles: ["/** In buffer mode a repeated SVG object is used as a background.  Each of the following defines the SVG object for each of the class defined colors. Each string is a URL encoded version of: <svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"1.1\" x=\"0px\" y=\"0px\" enable-background=\"new 0 0 5 2\" xml:space=\"preserve\" viewBox=\"0 0 5 2\" preserveAspectRatio=\"none slice\"> <circle cx=\"1\" cy=\"1\" r=\"1\" fill=\"{INJECTED_COLOR}\"/> </svg> */ :host { display: block; height: 5px; overflow: hidden; position: relative; -webkit-transform: translateZ(0); transform: translateZ(0); -webkit-transition: opacity 250ms linear; transition: opacity 250ms linear; width: 100%; /** * The progress bar buffer is the bar indicator showing the buffer value and is only visible beyond the current value * of the primary progress bar. */ /** * The secondary progress bar is only used in the indeterminate animation, because of this it is hidden in other uses. */ /** * The progress bar fill fills the progress bar with the indicator color. */ /** * A pseudo element is created for each progress bar bar that fills with the indicator color. */ } :host .md-progress-bar-background { background: url(\"data:image/svg+xml;charset=UTF-8,%3Csvg%20version%3D%271.1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20enable-background%3D%27new%200%200%205%202%27%20xml%3Aspace%3D%27preserve%27%20viewBox%3D%270%200%205%202%27%20preserveAspectRatio%3D%27none%20slice%27%3E%3Ccircle%20cx%3D%271%27%20cy%3D%271%27%20r%3D%271%27%20fill%3D%27#b2dfdb%27%2F%3E%3C%2Fsvg%3E\"); background-repeat: repeat-x; background-size: 10px 4px; height: 100%; position: absolute; visibility: hidden; width: 100%; } :host .md-progress-bar-buffer { background-color: #b2dfdb; height: 100%; position: absolute; -webkit-transform-origin: top left; transform-origin: top left; -webkit-transition: -webkit-transform 250ms ease; transition: -webkit-transform 250ms ease; transition: transform 250ms ease; transition: transform 250ms ease, -webkit-transform 250ms ease; width: 100%; } :host .md-progress-bar-secondary { visibility: hidden; } :host .md-progress-bar-fill { -webkit-animation: none; animation: none; height: 100%; position: absolute; -webkit-transform-origin: top left; transform-origin: top left; -webkit-transition: -webkit-transform 250ms ease; transition: -webkit-transform 250ms ease; transition: transform 250ms ease; transition: transform 250ms ease, -webkit-transform 250ms ease; width: 100%; } :host .md-progress-bar-fill::after { -webkit-animation: none; animation: none; background-color: #00897b; content: ''; display: inline-block; height: 100%; position: absolute; width: 100%; } :host[color='accent'] .md-progress-bar-background { background: url(\"data:image/svg+xml;charset=UTF-8,%3Csvg%20version%3D%271.1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20enable-background%3D%27new%200%200%205%202%27%20xml%3Aspace%3D%27preserve%27%20viewBox%3D%270%200%205%202%27%20preserveAspectRatio%3D%27none%20slice%27%3E%3Ccircle%20cx%3D%271%27%20cy%3D%271%27%20r%3D%271%27%20fill%3D%27#e1bee7%27%2F%3E%3C%2Fsvg%3E\"); background-repeat: repeat-x; background-size: 10px 4px; } :host[color='accent'] .md-progress-bar-buffer { background-color: #e1bee7; } :host[color='accent'] .md-progress-bar-fill::after { background-color: #8e24aa; } :host[color='warn'] .md-progress-bar-background { background: url(\"data:image/svg+xml;charset=UTF-8,%3Csvg%20version%3D%271.1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20enable-background%3D%27new%200%200%205%202%27%20xml%3Aspace%3D%27preserve%27%20viewBox%3D%270%200%205%202%27%20preserveAspectRatio%3D%27none%20slice%27%3E%3Ccircle%20cx%3D%271%27%20cy%3D%271%27%20r%3D%271%27%20fill%3D%27#ffcdd2%27%2F%3E%3C%2Fsvg%3E\"); background-repeat: repeat-x; background-size: 10px 4px; } :host[color='warn'] .md-progress-bar-buffer { background-color: #ffcdd2; } :host[color='warn'] .md-progress-bar-fill::after { background-color: #e53935; } :host[mode='query'] { -webkit-transform: rotateZ(180deg); transform: rotateZ(180deg); } :host[mode='indeterminate'] .md-progress-bar-fill, :host[mode='query'] .md-progress-bar-fill { -webkit-transition: none; transition: none; } :host[mode='indeterminate'] .md-progress-bar-primary, :host[mode='query'] .md-progress-bar-primary { -webkit-animation: md-progress-bar-primary-indeterminate-translate 2000ms infinite linear; animation: md-progress-bar-primary-indeterminate-translate 2000ms infinite linear; left: -145.166611%; } :host[mode='indeterminate'] .md-progress-bar-primary.md-progress-bar-fill::after, :host[mode='query'] .md-progress-bar-primary.md-progress-bar-fill::after { -webkit-animation: md-progress-bar-primary-indeterminate-scale 2000ms infinite linear; animation: md-progress-bar-primary-indeterminate-scale 2000ms infinite linear; } :host[mode='indeterminate'] .md-progress-bar-secondary, :host[mode='query'] .md-progress-bar-secondary { -webkit-animation: md-progress-bar-secondary-indeterminate-translate 2000ms infinite linear; animation: md-progress-bar-secondary-indeterminate-translate 2000ms infinite linear; left: -54.888891%; visibility: visible; } :host[mode='indeterminate'] .md-progress-bar-secondary.md-progress-bar-fill::after, :host[mode='query'] .md-progress-bar-secondary.md-progress-bar-fill::after { -webkit-animation: md-progress-bar-secondary-indeterminate-scale 2000ms infinite linear; animation: md-progress-bar-secondary-indeterminate-scale 2000ms infinite linear; } :host[mode='buffer'] .md-progress-bar-background { -webkit-animation: md-progress-bar-background-scroll 250ms infinite linear; animation: md-progress-bar-background-scroll 250ms infinite linear; visibility: visible; } :host-context([dir='rtl']) { -webkit-transform: rotateY(180deg); transform: rotateY(180deg); } /** The values used for animations in md-progress-bar, both timing and transformation, can be considered magic values. They are sourced from the Material Design example spec and duplicate the values of the original designers definitions. The indeterminate state is essentially made up of two progress bars, one primary (the one that is shown in both the determinate and indeterminate states) and one secondary, which essentially mirrors the primary progress bar in appearance but is only shown to assist with the indeterminate animations. KEYFRAME BLOCK	                    DESCRIPTION primary-indeterminate-translate     Translation of the primary progressbar across the screen primary-indeterminate-scale         Scaling of the primary progressbar as it's being translated across the screen secondary-indeterminate-translate   Translation of the secondary progressbar across the screen secondary-indeterminate-scale       Scaling of the secondary progressbar as it's being translated across the screen Because two different transform animations need to be applied at once, the translation is applied to the outer element and the scaling is applied to the inner element, which provides the illusion necessary to make the animation work. */ /** Animations for indeterminate and query mode. */ @-webkit-keyframes md-progress-bar-primary-indeterminate-translate { 0% { -webkit-transform: translateX(0); transform: translateX(0); } 20% { -webkit-animation-timing-function: cubic-bezier(0.5, 0, 0.70173, 0.49582); animation-timing-function: cubic-bezier(0.5, 0, 0.70173, 0.49582); -webkit-transform: translateX(0); transform: translateX(0); } 59.15% { -webkit-animation-timing-function: cubic-bezier(0.30244, 0.38135, 0.55, 0.95635); animation-timing-function: cubic-bezier(0.30244, 0.38135, 0.55, 0.95635); -webkit-transform: translateX(83.67142%); transform: translateX(83.67142%); } 100% { -webkit-transform: translateX(200.61106%); transform: translateX(200.61106%); } } @keyframes md-progress-bar-primary-indeterminate-translate { 0% { -webkit-transform: translateX(0); transform: translateX(0); } 20% { -webkit-animation-timing-function: cubic-bezier(0.5, 0, 0.70173, 0.49582); animation-timing-function: cubic-bezier(0.5, 0, 0.70173, 0.49582); -webkit-transform: translateX(0); transform: translateX(0); } 59.15% { -webkit-animation-timing-function: cubic-bezier(0.30244, 0.38135, 0.55, 0.95635); animation-timing-function: cubic-bezier(0.30244, 0.38135, 0.55, 0.95635); -webkit-transform: translateX(83.67142%); transform: translateX(83.67142%); } 100% { -webkit-transform: translateX(200.61106%); transform: translateX(200.61106%); } } @-webkit-keyframes md-progress-bar-primary-indeterminate-scale { 0% { -webkit-transform: scaleX(0.08); transform: scaleX(0.08); } 36.65% { -webkit-animation-timing-function: cubic-bezier(0.33473, 0.12482, 0.78584, 1); animation-timing-function: cubic-bezier(0.33473, 0.12482, 0.78584, 1); -webkit-transform: scaleX(0.08); transform: scaleX(0.08); } 69.15% { -webkit-animation-timing-function: cubic-bezier(0.06, 0.11, 0.6, 1); animation-timing-function: cubic-bezier(0.06, 0.11, 0.6, 1); -webkit-transform: scaleX(0.66148); transform: scaleX(0.66148); } 100% { -webkit-transform: scaleX(0.08); transform: scaleX(0.08); } } @keyframes md-progress-bar-primary-indeterminate-scale { 0% { -webkit-transform: scaleX(0.08); transform: scaleX(0.08); } 36.65% { -webkit-animation-timing-function: cubic-bezier(0.33473, 0.12482, 0.78584, 1); animation-timing-function: cubic-bezier(0.33473, 0.12482, 0.78584, 1); -webkit-transform: scaleX(0.08); transform: scaleX(0.08); } 69.15% { -webkit-animation-timing-function: cubic-bezier(0.06, 0.11, 0.6, 1); animation-timing-function: cubic-bezier(0.06, 0.11, 0.6, 1); -webkit-transform: scaleX(0.66148); transform: scaleX(0.66148); } 100% { -webkit-transform: scaleX(0.08); transform: scaleX(0.08); } } @-webkit-keyframes md-progress-bar-secondary-indeterminate-translate { 0% { -webkit-animation-timing-function: cubic-bezier(0.15, 0, 0.51506, 0.40969); animation-timing-function: cubic-bezier(0.15, 0, 0.51506, 0.40969); -webkit-transform: translateX(0); transform: translateX(0); } 25% { -webkit-animation-timing-function: cubic-bezier(0.31033, 0.28406, 0.8, 0.73371); animation-timing-function: cubic-bezier(0.31033, 0.28406, 0.8, 0.73371); -webkit-transform: translateX(37.65191%); transform: translateX(37.65191%); } 48.35% { -webkit-animation-timing-function: cubic-bezier(0.4, 0.62704, 0.6, 0.90203); animation-timing-function: cubic-bezier(0.4, 0.62704, 0.6, 0.90203); -webkit-transform: translateX(84.38617%); transform: translateX(84.38617%); } 100% { -webkit-transform: translateX(160.27778%); transform: translateX(160.27778%); } } @keyframes md-progress-bar-secondary-indeterminate-translate { 0% { -webkit-animation-timing-function: cubic-bezier(0.15, 0, 0.51506, 0.40969); animation-timing-function: cubic-bezier(0.15, 0, 0.51506, 0.40969); -webkit-transform: translateX(0); transform: translateX(0); } 25% { -webkit-animation-timing-function: cubic-bezier(0.31033, 0.28406, 0.8, 0.73371); animation-timing-function: cubic-bezier(0.31033, 0.28406, 0.8, 0.73371); -webkit-transform: translateX(37.65191%); transform: translateX(37.65191%); } 48.35% { -webkit-animation-timing-function: cubic-bezier(0.4, 0.62704, 0.6, 0.90203); animation-timing-function: cubic-bezier(0.4, 0.62704, 0.6, 0.90203); -webkit-transform: translateX(84.38617%); transform: translateX(84.38617%); } 100% { -webkit-transform: translateX(160.27778%); transform: translateX(160.27778%); } } @-webkit-keyframes md-progress-bar-secondary-indeterminate-scale { 0% { -webkit-animation-timing-function: cubic-bezier(0.15, 0, 0.51506, 0.40969); animation-timing-function: cubic-bezier(0.15, 0, 0.51506, 0.40969); -webkit-transform: scaleX(0.08); transform: scaleX(0.08); } 19.15% { -webkit-animation-timing-function: cubic-bezier(0.31033, 0.28406, 0.8, 0.73371); animation-timing-function: cubic-bezier(0.31033, 0.28406, 0.8, 0.73371); -webkit-transform: scaleX(0.4571); transform: scaleX(0.4571); } 44.15% { -webkit-animation-timing-function: cubic-bezier(0.4, 0.62704, 0.6, 0.90203); animation-timing-function: cubic-bezier(0.4, 0.62704, 0.6, 0.90203); -webkit-transform: scaleX(0.72796); transform: scaleX(0.72796); } 100% { -webkit-transform: scaleX(0.08); transform: scaleX(0.08); } } @keyframes md-progress-bar-secondary-indeterminate-scale { 0% { -webkit-animation-timing-function: cubic-bezier(0.15, 0, 0.51506, 0.40969); animation-timing-function: cubic-bezier(0.15, 0, 0.51506, 0.40969); -webkit-transform: scaleX(0.08); transform: scaleX(0.08); } 19.15% { -webkit-animation-timing-function: cubic-bezier(0.31033, 0.28406, 0.8, 0.73371); animation-timing-function: cubic-bezier(0.31033, 0.28406, 0.8, 0.73371); -webkit-transform: scaleX(0.4571); transform: scaleX(0.4571); } 44.15% { -webkit-animation-timing-function: cubic-bezier(0.4, 0.62704, 0.6, 0.90203); animation-timing-function: cubic-bezier(0.4, 0.62704, 0.6, 0.90203); -webkit-transform: scaleX(0.72796); transform: scaleX(0.72796); } 100% { -webkit-transform: scaleX(0.08); transform: scaleX(0.08); } } /** Animation for buffer mode. */ @-webkit-keyframes md-progress-bar-background-scroll { to { -webkit-transform: translateX(-10px); transform: translateX(-10px); } } @keyframes md-progress-bar-background-scroll { to { -webkit-transform: translateX(-10px); transform: translateX(-10px); } } "],
+            styles: ["/** In buffer mode a repeated SVG object is used as a background.  Each of the following defines the SVG object for each of the class defined colors. Each string is a URL encoded version of: <svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"1.1\" x=\"0px\" y=\"0px\" enable-background=\"new 0 0 5 2\" xml:space=\"preserve\" viewBox=\"0 0 5 2\" preserveAspectRatio=\"none slice\"> <circle cx=\"1\" cy=\"1\" r=\"1\" fill=\"{INJECTED_COLOR}\"/> </svg> */ :host { display: block; height: 5px; overflow: hidden; position: relative; transform: translateZ(0); transition: opacity 250ms linear; width: 100%; /** * The progress bar buffer is the bar indicator showing the buffer value and is only visible beyond the current value * of the primary progress bar. */ /** * The secondary progress bar is only used in the indeterminate animation, because of this it is hidden in other uses. */ /** * The progress bar fill fills the progress bar with the indicator color. */ /** * A pseudo element is created for each progress bar bar that fills with the indicator color. */ } :host .md-progress-bar-background { background: url(\"data:image/svg+xml;charset=UTF-8,%3Csvg%20version%3D%271.1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20enable-background%3D%27new%200%200%205%202%27%20xml%3Aspace%3D%27preserve%27%20viewBox%3D%270%200%205%202%27%20preserveAspectRatio%3D%27none%20slice%27%3E%3Ccircle%20cx%3D%271%27%20cy%3D%271%27%20r%3D%271%27%20fill%3D%27#b2dfdb%27%2F%3E%3C%2Fsvg%3E\"); background-repeat: repeat-x; background-size: 10px 4px; height: 100%; position: absolute; visibility: hidden; width: 100%; } :host .md-progress-bar-buffer { background-color: #b2dfdb; height: 100%; position: absolute; transform-origin: top left; transition: transform 250ms ease; width: 100%; } :host .md-progress-bar-secondary { visibility: hidden; } :host .md-progress-bar-fill { animation: none; height: 100%; position: absolute; transform-origin: top left; transition: transform 250ms ease; width: 100%; } :host .md-progress-bar-fill::after { animation: none; background-color: #00897b; content: ''; display: inline-block; height: 100%; position: absolute; width: 100%; } :host[color='accent'] .md-progress-bar-background { background: url(\"data:image/svg+xml;charset=UTF-8,%3Csvg%20version%3D%271.1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20enable-background%3D%27new%200%200%205%202%27%20xml%3Aspace%3D%27preserve%27%20viewBox%3D%270%200%205%202%27%20preserveAspectRatio%3D%27none%20slice%27%3E%3Ccircle%20cx%3D%271%27%20cy%3D%271%27%20r%3D%271%27%20fill%3D%27#e1bee7%27%2F%3E%3C%2Fsvg%3E\"); background-repeat: repeat-x; background-size: 10px 4px; } :host[color='accent'] .md-progress-bar-buffer { background-color: #e1bee7; } :host[color='accent'] .md-progress-bar-fill::after { background-color: #8e24aa; } :host[color='warn'] .md-progress-bar-background { background: url(\"data:image/svg+xml;charset=UTF-8,%3Csvg%20version%3D%271.1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20enable-background%3D%27new%200%200%205%202%27%20xml%3Aspace%3D%27preserve%27%20viewBox%3D%270%200%205%202%27%20preserveAspectRatio%3D%27none%20slice%27%3E%3Ccircle%20cx%3D%271%27%20cy%3D%271%27%20r%3D%271%27%20fill%3D%27#ffcdd2%27%2F%3E%3C%2Fsvg%3E\"); background-repeat: repeat-x; background-size: 10px 4px; } :host[color='warn'] .md-progress-bar-buffer { background-color: #ffcdd2; } :host[color='warn'] .md-progress-bar-fill::after { background-color: #e53935; } :host[mode='query'] { transform: rotateZ(180deg); } :host[mode='indeterminate'] .md-progress-bar-fill, :host[mode='query'] .md-progress-bar-fill { transition: none; } :host[mode='indeterminate'] .md-progress-bar-primary, :host[mode='query'] .md-progress-bar-primary { animation: md-progress-bar-primary-indeterminate-translate 2000ms infinite linear; left: -145.166611%; } :host[mode='indeterminate'] .md-progress-bar-primary.md-progress-bar-fill::after, :host[mode='query'] .md-progress-bar-primary.md-progress-bar-fill::after { animation: md-progress-bar-primary-indeterminate-scale 2000ms infinite linear; } :host[mode='indeterminate'] .md-progress-bar-secondary, :host[mode='query'] .md-progress-bar-secondary { animation: md-progress-bar-secondary-indeterminate-translate 2000ms infinite linear; left: -54.888891%; visibility: visible; } :host[mode='indeterminate'] .md-progress-bar-secondary.md-progress-bar-fill::after, :host[mode='query'] .md-progress-bar-secondary.md-progress-bar-fill::after { animation: md-progress-bar-secondary-indeterminate-scale 2000ms infinite linear; } :host[mode='buffer'] .md-progress-bar-background { animation: md-progress-bar-background-scroll 250ms infinite linear; visibility: visible; } :host-context([dir='rtl']) { transform: rotateY(180deg); } /** The values used for animations in md-progress-bar, both timing and transformation, can be considered magic values. They are sourced from the Material Design example spec and duplicate the values of the original designers definitions. The indeterminate state is essentially made up of two progress bars, one primary (the one that is shown in both the determinate and indeterminate states) and one secondary, which essentially mirrors the primary progress bar in appearance but is only shown to assist with the indeterminate animations. KEYFRAME BLOCK	                    DESCRIPTION primary-indeterminate-translate     Translation of the primary progressbar across the screen primary-indeterminate-scale         Scaling of the primary progressbar as it's being translated across the screen secondary-indeterminate-translate   Translation of the secondary progressbar across the screen secondary-indeterminate-scale       Scaling of the secondary progressbar as it's being translated across the screen Because two different transform animations need to be applied at once, the translation is applied to the outer element and the scaling is applied to the inner element, which provides the illusion necessary to make the animation work. */ /** Animations for indeterminate and query mode. */ @keyframes md-progress-bar-primary-indeterminate-translate { 0% { transform: translateX(0); } 20% { animation-timing-function: cubic-bezier(0.5, 0, 0.70173, 0.49582); transform: translateX(0); } 59.15% { animation-timing-function: cubic-bezier(0.30244, 0.38135, 0.55, 0.95635); transform: translateX(83.67142%); } 100% { transform: translateX(200.61106%); } } @keyframes md-progress-bar-primary-indeterminate-scale { 0% { transform: scaleX(0.08); } 36.65% { animation-timing-function: cubic-bezier(0.33473, 0.12482, 0.78584, 1); transform: scaleX(0.08); } 69.15% { animation-timing-function: cubic-bezier(0.06, 0.11, 0.6, 1); transform: scaleX(0.66148); } 100% { transform: scaleX(0.08); } } @keyframes md-progress-bar-secondary-indeterminate-translate { 0% { animation-timing-function: cubic-bezier(0.15, 0, 0.51506, 0.40969); transform: translateX(0); } 25% { animation-timing-function: cubic-bezier(0.31033, 0.28406, 0.8, 0.73371); transform: translateX(37.65191%); } 48.35% { animation-timing-function: cubic-bezier(0.4, 0.62704, 0.6, 0.90203); transform: translateX(84.38617%); } 100% { transform: translateX(160.27778%); } } @keyframes md-progress-bar-secondary-indeterminate-scale { 0% { animation-timing-function: cubic-bezier(0.15, 0, 0.51506, 0.40969); transform: scaleX(0.08); } 19.15% { animation-timing-function: cubic-bezier(0.31033, 0.28406, 0.8, 0.73371); transform: scaleX(0.4571); } 44.15% { animation-timing-function: cubic-bezier(0.4, 0.62704, 0.6, 0.90203); transform: scaleX(0.72796); } 100% { transform: scaleX(0.08); } } /** Animation for buffer mode. */ @keyframes md-progress-bar-background-scroll { to { transform: translateX(-10px); } } /*# sourceMappingURL=progress-bar.css.map */ "],
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
         }), 
         __metadata('design:paramtypes', [])
@@ -69365,7 +69485,9 @@ var MdProgressBarModule = (function () {
     return MdProgressBarModule;
 }());
 exports.MdProgressBarModule = MdProgressBarModule;
+
 //# sourceMappingURL=progress-bar.js.map
+
 
 /***/ },
 /* 611 */
@@ -69568,14 +69690,16 @@ var MdProgressCircle = (function () {
         __metadata('design:type', Object)
     ], MdProgressCircle.prototype, "mode", null);
     MdProgressCircle = __decorate([
-        core_1.Component({            selector: 'md-progress-circle',
+        core_1.Component({
+            moduleId: module.i,
+            selector: 'md-progress-circle',
             host: {
                 'role': 'progressbar',
                 '[attr.aria-valuemin]': '_ariaValueMin',
                 '[attr.aria-valuemax]': '_ariaValueMax',
             },
             template: "<!-- preserveAspectRatio of xMidYMid meet as the center of the viewport is the circle's center.  The center of the circle with remain at the center of the md-progress-circle element containing the SVG. --> <svg viewBox=\"0 0 100 100\" preserveAspectRatio=\"xMidYMid meet\"> <path [attr.d]=\"currentPath\"></path> </svg> ",
-            styles: ["/* Animation Durations */ /** Component sizing */ :host { display: block; /** Height and width are provided for md-progress-circle to act as a default. The height and width are expected to be overwritten by application css. */ height: 100px; width: 100px; /** SVG's viewBox is defined as 0 0 100 100, this means that all SVG children will placed based on a 100px by 100px box.  Additionally all SVG sizes and locations are in reference to this viewBox. */ } :host svg { height: 100%; width: 100%; -webkit-transform-origin: center; transform-origin: center; } :host path { fill: transparent; stroke: #00897b; /** Stroke width of 10px defines stroke as 10% of the viewBox */ stroke-width: 10px; } :host[color='accent'] path { stroke: #8e24aa; } :host[color='warn'] path { stroke: #e53935; } :host[mode='indeterminate'] { -webkit-animation-duration: 5250ms, 2887.5ms; animation-duration: 5250ms, 2887.5ms; -webkit-animation-name: md-progress-circle-sporadic-rotate, md-progress-circle-linear-rotate; animation-name: md-progress-circle-sporadic-rotate, md-progress-circle-linear-rotate; -webkit-animation-timing-function: cubic-bezier(0.35, 0, 0.25, 1), linear; animation-timing-function: cubic-bezier(0.35, 0, 0.25, 1), linear; -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite; -webkit-transition: none; transition: none; } /** Animations for indeterminate mode */ @-webkit-keyframes md-progress-circle-linear-rotate { 0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); } 100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); } } @keyframes md-progress-circle-linear-rotate { 0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); } 100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); } } @-webkit-keyframes md-progress-circle-sporadic-rotate { 12.5% { -webkit-transform: rotate(135deg); transform: rotate(135deg); } 25% { -webkit-transform: rotate(270deg); transform: rotate(270deg); } 37.5% { -webkit-transform: rotate(405deg); transform: rotate(405deg); } 50% { -webkit-transform: rotate(540deg); transform: rotate(540deg); } 62.5% { -webkit-transform: rotate(675deg); transform: rotate(675deg); } 75% { -webkit-transform: rotate(810deg); transform: rotate(810deg); } 87.5% { -webkit-transform: rotate(945deg); transform: rotate(945deg); } 100% { -webkit-transform: rotate(1080deg); transform: rotate(1080deg); } } @keyframes md-progress-circle-sporadic-rotate { 12.5% { -webkit-transform: rotate(135deg); transform: rotate(135deg); } 25% { -webkit-transform: rotate(270deg); transform: rotate(270deg); } 37.5% { -webkit-transform: rotate(405deg); transform: rotate(405deg); } 50% { -webkit-transform: rotate(540deg); transform: rotate(540deg); } 62.5% { -webkit-transform: rotate(675deg); transform: rotate(675deg); } 75% { -webkit-transform: rotate(810deg); transform: rotate(810deg); } 87.5% { -webkit-transform: rotate(945deg); transform: rotate(945deg); } 100% { -webkit-transform: rotate(1080deg); transform: rotate(1080deg); } } "],
+            styles: ["/* Animation Durations */ /** Component sizing */ :host { display: block; /** Height and width are provided for md-progress-circle to act as a default. The height and width are expected to be overwritten by application css. */ height: 100px; width: 100px; /** SVG's viewBox is defined as 0 0 100 100, this means that all SVG children will placed based on a 100px by 100px box.  Additionally all SVG sizes and locations are in reference to this viewBox. */ } :host svg { height: 100%; width: 100%; transform-origin: center; } :host path { fill: transparent; stroke: #00897b; /** Stroke width of 10px defines stroke as 10% of the viewBox */ stroke-width: 10px; } :host[color='accent'] path { stroke: #8e24aa; } :host[color='warn'] path { stroke: #e53935; } :host[mode='indeterminate'] { animation-duration: 5250ms, 2887.5ms; animation-name: md-progress-circle-sporadic-rotate, md-progress-circle-linear-rotate; animation-timing-function: cubic-bezier(0.35, 0, 0.25, 1), linear; animation-iteration-count: infinite; transition: none; } /** Animations for indeterminate mode */ @keyframes md-progress-circle-linear-rotate { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } } @keyframes md-progress-circle-sporadic-rotate { 12.5% { transform: rotate(135deg); } 25% { transform: rotate(270deg); } 37.5% { transform: rotate(405deg); } 50% { transform: rotate(540deg); } 62.5% { transform: rotate(675deg); } 75% { transform: rotate(810deg); } 87.5% { transform: rotate(945deg); } 100% { transform: rotate(1080deg); } } /*# sourceMappingURL=progress-circle.css.map */ "],
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
         }), 
         __metadata('design:paramtypes', [core_1.ChangeDetectorRef])
@@ -69596,13 +69720,15 @@ var MdSpinner = (function (_super) {
         this.mode = 'indeterminate';
     }
     MdSpinner = __decorate([
-        core_1.Component({            selector: 'md-spinner',
+        core_1.Component({
+            moduleId: module.i,
+            selector: 'md-spinner',
             host: {
                 'role': 'progressbar',
                 'mode': 'indeterminate',
             },
             template: "<!-- preserveAspectRatio of xMidYMid meet as the center of the viewport is the circle's center.  The center of the circle with remain at the center of the md-progress-circle element containing the SVG. --> <svg viewBox=\"0 0 100 100\" preserveAspectRatio=\"xMidYMid meet\"> <path [attr.d]=\"currentPath\"></path> </svg> ",
-            styles: ["/* Animation Durations */ /** Component sizing */ :host { display: block; /** Height and width are provided for md-progress-circle to act as a default. The height and width are expected to be overwritten by application css. */ height: 100px; width: 100px; /** SVG's viewBox is defined as 0 0 100 100, this means that all SVG children will placed based on a 100px by 100px box.  Additionally all SVG sizes and locations are in reference to this viewBox. */ } :host svg { height: 100%; width: 100%; -webkit-transform-origin: center; transform-origin: center; } :host path { fill: transparent; stroke: #00897b; /** Stroke width of 10px defines stroke as 10% of the viewBox */ stroke-width: 10px; } :host[color='accent'] path { stroke: #8e24aa; } :host[color='warn'] path { stroke: #e53935; } :host[mode='indeterminate'] { -webkit-animation-duration: 5250ms, 2887.5ms; animation-duration: 5250ms, 2887.5ms; -webkit-animation-name: md-progress-circle-sporadic-rotate, md-progress-circle-linear-rotate; animation-name: md-progress-circle-sporadic-rotate, md-progress-circle-linear-rotate; -webkit-animation-timing-function: cubic-bezier(0.35, 0, 0.25, 1), linear; animation-timing-function: cubic-bezier(0.35, 0, 0.25, 1), linear; -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite; -webkit-transition: none; transition: none; } /** Animations for indeterminate mode */ @-webkit-keyframes md-progress-circle-linear-rotate { 0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); } 100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); } } @keyframes md-progress-circle-linear-rotate { 0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); } 100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); } } @-webkit-keyframes md-progress-circle-sporadic-rotate { 12.5% { -webkit-transform: rotate(135deg); transform: rotate(135deg); } 25% { -webkit-transform: rotate(270deg); transform: rotate(270deg); } 37.5% { -webkit-transform: rotate(405deg); transform: rotate(405deg); } 50% { -webkit-transform: rotate(540deg); transform: rotate(540deg); } 62.5% { -webkit-transform: rotate(675deg); transform: rotate(675deg); } 75% { -webkit-transform: rotate(810deg); transform: rotate(810deg); } 87.5% { -webkit-transform: rotate(945deg); transform: rotate(945deg); } 100% { -webkit-transform: rotate(1080deg); transform: rotate(1080deg); } } @keyframes md-progress-circle-sporadic-rotate { 12.5% { -webkit-transform: rotate(135deg); transform: rotate(135deg); } 25% { -webkit-transform: rotate(270deg); transform: rotate(270deg); } 37.5% { -webkit-transform: rotate(405deg); transform: rotate(405deg); } 50% { -webkit-transform: rotate(540deg); transform: rotate(540deg); } 62.5% { -webkit-transform: rotate(675deg); transform: rotate(675deg); } 75% { -webkit-transform: rotate(810deg); transform: rotate(810deg); } 87.5% { -webkit-transform: rotate(945deg); transform: rotate(945deg); } 100% { -webkit-transform: rotate(1080deg); transform: rotate(1080deg); } } "],
+            styles: ["/* Animation Durations */ /** Component sizing */ :host { display: block; /** Height and width are provided for md-progress-circle to act as a default. The height and width are expected to be overwritten by application css. */ height: 100px; width: 100px; /** SVG's viewBox is defined as 0 0 100 100, this means that all SVG children will placed based on a 100px by 100px box.  Additionally all SVG sizes and locations are in reference to this viewBox. */ } :host svg { height: 100%; width: 100%; transform-origin: center; } :host path { fill: transparent; stroke: #00897b; /** Stroke width of 10px defines stroke as 10% of the viewBox */ stroke-width: 10px; } :host[color='accent'] path { stroke: #8e24aa; } :host[color='warn'] path { stroke: #e53935; } :host[mode='indeterminate'] { animation-duration: 5250ms, 2887.5ms; animation-name: md-progress-circle-sporadic-rotate, md-progress-circle-linear-rotate; animation-timing-function: cubic-bezier(0.35, 0, 0.25, 1), linear; animation-iteration-count: infinite; transition: none; } /** Animations for indeterminate mode */ @keyframes md-progress-circle-linear-rotate { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } } @keyframes md-progress-circle-sporadic-rotate { 12.5% { transform: rotate(135deg); } 25% { transform: rotate(270deg); } 37.5% { transform: rotate(405deg); } 50% { transform: rotate(540deg); } 62.5% { transform: rotate(675deg); } 75% { transform: rotate(810deg); } 87.5% { transform: rotate(945deg); } 100% { transform: rotate(1080deg); } } /*# sourceMappingURL=progress-circle.css.map */ "],
         }), 
         __metadata('design:paramtypes', [core_1.ChangeDetectorRef])
     ], MdSpinner);
@@ -69685,7 +69811,9 @@ var MdProgressCircleModule = (function () {
     return MdProgressCircleModule;
 }());
 exports.MdProgressCircleModule = MdProgressCircleModule;
+
 //# sourceMappingURL=progress-circle.js.map
+
 
 /***/ },
 /* 612 */
@@ -69706,7 +69834,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var core_1 = __webpack_require__(0);
-var forms_1 = __webpack_require__(60);
+var forms_1 = __webpack_require__(51);
 var unique_selection_dispatcher_1 = __webpack_require__(171);
 // Re-exports.
 var unique_selection_dispatcher_2 = __webpack_require__(171);
@@ -69837,9 +69965,11 @@ var MdRadioGroup = (function () {
     };
     MdRadioGroup.prototype._updateRadioButtonNames = function () {
         var _this = this;
-        (this._radios || []).forEach(function (radio) {
-            radio.name = _this.name;
-        });
+        if (this._radios) {
+            this._radios.forEach(function (radio) {
+                radio.name = _this.name;
+            });
+        }
     };
     /** Updates the `selected` radio button from the internal _value state. */
     MdRadioGroup.prototype._updateSelectedRadioFromValue = function () {
@@ -70111,9 +70241,11 @@ var MdRadioButton = (function () {
         __metadata('design:type', Boolean)
     ], MdRadioButton.prototype, "disabled", null);
     MdRadioButton = __decorate([
-        core_1.Component({            selector: 'md-radio-button',
+        core_1.Component({
+            moduleId: module.i,
+            selector: 'md-radio-button',
             template: "<!-- TODO(jelbourn): render the radio on either side of the content --> <!-- TODO(mtlin): Evaluate trade-offs of using native radio vs. cost of additional bindings. --> <label [attr.for]=\"inputId\" class=\"md-radio-label\"> <!-- The actual 'radio' part of the control. --> <div class=\"md-radio-container\"> <div class=\"md-radio-outer-circle\"></div> <div class=\"md-radio-inner-circle\"></div> <div class=\"md-ink-ripple\"></div> </div> <input #input class=\"md-radio-input\" type=\"radio\" [id]=\"inputId\" [checked]=\"checked\" [disabled]=\"disabled\" [name]=\"name\" [attr.aria-label]=\"ariaLabel\" [attr.aria-labelledby]=\"ariaLabelledby\" (change)=\"_onInputChange($event)\" (focus)=\"_onInputFocus()\" (blur)=\"_onInputBlur()\" (click)=\"_onInputClick($event)\"> <!-- The label content for radio control. --> <div class=\"md-radio-label-content\" [class.md-radio-align-end]=\"align == 'end'\"> <ng-content></ng-content> </div> </label> ",
-            styles: ["/** * Mixin that creates a new stacking context. * see https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context */ /** * This mixin hides an element visually. * That means it's still accessible for screen-readers but not visible in view. */ /** * Forces an element to grow to fit floated contents; used as as an alternative to * `overflow: hidden;` because it doesn't cut off contents. */ /** * A mixin, which generates temporary ink ripple on a given component. * When $bindToParent is set to true, it will check for the focused class on the same selector as you included * that mixin. * It is also possible to specify the color palette of the temporary ripple. By default it uses the * accent palette for its background. */ md-radio-button { display: inline-block; } .md-radio-label { cursor: pointer; display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; -webkit-box-align: baseline; -ms-flex-align: baseline; align-items: baseline; white-space: nowrap; } .md-radio-container { box-sizing: border-box; display: inline-block; height: 20px; position: relative; width: 20px; top: 2px; } .md-radio-outer-circle { border-color: rgba(0, 0, 0, 0.54); border: solid 2px; border-radius: 50%; box-sizing: border-box; height: 20px; left: 0; position: absolute; top: 0; -webkit-transition: border-color ease 280ms; transition: border-color ease 280ms; width: 20px; } .md-radio-checked .md-radio-outer-circle { border-color: #9c27b0; } .md-radio-disabled .md-radio-outer-circle { border-color: rgba(0, 0, 0, 0.38); } .md-radio-inner-circle { background-color: #9c27b0; border-radius: 50%; box-sizing: border-box; height: 20px; left: 0; position: absolute; top: 0; -webkit-transition: background-color ease 280ms, -webkit-transform ease 280ms; transition: background-color ease 280ms, -webkit-transform ease 280ms; transition: transform ease 280ms, background-color ease 280ms; transition: transform ease 280ms, background-color ease 280ms, -webkit-transform ease 280ms; -webkit-transform: scale(0); transform: scale(0); width: 20px; } .md-radio-checked .md-radio-inner-circle { -webkit-transform: scale(0.5); transform: scale(0.5); } .md-radio-disabled .md-radio-inner-circle { background-color: rgba(0, 0, 0, 0.38); } .md-radio-label-content { display: inline-block; -webkit-box-ordinal-group: 1; -ms-flex-order: 0; order: 0; line-height: inherit; padding-left: 8px; padding-right: 0; } [dir='rtl'] .md-radio-label-content { padding-right: 8px; padding-left: 0; } .md-radio-label-content.md-radio-align-end { -webkit-box-ordinal-group: 0; -ms-flex-order: -1; order: -1; padding-left: 0; padding-right: 8px; } [dir='rtl'] .md-radio-label-content.md-radio-align-end { padding-right: 0; padding-left: 8px; } .md-radio-input { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; text-transform: none; width: 1px; } .md-radio-disabled, .md-radio-disabled .md-radio-label { cursor: default; } .md-ink-ripple { border-radius: 50%; opacity: 0; height: 48px; left: 50%; overflow: hidden; pointer-events: none; position: absolute; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); -webkit-transition: opacity ease 280ms, background-color ease 280ms; transition: opacity ease 280ms, background-color ease 280ms; width: 48px; } .md-radio-focused .md-ink-ripple { opacity: 1; background-color: rgba(156, 39, 176, 0.26); } .md-radio-disabled .md-ink-ripple { background-color: #000; } "],
+            styles: ["/** * Mixin that creates a new stacking context. * see https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context */ /** * This mixin hides an element visually. * That means it's still accessible for screen-readers but not visible in view. */ /** * Forces an element to grow to fit floated contents; used as as an alternative to * `overflow: hidden;` because it doesn't cut off contents. */ /** * A mixin, which generates temporary ink ripple on a given component. * When $bindToParent is set to true, it will check for the focused class on the same selector as you included * that mixin. * It is also possible to specify the color palette of the temporary ripple. By default it uses the * accent palette for its background. */ md-radio-button { display: inline-block; } .md-radio-label { cursor: pointer; display: inline-flex; align-items: baseline; white-space: nowrap; } .md-radio-container { box-sizing: border-box; display: inline-block; height: 20px; position: relative; width: 20px; top: 2px; } .md-radio-outer-circle { border-color: rgba(0, 0, 0, 0.54); border: solid 2px; border-radius: 50%; box-sizing: border-box; height: 20px; left: 0; position: absolute; top: 0; transition: border-color ease 280ms; width: 20px; } .md-radio-checked .md-radio-outer-circle { border-color: #9c27b0; } .md-radio-disabled .md-radio-outer-circle { border-color: rgba(0, 0, 0, 0.38); } .md-radio-inner-circle { background-color: #9c27b0; border-radius: 50%; box-sizing: border-box; height: 20px; left: 0; position: absolute; top: 0; transition: transform ease 280ms, background-color ease 280ms; transform: scale(0); width: 20px; } .md-radio-checked .md-radio-inner-circle { transform: scale(0.5); } .md-radio-disabled .md-radio-inner-circle { background-color: rgba(0, 0, 0, 0.38); } .md-radio-label-content { display: inline-block; order: 0; line-height: inherit; padding-left: 8px; padding-right: 0; } [dir='rtl'] .md-radio-label-content { padding-right: 8px; padding-left: 0; } .md-radio-label-content.md-radio-align-end { order: -1; padding-left: 0; padding-right: 8px; } [dir='rtl'] .md-radio-label-content.md-radio-align-end { padding-right: 0; padding-left: 8px; } .md-radio-input { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; text-transform: none; width: 1px; } .md-radio-disabled, .md-radio-disabled .md-radio-label { cursor: default; } .md-ink-ripple { border-radius: 50%; opacity: 0; height: 48px; left: 50%; overflow: hidden; pointer-events: none; position: absolute; top: 50%; transform: translate(-50%, -50%); transition: opacity ease 280ms, background-color ease 280ms; width: 48px; } .md-radio-focused .md-ink-ripple { opacity: 1; background-color: rgba(156, 39, 176, 0.26); } .md-radio-disabled .md-ink-ripple { background-color: #000; } /*# sourceMappingURL=radio.css.map */ "],
             encapsulation: core_1.ViewEncapsulation.None
         }),
         __param(0, core_1.Optional()), 
@@ -70138,7 +70270,9 @@ var MdRadioModule = (function () {
     return MdRadioModule;
 }());
 exports.MdRadioModule = MdRadioModule;
+
 //# sourceMappingURL=radio.js.map
+
 
 /***/ },
 /* 613 */
@@ -70436,6 +70570,7 @@ var MdSidenav = (function () {
     ], MdSidenav.prototype, "_modePush", null);
     MdSidenav = __decorate([
         core_1.Component({
+            moduleId: module.i,
             selector: 'md-sidenav',
             template: '<ng-content></ng-content>',
             host: {
@@ -70591,13 +70726,15 @@ var MdSidenavLayout = (function () {
         __metadata('design:type', core_1.QueryList)
     ], MdSidenavLayout.prototype, "_sidenavs", void 0);
     MdSidenavLayout = __decorate([
-        core_1.Component({            selector: 'md-sidenav-layout',
+        core_1.Component({
+            moduleId: module.i,
+            selector: 'md-sidenav-layout',
             // Do not use ChangeDetectionStrategy.OnPush. It does not work for this component because
             // technically it is a sibling of MdSidenav (on the content tree) and isn't updated when MdSidenav
             // changes its state.
             template: "<div class=\"md-sidenav-backdrop\" (click)=\"_closeModalSidenav()\" [class.md-sidenav-shown]=\"_isShowingBackdrop()\"></div> <ng-content select=\"md-sidenav\"></ng-content> <md-content [ngStyle]=\"_getStyles()\"> <ng-content></ng-content> </md-content> ",
-            styles: ["/** * Mixin that creates a new stacking context. * see https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context */ /** * This mixin hides an element visually. * That means it's still accessible for screen-readers but not visible in view. */ /** * Forces an element to grow to fit floated contents; used as as an alternative to * `overflow: hidden;` because it doesn't cut off contents. */ /** * A mixin, which generates temporary ink ripple on a given component. * When $bindToParent is set to true, it will check for the focused class on the same selector as you included * that mixin. * It is also possible to specify the color palette of the temporary ripple. By default it uses the * accent palette for its background. */ /** * A collection of mixins and CSS classes that can be used to apply elevation to a material * element. * See: https://www.google.com/design/spec/what-is-material/elevation-shadows.html * Examples: * * * .md-foo { *   @include $md-elevation(2); * *   &:active { *     @include $md-elevation(8); *   } * } * * <div id=\"external-card\" class=\"md-elevation-z2\"><p>Some content</p></div> * * For an explanation of the design behind how elevation is implemented, see the design doc at * https://goo.gl/Kq0k9Z. */ /** * The css property used for elevation. In most cases this should not be changed. It is exposed * as a variable for abstraction / easy use when needing to reference the property directly, for * example in a will-change rule. */ /** The default duration value for elevation transitions. */ /** The default easing value for elevation transitions. */ /** * Applies the correct css rules to an element to give it the elevation specified by $zValue. * The $zValue must be between 0 and 24. */ /** * Returns a string that can be used as the value for a transition property for elevation. * Calling this function directly is useful in situations where a component needs to transition * more than one property. * * .foo { *   transition: md-elevation-transition-property-value(), opacity 100ms ease; *   will-change: $md-elevation-property, opacity; * } */ /** * Applies the correct css rules needed to have an element transition between elevations. * This mixin should be applied to elements whose elevation values will change depending on their * context (e.g. when active or disabled). */ /* This mixin ensures an element spans the whole viewport.*/ /** * Mixin to help with defining LTR/RTL 'transform: translate3d()' values. * @param $open The translation value when the sidenav is opened. * @param $close The translation value when the sidenav is closed. */ :host { position: relative; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); box-sizing: border-box; -webkit-overflow-scrolling: touch; display: block; overflow: hidden; } :host[fullscreen] { position: fixed; top: 0; left: 0; right: 0; bottom: 0; } :host[fullscreen].md-sidenav-opened { overflow: hidden; } :host > .md-sidenav-backdrop { position: fixed; top: 0; left: 0; right: 0; bottom: 0; display: block; z-index: 2; visibility: hidden; } :host > .md-sidenav-backdrop.md-sidenav-shown { visibility: visible; background-color: rgba(0, 0, 0, 0.6); } :host > md-content { position: relative; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); display: block; height: 100%; overflow: auto; } :host > md-sidenav { position: relative; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); display: block; position: absolute; top: 0; bottom: 0; z-index: 3; min-width: 5%; overflow-y: auto; background-color: white; -webkit-transform: translate3d(-100%, 0, 0); transform: translate3d(-100%, 0, 0); } :host > md-sidenav.md-sidenav-closed { visibility: hidden; } :host > md-sidenav.md-sidenav-closing { -webkit-transform: translate3d(-100%, 0, 0); transform: translate3d(-100%, 0, 0); will-change: transform; } :host > md-sidenav.md-sidenav-opening { box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); visibility: visible; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); will-change: transform; } :host > md-sidenav.md-sidenav-opened { box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); } :host > md-sidenav.md-sidenav-push { background-color: white; } :host > md-sidenav.md-sidenav-side { z-index: 1; } :host > md-sidenav.md-sidenav-end { right: 0; -webkit-transform: translate3d(100%, 0, 0); transform: translate3d(100%, 0, 0); } :host > md-sidenav.md-sidenav-end.md-sidenav-closed { visibility: hidden; } :host > md-sidenav.md-sidenav-end.md-sidenav-closing { -webkit-transform: translate3d(100%, 0, 0); transform: translate3d(100%, 0, 0); will-change: transform; } :host > md-sidenav.md-sidenav-end.md-sidenav-opening { box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); visibility: visible; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); will-change: transform; } :host > md-sidenav.md-sidenav-end.md-sidenav-opened { box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); } :host-context([dir='rtl']) > md-sidenav { -webkit-transform: translate3d(100%, 0, 0); transform: translate3d(100%, 0, 0); } :host-context([dir='rtl']) > md-sidenav.md-sidenav-closed { visibility: hidden; } :host-context([dir='rtl']) > md-sidenav.md-sidenav-closing { -webkit-transform: translate3d(100%, 0, 0); transform: translate3d(100%, 0, 0); will-change: transform; } :host-context([dir='rtl']) > md-sidenav.md-sidenav-opening { box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); visibility: visible; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); will-change: transform; } :host-context([dir='rtl']) > md-sidenav.md-sidenav-opened { box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); } :host-context([dir='rtl']) > md-sidenav.md-sidenav-end { left: 0; right: auto; -webkit-transform: translate3d(-100%, 0, 0); transform: translate3d(-100%, 0, 0); } :host-context([dir='rtl']) > md-sidenav.md-sidenav-end.md-sidenav-closed { visibility: hidden; } :host-context([dir='rtl']) > md-sidenav.md-sidenav-end.md-sidenav-closing { -webkit-transform: translate3d(-100%, 0, 0); transform: translate3d(-100%, 0, 0); will-change: transform; } :host-context([dir='rtl']) > md-sidenav.md-sidenav-end.md-sidenav-opening { box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); visibility: visible; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); will-change: transform; } :host-context([dir='rtl']) > md-sidenav.md-sidenav-end.md-sidenav-opened { box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); } ",
-"/** * We separate transitions to be able to disable them in unit tests, by simply not loading this file. */ :host > .md-sidenav-backdrop.md-sidenav-shown { -webkit-transition: background-color 400ms cubic-bezier(0.25, 0.8, 0.25, 1); transition: background-color 400ms cubic-bezier(0.25, 0.8, 0.25, 1); } :host > md-content { -webkit-transition: -webkit-transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1); transition: -webkit-transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1); transition: transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1); transition: transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1), -webkit-transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1); } :host > md-sidenav { -webkit-transition: -webkit-transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1); transition: -webkit-transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1); transition: transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1); transition: transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1), -webkit-transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1); } "],
+            styles: ["/** * Mixin that creates a new stacking context. * see https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context */ /** * This mixin hides an element visually. * That means it's still accessible for screen-readers but not visible in view. */ /** * Forces an element to grow to fit floated contents; used as as an alternative to * `overflow: hidden;` because it doesn't cut off contents. */ /** * A mixin, which generates temporary ink ripple on a given component. * When $bindToParent is set to true, it will check for the focused class on the same selector as you included * that mixin. * It is also possible to specify the color palette of the temporary ripple. By default it uses the * accent palette for its background. */ /** * A collection of mixins and CSS classes that can be used to apply elevation to a material * element. * See: https://www.google.com/design/spec/what-is-material/elevation-shadows.html * Examples: * * * .md-foo { *   @include $md-elevation(2); * *   &:active { *     @include $md-elevation(8); *   } * } * * <div id=\"external-card\" class=\"md-elevation-z2\"><p>Some content</p></div> * * For an explanation of the design behind how elevation is implemented, see the design doc at * https://goo.gl/Kq0k9Z. */ /** * The css property used for elevation. In most cases this should not be changed. It is exposed * as a variable for abstraction / easy use when needing to reference the property directly, for * example in a will-change rule. */ /** The default duration value for elevation transitions. */ /** The default easing value for elevation transitions. */ /** * Applies the correct css rules to an element to give it the elevation specified by $zValue. * The $zValue must be between 0 and 24. */ /** * Returns a string that can be used as the value for a transition property for elevation. * Calling this function directly is useful in situations where a component needs to transition * more than one property. * * .foo { *   transition: md-elevation-transition-property-value(), opacity 100ms ease; *   will-change: $md-elevation-property, opacity; * } */ /** * Applies the correct css rules needed to have an element transition between elevations. * This mixin should be applied to elements whose elevation values will change depending on their * context (e.g. when active or disabled). */ /* This mixin ensures an element spans the whole viewport.*/ /** * Mixin to help with defining LTR/RTL 'transform: translate3d()' values. * @param $open The translation value when the sidenav is opened. * @param $close The translation value when the sidenav is closed. */ :host { position: relative; transform: translate3d(0, 0, 0); box-sizing: border-box; -webkit-overflow-scrolling: touch; display: block; overflow: hidden; } :host[fullscreen] { position: fixed; top: 0; left: 0; right: 0; bottom: 0; } :host[fullscreen].md-sidenav-opened { overflow: hidden; } :host > .md-sidenav-backdrop { position: fixed; top: 0; left: 0; right: 0; bottom: 0; display: block; z-index: 2; visibility: hidden; } :host > .md-sidenav-backdrop.md-sidenav-shown { visibility: visible; background-color: rgba(0, 0, 0, 0.6); } :host > md-content { position: relative; transform: translate3d(0, 0, 0); display: block; height: 100%; overflow: auto; } :host > md-sidenav { position: relative; transform: translate3d(0, 0, 0); display: block; position: absolute; top: 0; bottom: 0; z-index: 3; min-width: 5%; overflow-y: auto; background-color: white; transform: translate3d(-100%, 0, 0); } :host > md-sidenav.md-sidenav-closed { visibility: hidden; } :host > md-sidenav.md-sidenav-closing { transform: translate3d(-100%, 0, 0); will-change: transform; } :host > md-sidenav.md-sidenav-opening { box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); visibility: visible; transform: translate3d(0, 0, 0); will-change: transform; } :host > md-sidenav.md-sidenav-opened { box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); transform: translate3d(0, 0, 0); } :host > md-sidenav.md-sidenav-push { background-color: white; } :host > md-sidenav.md-sidenav-side { z-index: 1; } :host > md-sidenav.md-sidenav-end { right: 0; transform: translate3d(100%, 0, 0); } :host > md-sidenav.md-sidenav-end.md-sidenav-closed { visibility: hidden; } :host > md-sidenav.md-sidenav-end.md-sidenav-closing { transform: translate3d(100%, 0, 0); will-change: transform; } :host > md-sidenav.md-sidenav-end.md-sidenav-opening { box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); visibility: visible; transform: translate3d(0, 0, 0); will-change: transform; } :host > md-sidenav.md-sidenav-end.md-sidenav-opened { box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); transform: translate3d(0, 0, 0); } :host-context([dir='rtl']) > md-sidenav { transform: translate3d(100%, 0, 0); } :host-context([dir='rtl']) > md-sidenav.md-sidenav-closed { visibility: hidden; } :host-context([dir='rtl']) > md-sidenav.md-sidenav-closing { transform: translate3d(100%, 0, 0); will-change: transform; } :host-context([dir='rtl']) > md-sidenav.md-sidenav-opening { box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); visibility: visible; transform: translate3d(0, 0, 0); will-change: transform; } :host-context([dir='rtl']) > md-sidenav.md-sidenav-opened { box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); transform: translate3d(0, 0, 0); } :host-context([dir='rtl']) > md-sidenav.md-sidenav-end { left: 0; right: auto; transform: translate3d(-100%, 0, 0); } :host-context([dir='rtl']) > md-sidenav.md-sidenav-end.md-sidenav-closed { visibility: hidden; } :host-context([dir='rtl']) > md-sidenav.md-sidenav-end.md-sidenav-closing { transform: translate3d(-100%, 0, 0); will-change: transform; } :host-context([dir='rtl']) > md-sidenav.md-sidenav-end.md-sidenav-opening { box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); visibility: visible; transform: translate3d(0, 0, 0); will-change: transform; } :host-context([dir='rtl']) > md-sidenav.md-sidenav-end.md-sidenav-opened { box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); transform: translate3d(0, 0, 0); } /*# sourceMappingURL=sidenav.css.map */ ",
+"/** * We separate transitions to be able to disable them in unit tests, by simply not loading this file. */ :host > .md-sidenav-backdrop.md-sidenav-shown { transition: background-color 400ms cubic-bezier(0.25, 0.8, 0.25, 1); } :host > md-content { transition: transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1); } :host > md-sidenav { transition: transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1); } /*# sourceMappingURL=sidenav-transitions.css.map */ "],
         }),
         __param(0, core_1.Optional()), 
         __metadata('design:paramtypes', [dir_1.Dir, core_1.ElementRef, core_1.Renderer])
@@ -70621,7 +70758,9 @@ var MdSidenavModule = (function () {
     return MdSidenavModule;
 }());
 exports.MdSidenavModule = MdSidenavModule;
+
 //# sourceMappingURL=sidenav.js.map
+
 
 /***/ },
 /* 614 */
@@ -70640,7 +70779,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = __webpack_require__(0);
 var platform_browser_1 = __webpack_require__(64);
-var forms_1 = __webpack_require__(60);
+var forms_1 = __webpack_require__(51);
 var field_value_1 = __webpack_require__(92);
 var Observable_1 = __webpack_require__(4);
 var apply_transform_1 = __webpack_require__(174);
@@ -70856,7 +70995,9 @@ var MdSlideToggle = (function () {
         __metadata('design:type', String)
     ], MdSlideToggle.prototype, "color", null);
     MdSlideToggle = __decorate([
-        core_1.Component({            selector: 'md-slide-toggle',
+        core_1.Component({
+            moduleId: module.i,
+            selector: 'md-slide-toggle',
             host: {
                 '[class.md-checked]': 'checked',
                 '[class.md-disabled]': 'disabled',
@@ -70865,7 +71006,7 @@ var MdSlideToggle = (function () {
                 '(mousedown)': '_setMousedown()'
             },
             template: "<label class=\"md-slide-toggle-label\"> <div class=\"md-slide-toggle-container\"> <div class=\"md-slide-toggle-bar\"></div> <div class=\"md-slide-toggle-thumb-container\" (slidestart)=\"_onDragStart($event)\" (slide)=\"_onDrag($event)\" (slideend)=\"_onDragEnd($event)\"> <div class=\"md-slide-toggle-thumb\"> <div class=\"md-ink-ripple\"></div> </div> </div> <input #input class=\"md-slide-toggle-checkbox\" type=\"checkbox\" [id]=\"getInputId()\" [tabIndex]=\"tabIndex\" [checked]=\"checked\" [disabled]=\"disabled\" [attr.name]=\"name\" [attr.aria-label]=\"ariaLabel\" [attr.aria-labelledby]=\"ariaLabelledby\" (blur)=\"_onInputBlur()\" (focus)=\"_onInputFocus()\" (change)=\"_onChangeEvent($event)\" (click)=\"_onInputClick($event)\"> </div> <span class=\"md-slide-toggle-content\"> <ng-content></ng-content> </span> </label> ",
-            styles: ["/** * Mixin that creates a new stacking context. * see https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context */ /** * This mixin hides an element visually. * That means it's still accessible for screen-readers but not visible in view. */ /** * Forces an element to grow to fit floated contents; used as as an alternative to * `overflow: hidden;` because it doesn't cut off contents. */ /** * A mixin, which generates temporary ink ripple on a given component. * When $bindToParent is set to true, it will check for the focused class on the same selector as you included * that mixin. * It is also possible to specify the color palette of the temporary ripple. By default it uses the * accent palette for its background. */ /** * A collection of mixins and CSS classes that can be used to apply elevation to a material * element. * See: https://www.google.com/design/spec/what-is-material/elevation-shadows.html * Examples: * * * .md-foo { *   @include $md-elevation(2); * *   &:active { *     @include $md-elevation(8); *   } * } * * <div id=\"external-card\" class=\"md-elevation-z2\"><p>Some content</p></div> * * For an explanation of the design behind how elevation is implemented, see the design doc at * https://goo.gl/Kq0k9Z. */ /** * The css property used for elevation. In most cases this should not be changed. It is exposed * as a variable for abstraction / easy use when needing to reference the property directly, for * example in a will-change rule. */ /** The default duration value for elevation transitions. */ /** The default easing value for elevation transitions. */ /** * Applies the correct css rules to an element to give it the elevation specified by $zValue. * The $zValue must be between 0 and 24. */ /** * Returns a string that can be used as the value for a transition property for elevation. * Calling this function directly is useful in situations where a component needs to transition * more than one property. * * .foo { *   transition: md-elevation-transition-property-value(), opacity 100ms ease; *   will-change: $md-elevation-property, opacity; * } */ /** * Applies the correct css rules needed to have an element transition between elevations. * This mixin should be applied to elements whose elevation values will change depending on their * context (e.g. when active or disabled). */ :host { display: -webkit-box; display: -ms-flexbox; display: flex; height: 24px; margin: 16px 0; line-height: 24px; white-space: nowrap; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; outline: none; } :host.md-checked .md-slide-toggle-thumb-container { -webkit-transform: translate3d(100%, 0, 0); transform: translate3d(100%, 0, 0); } :host.md-checked .md-slide-toggle-thumb { background-color: #9c27b0; } :host.md-checked .md-slide-toggle-bar { background-color: rgba(156, 39, 176, 0.5); } :host .md-ink-ripple { border-radius: 50%; opacity: 0; height: 48px; left: 50%; overflow: hidden; pointer-events: none; position: absolute; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); -webkit-transition: opacity ease 280ms, background-color ease 280ms; transition: opacity ease 280ms, background-color ease 280ms; width: 48px; } :host.md-slide-toggle-focused .md-ink-ripple { opacity: 1; background-color: rgba(156, 39, 176, 0.26); } :host.md-slide-toggle-disabled .md-ink-ripple { background-color: #000; } :host.md-slide-toggle-focused:not(.md-checked) .md-ink-ripple { background-color: rgba(0, 0, 0, 0.12); } :host.md-primary.md-checked .md-slide-toggle-thumb { background-color: #009688; } :host.md-primary.md-checked .md-slide-toggle-bar { background-color: rgba(0, 150, 136, 0.5); } :host.md-primary .md-ink-ripple { border-radius: 50%; opacity: 0; height: 48px; left: 50%; overflow: hidden; pointer-events: none; position: absolute; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); -webkit-transition: opacity ease 280ms, background-color ease 280ms; transition: opacity ease 280ms, background-color ease 280ms; width: 48px; } :host.md-primary.md-slide-toggle-focused .md-ink-ripple { opacity: 1; background-color: rgba(0, 150, 136, 0.26); } :host.md-primary.md-slide-toggle-disabled .md-ink-ripple { background-color: #000; } :host.md-primary.md-slide-toggle-focused:not(.md-checked) .md-ink-ripple { background-color: rgba(0, 0, 0, 0.12); } :host.md-warn.md-checked .md-slide-toggle-thumb { background-color: #f44336; } :host.md-warn.md-checked .md-slide-toggle-bar { background-color: rgba(244, 67, 54, 0.5); } :host.md-warn .md-ink-ripple { border-radius: 50%; opacity: 0; height: 48px; left: 50%; overflow: hidden; pointer-events: none; position: absolute; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); -webkit-transition: opacity ease 280ms, background-color ease 280ms; transition: opacity ease 280ms, background-color ease 280ms; width: 48px; } :host.md-warn.md-slide-toggle-focused .md-ink-ripple { opacity: 1; background-color: rgba(244, 67, 54, 0.26); } :host.md-warn.md-slide-toggle-disabled .md-ink-ripple { background-color: #000; } :host.md-warn.md-slide-toggle-focused:not(.md-checked) .md-ink-ripple { background-color: rgba(0, 0, 0, 0.12); } :host.md-disabled .md-slide-toggle-label, :host.md-disabled .md-slide-toggle-container { cursor: default; } :host.md-disabled .md-slide-toggle-thumb { background-color: #bdbdbd; } :host.md-disabled .md-slide-toggle-bar { background-color: rgba(0, 0, 0, 0.12); } .md-slide-toggle-content { font-size: 14px; font-family: Roboto, \"Helvetica Neue\", sans-serif; font-weight: 500; } .md-slide-toggle-label { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-flex: 1; -ms-flex: 1; flex: 1; cursor: pointer; } .md-slide-toggle-container { cursor: -webkit-grab; cursor: grab; width: 36px; height: 24px; position: relative; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; margin-right: 8px; } .md-slide-toggle-thumb-container { position: absolute; top: 2px; left: 0; z-index: 1; width: 16px; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); -webkit-transition: all 80ms linear; transition: all 80ms linear; -webkit-transition-property: -webkit-transform; transition-property: -webkit-transform; transition-property: transform; transition-property: transform, -webkit-transform; } .md-slide-toggle-thumb-container.md-dragging { -webkit-transition-duration: 0ms; transition-duration: 0ms; } .md-slide-toggle-thumb { position: absolute; margin: 0; left: 0; top: 0; height: 20px; width: 20px; border-radius: 50%; background-color: #fafafa; box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); } .md-slide-toggle-bar { position: absolute; left: 1px; top: 5px; width: 34px; height: 14px; background-color: #9e9e9e; border-radius: 8px; } .md-slide-toggle-checkbox { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; text-transform: none; width: 1px; } .md-slide-toggle-bar, .md-slide-toggle-thumb { -webkit-transition: all 80ms linear; transition: all 80ms linear; -webkit-transition-property: background-color; transition-property: background-color; -webkit-transition-delay: 50ms; transition-delay: 50ms; } "],
+            styles: ["/** * Mixin that creates a new stacking context. * see https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context */ /** * This mixin hides an element visually. * That means it's still accessible for screen-readers but not visible in view. */ /** * Forces an element to grow to fit floated contents; used as as an alternative to * `overflow: hidden;` because it doesn't cut off contents. */ /** * A mixin, which generates temporary ink ripple on a given component. * When $bindToParent is set to true, it will check for the focused class on the same selector as you included * that mixin. * It is also possible to specify the color palette of the temporary ripple. By default it uses the * accent palette for its background. */ /** * A collection of mixins and CSS classes that can be used to apply elevation to a material * element. * See: https://www.google.com/design/spec/what-is-material/elevation-shadows.html * Examples: * * * .md-foo { *   @include $md-elevation(2); * *   &:active { *     @include $md-elevation(8); *   } * } * * <div id=\"external-card\" class=\"md-elevation-z2\"><p>Some content</p></div> * * For an explanation of the design behind how elevation is implemented, see the design doc at * https://goo.gl/Kq0k9Z. */ /** * The css property used for elevation. In most cases this should not be changed. It is exposed * as a variable for abstraction / easy use when needing to reference the property directly, for * example in a will-change rule. */ /** The default duration value for elevation transitions. */ /** The default easing value for elevation transitions. */ /** * Applies the correct css rules to an element to give it the elevation specified by $zValue. * The $zValue must be between 0 and 24. */ /** * Returns a string that can be used as the value for a transition property for elevation. * Calling this function directly is useful in situations where a component needs to transition * more than one property. * * .foo { *   transition: md-elevation-transition-property-value(), opacity 100ms ease; *   will-change: $md-elevation-property, opacity; * } */ /** * Applies the correct css rules needed to have an element transition between elevations. * This mixin should be applied to elements whose elevation values will change depending on their * context (e.g. when active or disabled). */ :host { display: flex; height: 24px; margin: 16px 0; line-height: 24px; white-space: nowrap; user-select: none; outline: none; } :host.md-checked .md-slide-toggle-thumb-container { transform: translate3d(100%, 0, 0); } :host.md-checked .md-slide-toggle-thumb { background-color: #9c27b0; } :host.md-checked .md-slide-toggle-bar { background-color: rgba(156, 39, 176, 0.5); } :host .md-ink-ripple { border-radius: 50%; opacity: 0; height: 48px; left: 50%; overflow: hidden; pointer-events: none; position: absolute; top: 50%; transform: translate(-50%, -50%); transition: opacity ease 280ms, background-color ease 280ms; width: 48px; } :host.md-slide-toggle-focused .md-ink-ripple { opacity: 1; background-color: rgba(156, 39, 176, 0.26); } :host.md-slide-toggle-disabled .md-ink-ripple { background-color: #000; } :host.md-slide-toggle-focused:not(.md-checked) .md-ink-ripple { background-color: rgba(0, 0, 0, 0.12); } :host.md-primary.md-checked .md-slide-toggle-thumb { background-color: #009688; } :host.md-primary.md-checked .md-slide-toggle-bar { background-color: rgba(0, 150, 136, 0.5); } :host.md-primary .md-ink-ripple { border-radius: 50%; opacity: 0; height: 48px; left: 50%; overflow: hidden; pointer-events: none; position: absolute; top: 50%; transform: translate(-50%, -50%); transition: opacity ease 280ms, background-color ease 280ms; width: 48px; } :host.md-primary.md-slide-toggle-focused .md-ink-ripple { opacity: 1; background-color: rgba(0, 150, 136, 0.26); } :host.md-primary.md-slide-toggle-disabled .md-ink-ripple { background-color: #000; } :host.md-primary.md-slide-toggle-focused:not(.md-checked) .md-ink-ripple { background-color: rgba(0, 0, 0, 0.12); } :host.md-warn.md-checked .md-slide-toggle-thumb { background-color: #f44336; } :host.md-warn.md-checked .md-slide-toggle-bar { background-color: rgba(244, 67, 54, 0.5); } :host.md-warn .md-ink-ripple { border-radius: 50%; opacity: 0; height: 48px; left: 50%; overflow: hidden; pointer-events: none; position: absolute; top: 50%; transform: translate(-50%, -50%); transition: opacity ease 280ms, background-color ease 280ms; width: 48px; } :host.md-warn.md-slide-toggle-focused .md-ink-ripple { opacity: 1; background-color: rgba(244, 67, 54, 0.26); } :host.md-warn.md-slide-toggle-disabled .md-ink-ripple { background-color: #000; } :host.md-warn.md-slide-toggle-focused:not(.md-checked) .md-ink-ripple { background-color: rgba(0, 0, 0, 0.12); } :host.md-disabled .md-slide-toggle-label, :host.md-disabled .md-slide-toggle-container { cursor: default; } :host.md-disabled .md-slide-toggle-thumb { background-color: #bdbdbd; } :host.md-disabled .md-slide-toggle-bar { background-color: rgba(0, 0, 0, 0.12); } .md-slide-toggle-content { font-size: 14px; font-family: Roboto, \"Helvetica Neue\", sans-serif; font-weight: 500; } .md-slide-toggle-label { display: flex; flex: 1; cursor: pointer; } .md-slide-toggle-container { cursor: grab; width: 36px; height: 24px; position: relative; user-select: none; margin-right: 8px; } .md-slide-toggle-thumb-container { position: absolute; top: 2px; left: 0; z-index: 1; width: 16px; transform: translate3d(0, 0, 0); transition: all 80ms linear; transition-property: transform; } .md-slide-toggle-thumb-container.md-dragging { transition-duration: 0ms; } .md-slide-toggle-thumb { position: absolute; margin: 0; left: 0; top: 0; height: 20px; width: 20px; border-radius: 50%; background-color: #fafafa; box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); } .md-slide-toggle-bar { position: absolute; left: 1px; top: 5px; width: 34px; height: 14px; background-color: #9e9e9e; border-radius: 8px; } .md-slide-toggle-checkbox { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; text-transform: none; width: 1px; } .md-slide-toggle-bar, .md-slide-toggle-thumb { transition: all 80ms linear; transition-property: background-color; transition-delay: 50ms; } /*# sourceMappingURL=slide-toggle.css.map */ "],
             providers: [exports.MD_SLIDE_TOGGLE_VALUE_ACCESSOR],
             changeDetection: core_1.ChangeDetectionStrategy.OnPush
         }), 
@@ -70941,7 +71082,9 @@ var MdSlideToggleModule = (function () {
     return MdSlideToggleModule;
 }());
 exports.MdSlideToggleModule = MdSlideToggleModule;
+
 //# sourceMappingURL=slide-toggle.js.map
+
 
 /***/ },
 /* 615 */
@@ -70959,6 +71102,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = __webpack_require__(0);
+var forms_1 = __webpack_require__(51);
 var platform_browser_1 = __webpack_require__(64);
 var field_value_1 = __webpack_require__(92);
 var apply_transform_1 = __webpack_require__(174);
@@ -70968,6 +71112,15 @@ var core_2 = __webpack_require__(116);
  * the default separation we chose.
  */
 var MIN_AUTO_TICK_SEPARATION = 30;
+/**
+ * Provider Expression that allows md-slider to register as a ControlValueAccessor.
+ * This allows it to support [(ngModel)] and [formControl].
+ */
+exports.MD_SLIDER_VALUE_ACCESSOR = {
+    provide: forms_1.NG_VALUE_ACCESSOR,
+    useExisting: core_1.forwardRef(function () { return MdSlider; }),
+    multi: true
+};
 var MdSlider = (function () {
     function MdSlider(elementRef) {
         /** A renderer to handle updating the slider's thumb and fill track. */
@@ -70975,12 +71128,17 @@ var MdSlider = (function () {
         /** The dimensions of the slider. */
         this._sliderDimensions = null;
         this.disabled = false;
+        /** Whether or not to show the thumb label. */
+        this.thumbLabel = false;
         /** The miniumum value that the slider can have. */
         this._min = 0;
         /** The maximum value that the slider can have. */
         this._max = 100;
         /** The percentage of the slider that coincides with the value. */
         this._percent = 0;
+        this._controlValueAccessorChangeFn = function (value) { };
+        /** onTouch function registered via registerOnTouch (ControlValueAccessor). */
+        this.onTouched = function () { };
         /** The values at which the thumb will snap. */
         this.step = 1;
         /**
@@ -71031,8 +71189,14 @@ var MdSlider = (function () {
             return this._value;
         },
         set: function (v) {
+            // Only set the value to a valid number. v is casted to an any as we know it will come in as a
+            // string but it is labeled as a number which causes parseFloat to not accept it.
+            if (isNaN(parseFloat(v))) {
+                return;
+            }
             this._value = Number(v);
             this._isInitialized = true;
+            this._controlValueAccessorChangeFn(this._value);
         },
         enumerable: true,
         configurable: true
@@ -71044,7 +71208,10 @@ var MdSlider = (function () {
      */
     MdSlider.prototype.ngAfterContentInit = function () {
         this._sliderDimensions = this._renderer.getSliderDimensions();
-        this.snapToValue();
+        // This needs to be called after content init because the value can be set to the min if the
+        // value itself isn't set. If this happens, the control value accessor needs to be updated.
+        this._controlValueAccessorChangeFn(this.value);
+        this.snapThumbToValue();
         this._updateTickSeparation();
     };
     /** TODO: internal */
@@ -71056,7 +71223,7 @@ var MdSlider = (function () {
         this.isSliding = false;
         this._renderer.addFocus();
         this.updateValueFromPosition(event.clientX);
-        this.snapToValue();
+        this.snapThumbToValue();
     };
     /** TODO: internal */
     MdSlider.prototype.onSlide = function (event) {
@@ -71081,7 +71248,7 @@ var MdSlider = (function () {
     /** TODO: internal */
     MdSlider.prototype.onSlideEnd = function () {
         this.isSliding = false;
-        this.snapToValue();
+        this.snapThumbToValue();
     };
     /** TODO: internal */
     MdSlider.prototype.onResize = function () {
@@ -71093,6 +71260,7 @@ var MdSlider = (function () {
     /** TODO: internal */
     MdSlider.prototype.onBlur = function () {
         this.isActive = false;
+        this.onTouched();
     };
     /**
      * When the value changes without a physical position, the percentage needs to be recalculated
@@ -71122,7 +71290,7 @@ var MdSlider = (function () {
      * Snaps the thumb to the current value.
      * Called after a click or drag event is over.
      */
-    MdSlider.prototype.snapToValue = function () {
+    MdSlider.prototype.snapThumbToValue = function () {
         this.updatePercentFromValue();
         this._renderer.updateThumbAndFillPosition(this._percent, this._sliderDimensions.width);
     };
@@ -71197,6 +71365,30 @@ var MdSlider = (function () {
         if (max === void 0) { max = 1; }
         return Math.max(min, Math.min(value, max));
     };
+    /**
+     * Implemented as part of ControlValueAccessor.
+     * TODO: internal
+     */
+    MdSlider.prototype.writeValue = function (value) {
+        this.value = value;
+        if (this._sliderDimensions) {
+            this.snapThumbToValue();
+        }
+    };
+    /**
+     * Implemented as part of ControlValueAccessor.
+     * TODO: internal
+     */
+    MdSlider.prototype.registerOnChange = function (fn) {
+        this._controlValueAccessorChangeFn = fn;
+    };
+    /**
+     * Implemented as part of ControlValueAccessor.
+     * TODO: internal
+     */
+    MdSlider.prototype.registerOnTouched = function (fn) {
+        this.onTouched = fn;
+    };
     __decorate([
         core_1.Input(),
         field_value_1.BooleanFieldValue(),
@@ -71204,6 +71396,11 @@ var MdSlider = (function () {
         core_1.HostBinding('attr.aria-disabled'), 
         __metadata('design:type', Boolean)
     ], MdSlider.prototype, "disabled", void 0);
+    __decorate([
+        core_1.Input('thumb-label'),
+        field_value_1.BooleanFieldValue(), 
+        __metadata('design:type', Boolean)
+    ], MdSlider.prototype, "thumbLabel", void 0);
     __decorate([
         core_1.Input(), 
         __metadata('design:type', Number)
@@ -71228,7 +71425,10 @@ var MdSlider = (function () {
         __metadata('design:type', Object)
     ], MdSlider.prototype, "value", null);
     MdSlider = __decorate([
-        core_1.Component({            selector: 'md-slider',
+        core_1.Component({
+            moduleId: module.i,
+            selector: 'md-slider',
+            providers: [exports.MD_SLIDER_VALUE_ACCESSOR],
             host: {
                 'tabindex': '0',
                 '(click)': 'onClick($event)',
@@ -71238,8 +71438,8 @@ var MdSlider = (function () {
                 '(window:resize)': 'onResize()',
                 '(blur)': 'onBlur()',
             },
-            template: "<div class=\"md-slider-wrapper\"> <div class=\"md-slider-container\" [class.md-slider-sliding]=\"isSliding\" [class.md-slider-active]=\"isActive\"> <div class=\"md-slider-track-container\"> <div class=\"md-slider-track\"></div> <div class=\"md-slider-track md-slider-track-fill\"></div> <div class=\"md-slider-tick-container\"></div> <div class=\"md-slider-last-tick-container\"></div> </div> <div class=\"md-slider-thumb-container\"> <div class=\"md-slider-thumb-position\"> <div class=\"md-slider-thumb\"></div> </div> </div> </div> </div> ",
-            styles: ["/** * Uses a container height and an item height to center an item vertically within the container. */ /** * Positions the thumb based on its width and height. */ md-slider { height: 20px; min-width: 128px; position: relative; padding: 0; display: inline-block; outline: none; vertical-align: middle; } md-slider *, md-slider *::after { box-sizing: border-box; } /** * Exists in order to pad the slider and keep everything positioned correctly. * Cannot be merged with the .md-slider-container. */ .md-slider-wrapper { width: 100%; height: 100%; padding-left: 8px; padding-right: 8px; } /** * Holds the isActive and isSliding classes as well as helps with positioning the children. * Cannot be merged with .md-slider-wrapper. */ .md-slider-container { position: relative; } .md-slider-track-container { width: 100%; position: absolute; top: 9px; height: 2px; } .md-slider-track { position: absolute; left: 0; right: 0; height: 100%; background-color: rgba(0, 0, 0, 0.26); } .md-slider-track-fill { -webkit-transition-duration: 400ms; transition-duration: 400ms; -webkit-transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1); transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1); -webkit-transition-property: width, height; transition-property: width, height; background-color: #9c27b0; } .md-slider-tick-container, .md-slider-last-tick-container { position: absolute; left: 0; right: 0; height: 100%; } .md-slider-thumb-container { position: absolute; left: 0; top: 50%; -webkit-transform: translate3d(-50%, -50%, 0); transform: translate3d(-50%, -50%, 0); -webkit-transition-duration: 400ms; transition-duration: 400ms; -webkit-transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1); transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1); -webkit-transition-property: left, bottom; transition-property: left, bottom; } .md-slider-thumb-position { -webkit-transition: -webkit-transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1); transition: -webkit-transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1); transition: transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1); transition: transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1), -webkit-transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1); } .md-slider-thumb { z-index: 1; position: absolute; top: 0px; left: -10px; width: 20px; height: 20px; border-radius: 20px; -webkit-transform: scale(0.7); transform: scale(0.7); -webkit-transition: -webkit-transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1); transition: -webkit-transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1); transition: transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1); transition: transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1), -webkit-transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1); } .md-slider-thumb::after { content: ''; position: absolute; width: 20px; height: 20px; border-radius: 20px; border-width: 3px; border-style: solid; -webkit-transition: inherit; transition: inherit; background-color: #9c27b0; border-color: #9c27b0; } .md-slider-sliding .md-slider-thumb-position, .md-slider-sliding .md-slider-track-fill { -webkit-transition: none; transition: none; cursor: default; } .md-slider-active .md-slider-thumb { -webkit-transform: scale(1); transform: scale(1); } .md-slider-disabled .md-slider-thumb::after { background-color: rgba(0, 0, 0, 0.26); border-color: rgba(0, 0, 0, 0.26); } "],
+            template: "<div class=\"md-slider-wrapper\"> <div class=\"md-slider-container\" [class.md-slider-sliding]=\"isSliding\" [class.md-slider-active]=\"isActive\" [class.md-slider-thumb-label-showing]=\"thumbLabel\"> <div class=\"md-slider-track-container\"> <div class=\"md-slider-track\"></div> <div class=\"md-slider-track md-slider-track-fill\"></div> <div class=\"md-slider-tick-container\"></div> <div class=\"md-slider-last-tick-container\"></div> </div> <div class=\"md-slider-thumb-container\"> <div class=\"md-slider-thumb-position\"> <div class=\"md-slider-thumb\"></div> <div class=\"md-slider-thumb-label\"> <span class=\"md-slider-thumb-label-text\">{{value}}</span> </div> </div> </div> </div> </div> ",
+            styles: ["/** * Uses a container height and an item height to center an item vertically within the container. */ /** * Positions the thumb based on its width and height. */ md-slider { height: 48px; min-width: 128px; position: relative; padding: 0; display: inline-block; outline: none; vertical-align: middle; } md-slider *, md-slider *::after { box-sizing: border-box; } /** * Exists in order to pad the slider and keep everything positioned correctly. * Cannot be merged with the .md-slider-container. */ .md-slider-wrapper { width: 100%; height: 100%; padding-left: 8px; padding-right: 8px; } /** * Holds the isActive and isSliding classes as well as helps with positioning the children. * Cannot be merged with .md-slider-wrapper. */ .md-slider-container { position: relative; } .md-slider-track-container { width: 100%; position: absolute; top: 23px; height: 2px; } .md-slider-track { position: absolute; left: 0; right: 0; height: 100%; background-color: rgba(0, 0, 0, 0.26); } .md-slider-track-fill { transition-duration: 400ms; transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1); transition-property: width, height; background-color: #9c27b0; } .md-slider-tick-container, .md-slider-last-tick-container { position: absolute; left: 0; right: 0; height: 100%; } .md-slider-thumb-container { position: absolute; left: 0; top: 50%; transform: translate3d(-50%, -50%, 0); transition-duration: 400ms; transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1); transition-property: left, bottom; } .md-slider-thumb-position { transition: transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1); } .md-slider-thumb { z-index: 1; position: absolute; top: 14px; left: -10px; width: 20px; height: 20px; border-radius: 20px; transform: scale(0.7); transition: transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1); } .md-slider-thumb::after { content: ''; position: absolute; width: 20px; height: 20px; border-radius: 20px; border-width: 3px; border-style: solid; transition: inherit; background-color: #9c27b0; border-color: #9c27b0; } .md-slider-thumb-label { display: flex; align-items: center; justify-content: center; position: absolute; left: -14px; top: -17px; width: 28px; height: 28px; border-radius: 50%; transform: scale(0.4) translate3d(0, 67.5px, 0) rotate(45deg); transition: 300ms cubic-bezier(0.35, 0, 0.25, 1); transition-property: transform, border-radius; background-color: #9c27b0; } .md-slider-thumb-label-text { z-index: 1; font-size: 12px; font-weight: bold; opacity: 0; transform: rotate(-45deg); transition: opacity 300ms cubic-bezier(0.35, 0, 0.25, 1); color: white; } .md-slider-container:not(.md-slider-thumb-label-showing) .md-slider-thumb-label { display: none; } .md-slider-active.md-slider-thumb-label-showing .md-slider-thumb { transform: scale(0); } .md-slider-sliding .md-slider-thumb-position, .md-slider-sliding .md-slider-track-fill { transition: none; cursor: default; } .md-slider-active .md-slider-thumb { transform: scale(1); } .md-slider-active .md-slider-thumb-label { border-radius: 50% 50% 0; transform: rotate(45deg); } .md-slider-active .md-slider-thumb-label-text { opacity: 1; } /*# sourceMappingURL=slider.css.map */ "],
             encapsulation: core_1.ViewEncapsulation.None,
         }), 
         __metadata('design:paramtypes', [core_1.ElementRef])
@@ -71270,7 +71470,7 @@ var SliderRenderer = (function () {
         // A container element that is used to avoid overwriting the transform on the thumb itself.
         var thumbPositionElement = this._sliderElement.querySelector('.md-slider-thumb-position');
         var fillTrackElement = this._sliderElement.querySelector('.md-slider-track-fill');
-        var position = percent * width;
+        var position = Math.round(percent * width);
         fillTrackElement.style.width = position + "px";
         apply_transform_1.applyCssTransform(thumbPositionElement, "translateX(" + position + "px)");
     };
@@ -71314,6 +71514,7 @@ var MdSliderModule = (function () {
     }
     MdSliderModule = __decorate([
         core_1.NgModule({
+            imports: [forms_1.FormsModule],
             exports: exports.MD_SLIDER_DIRECTIVES,
             declarations: exports.MD_SLIDER_DIRECTIVES,
             providers: [
@@ -71325,7 +71526,9 @@ var MdSliderModule = (function () {
     return MdSliderModule;
 }());
 exports.MdSliderModule = MdSliderModule;
+
 //# sourceMappingURL=slider.js.map
+
 
 /***/ },
 /* 616 */
@@ -71382,7 +71585,9 @@ var MdInkBar = (function () {
     return MdInkBar;
 }());
 exports.MdInkBar = MdInkBar;
+
 //# sourceMappingURL=ink-bar.js.map
+
 
 /***/ },
 /* 617 */
@@ -71421,7 +71626,9 @@ var MdTabContent = (function (_super) {
     return MdTabContent;
 }(portal_directives_1.TemplatePortalDirective));
 exports.MdTabContent = MdTabContent;
+
 //# sourceMappingURL=tab-content.js.map
+
 
 /***/ },
 /* 618 */
@@ -71459,7 +71666,9 @@ var MdTabLabelWrapper = (function () {
     return MdTabLabelWrapper;
 }());
 exports.MdTabLabelWrapper = MdTabLabelWrapper;
+
 //# sourceMappingURL=tab-label-wrapper.js.map
+
 
 /***/ },
 /* 619 */
@@ -71498,7 +71707,9 @@ var MdTabLabel = (function (_super) {
     return MdTabLabel;
 }(portal_directives_1.TemplatePortalDirective));
 exports.MdTabLabel = MdTabLabel;
+
 //# sourceMappingURL=tab-label.js.map
+
 
 /***/ },
 /* 620 */
@@ -71542,7 +71753,19 @@ var MdTabChangeEvent = (function () {
 exports.MdTabChangeEvent = MdTabChangeEvent;
 var MdTab = (function () {
     function MdTab() {
+        // TODO: Replace this when BooleanFieldValue is removed.
+        this._disabled = false;
     }
+    Object.defineProperty(MdTab.prototype, "disabled", {
+        get: function () {
+            return this._disabled;
+        },
+        set: function (value) {
+            this._disabled = (value != null && "" + value !== 'false');
+        },
+        enumerable: true,
+        configurable: true
+    });
     __decorate([
         core_1.ContentChild(tab_label_1.MdTabLabel), 
         __metadata('design:type', tab_label_1.MdTabLabel)
@@ -71551,6 +71774,11 @@ var MdTab = (function () {
         core_1.ContentChild(tab_content_1.MdTabContent), 
         __metadata('design:type', tab_content_1.MdTabContent)
     ], MdTab.prototype, "content", void 0);
+    __decorate([
+        core_1.Input('disabled'), 
+        __metadata('design:type', Boolean), 
+        __metadata('design:paramtypes', [Boolean])
+    ], MdTab.prototype, "disabled", null);
     MdTab = __decorate([
         core_1.Directive({
             selector: 'md-tab'
@@ -71580,7 +71808,7 @@ var MdTabGroup = (function () {
             return this._selectedIndex;
         },
         set: function (value) {
-            if (value != this._selectedIndex) {
+            if (value != this._selectedIndex && this.isValidIndex(value)) {
                 this._selectedIndex = value;
                 if (this._isInitialized) {
                     this._onSelectChange.emit(this._createChangeEvent(value));
@@ -71590,6 +71818,19 @@ var MdTabGroup = (function () {
         enumerable: true,
         configurable: true
     });
+    /**
+     * Determines if an index is valid.  If the tabs are not ready yet, we assume that the user is
+     * providing a valid index and return true.
+     */
+    MdTabGroup.prototype.isValidIndex = function (index) {
+        if (this._tabs) {
+            var tab = this._tabs.toArray()[index];
+            return tab && !tab.disabled;
+        }
+        else {
+            return true;
+        }
+    };
     Object.defineProperty(MdTabGroup.prototype, "_selectedIndexChange", {
         /** Output to enable support for two-way binding on `selectedIndex`. */
         get: function () {
@@ -71650,12 +71891,14 @@ var MdTabGroup = (function () {
         },
         /** When the focus index is set, we must manually send focus to the correct label */
         set: function (value) {
-            this._focusIndex = value;
-            if (this._isInitialized) {
-                this._onFocusChange.emit(this._createChangeEvent(value));
-            }
-            if (this._labelWrappers && this._labelWrappers.length) {
-                this._labelWrappers.toArray()[value].focus();
+            if (this.isValidIndex(value)) {
+                this._focusIndex = value;
+                if (this._isInitialized) {
+                    this._onFocusChange.emit(this._createChangeEvent(value));
+                }
+                if (this._labelWrappers && this._labelWrappers.length) {
+                    this._labelWrappers.toArray()[value].focus();
+                }
             }
         },
         enumerable: true,
@@ -71690,17 +71933,27 @@ var MdTabGroup = (function () {
                 break;
         }
     };
-    /** Increment the focus index by 1; prevent going over the number of tabs */
-    MdTabGroup.prototype.focusNextTab = function () {
-        if (this._labelWrappers && this.focusIndex < this._labelWrappers.length - 1) {
-            this.focusIndex++;
+    /**
+     * Moves the focus left or right depending on the offset provided.  Valid offsets are 1 and -1.
+     */
+    MdTabGroup.prototype.moveFocus = function (offset) {
+        if (this._labelWrappers) {
+            var tabs = this._tabs.toArray();
+            for (var i = this.focusIndex + offset; i < tabs.length && i >= 0; i += offset) {
+                if (this.isValidIndex(i)) {
+                    this.focusIndex = i;
+                    return;
+                }
+            }
         }
     };
-    /** Decrement the focus index by 1; prevent going below 0 */
+    /** Increment the focus index by 1 until a valid tab is found. */
+    MdTabGroup.prototype.focusNextTab = function () {
+        this.moveFocus(1);
+    };
+    /** Decrement the focus index by 1 until a valid tab is found. */
     MdTabGroup.prototype.focusPreviousTab = function () {
-        if (this.focusIndex > 0) {
-            this.focusIndex--;
-        }
+        this.moveFocus(-1);
     };
     __decorate([
         core_1.ContentChildren(MdTab), 
@@ -71732,9 +71985,11 @@ var MdTabGroup = (function () {
         __metadata('design:type', Observable_1.Observable)
     ], MdTabGroup.prototype, "selectChange", null);
     MdTabGroup = __decorate([
-        core_1.Component({            selector: 'md-tab-group',
-            template: "<div class=\"md-tab-header\" role=\"tablist\" (keydown)=\"handleKeydown($event)\"> <div class=\"md-tab-label\" role=\"tab\" md-tab-label-wrapper *ngFor=\"let tab of _tabs; let i = index\" [id]=\"_getTabLabelId(i)\" [tabIndex]=\"selectedIndex == i ? 0 : -1\" [attr.aria-controls]=\"_getTabContentId(i)\" [attr.aria-selected]=\"selectedIndex == i\" [class.md-active]=\"selectedIndex == i\" (click)=\"focusIndex = selectedIndex = i\"> <template [portalHost]=\"tab.label\"></template> </div> <md-ink-bar></md-ink-bar> </div> <div class=\"md-tab-body-wrapper\"> <div class=\"md-tab-body\" role=\"tabpanel\" *ngFor=\"let tab of _tabs; let i = index\" [id]=\"_getTabContentId(i)\" [class.md-active]=\"selectedIndex == i\" [attr.aria-labelledby]=\"_getTabLabelId(i)\"> <template [ngIf]=\"selectedIndex == i\"> <template [portalHost]=\"tab.content\"></template> </template> </div> </div> ",
-            styles: [":host { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; font-family: Roboto, \"Helvetica Neue\", sans-serif; } /** The top section of the view; contains the tab labels */ .md-tab-header { overflow: hidden; position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; border-bottom: 1px solid #e0e0e0; -ms-flex-negative: 0; flex-shrink: 0; } /** Wraps each tab label */ .md-tab-label { line-height: 48px; height: 48px; padding: 0 12px; font-size: 14px; font-family: Roboto, \"Helvetica Neue\", sans-serif; font-weight: 500; cursor: pointer; box-sizing: border-box; color: currentColor; opacity: 0.6; min-width: 160px; text-align: center; } .md-tab-label:focus { outline: none; opacity: 1; background-color: rgba(178, 223, 219, 0.3); } /** The bottom section of the view; contains the tab bodies */ .md-tab-body-wrapper { position: relative; overflow: hidden; -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; display: -webkit-box; display: -ms-flexbox; display: flex; } /** Wraps each tab body */ .md-tab-body { display: none; overflow: auto; box-sizing: border-box; -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; -ms-flex-negative: 1; flex-shrink: 1; } .md-tab-body.md-active { display: block; } /** The colored bar that underlines the active tab */ md-ink-bar { position: absolute; bottom: 0; height: 2px; background-color: #009688; -webkit-transition: 350ms ease-out; transition: 350ms ease-out; } "],
+        core_1.Component({
+            moduleId: module.i,
+            selector: 'md-tab-group',
+            template: "<div class=\"md-tab-header\" role=\"tablist\" (keydown)=\"handleKeydown($event)\"> <div class=\"md-tab-label\" role=\"tab\" md-tab-label-wrapper *ngFor=\"let tab of _tabs; let i = index\" [id]=\"_getTabLabelId(i)\" [tabIndex]=\"selectedIndex == i ? 0 : -1\" [attr.aria-controls]=\"_getTabContentId(i)\" [attr.aria-selected]=\"selectedIndex == i\" [class.md-tab-active]=\"selectedIndex == i\" [class.md-tab-disabled]=\"tab.disabled\" (click)=\"focusIndex = selectedIndex = i\"> <template [portalHost]=\"tab.label\"></template> </div> <md-ink-bar></md-ink-bar> </div> <div class=\"md-tab-body-wrapper\"> <div class=\"md-tab-body\" role=\"tabpanel\" *ngFor=\"let tab of _tabs; let i = index\" [id]=\"_getTabContentId(i)\" [class.md-tab-active]=\"selectedIndex == i\" [attr.aria-labelledby]=\"_getTabLabelId(i)\"> <template [ngIf]=\"selectedIndex == i\"> <template [portalHost]=\"tab.content\"></template> </template> </div> </div> ",
+            styles: [":host { display: flex; flex-direction: column; font-family: Roboto, \"Helvetica Neue\", sans-serif; } /** The top section of the view; contains the tab labels */ .md-tab-header { overflow: hidden; position: relative; display: flex; flex-direction: row; border-bottom: 1px solid #e0e0e0; flex-shrink: 0; } /** Wraps each tab label */ .md-tab-label { line-height: 48px; height: 48px; padding: 0 12px; font-size: 14px; font-family: Roboto, \"Helvetica Neue\", sans-serif; font-weight: 500; cursor: pointer; box-sizing: border-box; color: currentColor; opacity: 0.6; min-width: 160px; text-align: center; } .md-tab-label:focus { outline: none; opacity: 1; background-color: rgba(178, 223, 219, 0.3); } .md-tab-disabled { cursor: default; pointer-events: none; } /** The bottom section of the view; contains the tab bodies */ .md-tab-body-wrapper { position: relative; overflow: hidden; flex-grow: 1; display: flex; } /** Wraps each tab body */ .md-tab-body { display: none; overflow: auto; box-sizing: border-box; flex-grow: 1; flex-shrink: 1; } .md-tab-body.md-tab-active { display: block; } /** The colored bar that underlines the active tab */ md-ink-bar { position: absolute; bottom: 0; height: 2px; background-color: #009688; transition: 350ms ease-out; } /*# sourceMappingURL=tab-group.css.map */ "],
         }), 
         __metadata('design:paramtypes', [core_1.NgZone])
     ], MdTabGroup);
@@ -71758,7 +72013,9 @@ var MdTabsModule = (function () {
     return MdTabsModule;
 }());
 exports.MdTabsModule = MdTabsModule;
+
 //# sourceMappingURL=tabs.js.map
+
 
 /***/ },
 /* 621 */
@@ -71808,9 +72065,11 @@ var MdToolbar = (function () {
         __metadata('design:type', String)
     ], MdToolbar.prototype, "color", null);
     MdToolbar = __decorate([
-        core_1.Component({            selector: 'md-toolbar',
+        core_1.Component({
+            moduleId: module.i,
+            selector: 'md-toolbar',
             template: "<div class=\"md-toolbar-layout\"> <md-toolbar-row> <ng-content></ng-content> </md-toolbar-row> <ng-content select=\"md-toolbar-row\"></ng-content> </div>",
-            styles: ["/** * Mixin that creates a new stacking context. * see https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context */ /** * This mixin hides an element visually. * That means it's still accessible for screen-readers but not visible in view. */ /** * Forces an element to grow to fit floated contents; used as as an alternative to * `overflow: hidden;` because it doesn't cut off contents. */ /** * A mixin, which generates temporary ink ripple on a given component. * When $bindToParent is set to true, it will check for the focused class on the same selector as you included * that mixin. * It is also possible to specify the color palette of the temporary ripple. By default it uses the * accent palette for its background. */ md-toolbar { display: -webkit-box; display: -ms-flexbox; display: flex; box-sizing: border-box; width: 100%; min-height: 64px; font-size: 20px; font-weight: 400; font-family: Roboto, \"Helvetica Neue\", sans-serif; padding: 0 16px; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; background: whitesmoke; color: rgba(0, 0, 0, 0.87); } md-toolbar.md-primary { background: #009688; color: white; } md-toolbar.md-accent { background: #9c27b0; color: rgba(255, 255, 255, 0.870588); } md-toolbar.md-warn { background: #f44336; color: white; } md-toolbar md-toolbar-row { display: -webkit-box; display: -ms-flexbox; display: flex; box-sizing: border-box; width: 100%; height: 64px; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-align: center; -ms-flex-align: center; align-items: center; } "],
+            styles: ["/** * Mixin that creates a new stacking context. * see https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context */ /** * This mixin hides an element visually. * That means it's still accessible for screen-readers but not visible in view. */ /** * Forces an element to grow to fit floated contents; used as as an alternative to * `overflow: hidden;` because it doesn't cut off contents. */ /** * A mixin, which generates temporary ink ripple on a given component. * When $bindToParent is set to true, it will check for the focused class on the same selector as you included * that mixin. * It is also possible to specify the color palette of the temporary ripple. By default it uses the * accent palette for its background. */ md-toolbar { display: flex; box-sizing: border-box; width: 100%; min-height: 64px; font-size: 20px; font-weight: 400; font-family: Roboto, \"Helvetica Neue\", sans-serif; padding: 0 16px; flex-direction: column; background: whitesmoke; color: rgba(0, 0, 0, 0.87); } md-toolbar.md-primary { background: #009688; color: white; } md-toolbar.md-accent { background: #9c27b0; color: rgba(255, 255, 255, 0.870588); } md-toolbar.md-warn { background: #f44336; color: white; } md-toolbar md-toolbar-row { display: flex; box-sizing: border-box; width: 100%; height: 64px; flex-direction: row; align-items: center; } /*# sourceMappingURL=toolbar.css.map */ "],
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
             encapsulation: core_1.ViewEncapsulation.None
         }), 
@@ -71834,7 +72093,9 @@ var MdToolbarModule = (function () {
     return MdToolbarModule;
 }());
 exports.MdToolbarModule = MdToolbarModule;
+
 //# sourceMappingURL=toolbar.js.map
+
 
 /***/ },
 /* 622 */
@@ -71899,11 +72160,11 @@ var MdTooltip = (function () {
      * Create the overlay config and position strategy
      */
     MdTooltip.prototype._createOverlay = function () {
-        var _this = this;
         if (this._overlayRef) {
             if (this.visible) {
                 // if visible, hide before destroying
-                this.hide().then(function () { return _this._createOverlay(); });
+                this.hide();
+                this._createOverlay();
             }
             else {
                 // if not visible, dispose and recreate
@@ -71918,9 +72179,7 @@ var MdTooltip = (function () {
             var strategy = this._overlay.position().connectedTo(this._elementRef, origin, position);
             var config = new core_2.OverlayState();
             config.positionStrategy = strategy;
-            this._overlay.create(config).then(function (ref) {
-                _this._overlayRef = ref;
-            });
+            this._overlayRef = this._overlay.create(config);
         }
     };
     /**
@@ -71963,15 +72222,12 @@ var MdTooltip = (function () {
      * Shows the tooltip and returns a promise that will resolve when the tooltip is visible
      */
     MdTooltip.prototype.show = function () {
-        var _this = this;
         if (!this.visible && this._overlayRef && !this._overlayRef.hasAttached()) {
             this.visible = true;
-            var promise = this._overlayRef.attach(new core_2.ComponentPortal(TooltipComponent, this._viewContainerRef));
-            promise.then(function (ref) {
-                ref.instance.message = _this.message;
-                _this._updatePosition();
-            });
-            return promise;
+            var portal = new core_2.ComponentPortal(TooltipComponent, this._viewContainerRef);
+            var tooltipRef = this._overlayRef.attach(portal);
+            tooltipRef.instance.message = this.message;
+            this._updatePosition();
         }
     };
     /**
@@ -71980,7 +72236,7 @@ var MdTooltip = (function () {
     MdTooltip.prototype.hide = function () {
         if (this.visible && this._overlayRef && this._overlayRef.hasAttached()) {
             this.visible = false;
-            return this._overlayRef.detach();
+            this._overlayRef.detach();
         }
     };
     /**
@@ -71988,10 +72244,10 @@ var MdTooltip = (function () {
      */
     MdTooltip.prototype.toggle = function () {
         if (this.visible) {
-            return this.hide();
+            this.hide();
         }
         else {
-            return this.show();
+            this.show();
         }
     };
     /**
@@ -72028,9 +72284,11 @@ var TooltipComponent = (function () {
     function TooltipComponent() {
     }
     TooltipComponent = __decorate([
-        core_1.Component({            selector: 'md-tooltip-component',
+        core_1.Component({
+            moduleId: module.i,
+            selector: 'md-tooltip-component',
             template: "<div class=\"md-tooltip\">{{message}}</div>",
-            styles: [":host { pointer-events: none; } .md-tooltip { background: rgba(97, 97, 97, 0.9); color: white; padding: 0 8px; border-radius: 2px; font-family: Roboto, \"Helvetica Neue\", sans-serif; font-size: 10px; margin: 14px; height: 22px; line-height: 22px; } "],
+            styles: [":host { pointer-events: none; } .md-tooltip { background: rgba(97, 97, 97, 0.9); color: white; padding: 0 8px; border-radius: 2px; font-family: Roboto, \"Helvetica Neue\", sans-serif; font-size: 10px; margin: 14px; height: 22px; line-height: 22px; } /*# sourceMappingURL=tooltip.css.map */ "],
         }), 
         __metadata('design:paramtypes', [])
     ], TooltipComponent);
@@ -72054,7 +72312,9 @@ var MdTooltipModule = (function () {
     return MdTooltipModule;
 }());
 exports.MdTooltipModule = MdTooltipModule;
+
 //# sourceMappingURL=tooltip.js.map
+
 
 /***/ },
 /* 623 */
@@ -72070,7 +72330,7 @@ exports.MdTooltipModule = MdTooltipModule;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common___default = __WEBPACK_IMPORTED_MODULE_2__angular_common__ && __WEBPACK_IMPORTED_MODULE_2__angular_common__.__esModule ? function() { return __WEBPACK_IMPORTED_MODULE_2__angular_common__['default'] } : function() { return __WEBPACK_IMPORTED_MODULE_2__angular_common__; };
 /* harmony import */ __webpack_require__.d(__WEBPACK_IMPORTED_MODULE_2__angular_common___default, 'a', __WEBPACK_IMPORTED_MODULE_2__angular_common___default);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(51);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms___default = __WEBPACK_IMPORTED_MODULE_3__angular_forms__ && __WEBPACK_IMPORTED_MODULE_3__angular_forms__.__esModule ? function() { return __WEBPACK_IMPORTED_MODULE_3__angular_forms__['default'] } : function() { return __WEBPACK_IMPORTED_MODULE_3__angular_forms__; };
 /* harmony import */ __webpack_require__.d(__WEBPACK_IMPORTED_MODULE_3__angular_forms___default, 'a', __WEBPACK_IMPORTED_MODULE_3__angular_forms___default);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(241);
@@ -72283,7 +72543,7 @@ var routing = __WEBPACK_IMPORTED_MODULE_0__angular_router__["RouterModule"].forR
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core___default = __WEBPACK_IMPORTED_MODULE_0__angular_core__ && __WEBPACK_IMPORTED_MODULE_0__angular_core__.__esModule ? function() { return __WEBPACK_IMPORTED_MODULE_0__angular_core__['default'] } : function() { return __WEBPACK_IMPORTED_MODULE_0__angular_core__; };
 /* harmony import */ __webpack_require__.d(__WEBPACK_IMPORTED_MODULE_0__angular_core___default, 'a', __WEBPACK_IMPORTED_MODULE_0__angular_core___default);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(51);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms___default = __WEBPACK_IMPORTED_MODULE_1__angular_forms__ && __WEBPACK_IMPORTED_MODULE_1__angular_forms__.__esModule ? function() { return __WEBPACK_IMPORTED_MODULE_1__angular_forms__['default'] } : function() { return __WEBPACK_IMPORTED_MODULE_1__angular_forms__; };
 /* harmony import */ __webpack_require__.d(__WEBPACK_IMPORTED_MODULE_1__angular_forms___default, 'a', __WEBPACK_IMPORTED_MODULE_1__angular_forms___default);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(19);
@@ -72467,7 +72727,7 @@ var crisisCenterRouting = __WEBPACK_IMPORTED_MODULE_0__angular_router__["RouterM
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common___default = __WEBPACK_IMPORTED_MODULE_1__angular_common__ && __WEBPACK_IMPORTED_MODULE_1__angular_common__.__esModule ? function() { return __WEBPACK_IMPORTED_MODULE_1__angular_common__['default'] } : function() { return __WEBPACK_IMPORTED_MODULE_1__angular_common__; };
 /* harmony import */ __webpack_require__.d(__WEBPACK_IMPORTED_MODULE_1__angular_common___default, 'a', __WEBPACK_IMPORTED_MODULE_1__angular_common___default);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(51);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms___default = __WEBPACK_IMPORTED_MODULE_2__angular_forms__ && __WEBPACK_IMPORTED_MODULE_2__angular_forms__.__esModule ? function() { return __WEBPACK_IMPORTED_MODULE_2__angular_forms__['default'] } : function() { return __WEBPACK_IMPORTED_MODULE_2__angular_forms__; };
 /* harmony import */ __webpack_require__.d(__WEBPACK_IMPORTED_MODULE_2__angular_forms___default, 'a', __WEBPACK_IMPORTED_MODULE_2__angular_forms___default);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__hero_list_component__ = __webpack_require__(413);
@@ -72593,13 +72853,13 @@ can be found in the LICENSE file at http://angular.io/license
 /* 631 */
 /***/ function(module, exports) {
 
-module.exports = ".app-content {\r\n  padding: 20px;\r\n}\r\n\r\n.app-content md-card {\r\n  margin: 20px;\r\n}\r\n\r\n.app-sidenav {\r\n  padding: 10px;\r\n  min-width: 100px;\r\n}\r\n\r\n.app-content md-checkbox {\r\n  margin: 10px;\r\n}\r\n\r\n.app-toolbar-filler {\r\n  flex: 1 1 auto;\r\n}\r\n\r\n.app-toolbar-menu {\r\n  padding: 0 14px 0 14px;\r\n  color: white;\r\n}\r\n\r\n.app-icon-button {\r\n  box-shadow: none;\r\n  user-select: none;\r\n  background: none;\r\n  border: none;\r\n  cursor: pointer;\r\n  filter: none;\r\n  font-weight: normal;\r\n  height: auto;\r\n  line-height: inherit;\r\n  margin: 0;\r\n  min-width: 0;\r\n  padding: 0;\r\n  text-align: left;\r\n  text-decoration: none;\r\n}\r\n\r\n.app-action {\r\n  display: inline-block;\r\n  position: fixed;\r\n  bottom: 20px;\r\n  right: 20px;\r\n}\r\n\r\n.app-spinner {\r\n  height: 30px;\r\n  width: 30px;\r\n  display: inline-block;\r\n}\r\n\r\n.app-input-icon {\r\n  font-size: 16px;\r\n}\r\n\r\n.app-list {\r\n  border: 1px solid rgba(0,0,0,0.12);\r\n  width: 350px;\r\n  margin: 20px;\r\n}\r\n\r\n.app-progress {\r\n  margin: 20px;\r\n}"
+module.exports = ".app-content {\n  padding: 20px; }\n\n.app-content md-card {\n  margin: 20px; }\n\n.app-sidenav {\n  padding: 10px;\n  min-width: 100px; }\n\n.app-content md-checkbox {\n  margin: 10px; }\n\n.app-toolbar-filler {\n  flex: 1 1 auto; }\n\n.app-toolbar-menu {\n  padding: 0 14px 0 14px;\n  color: white; }\n\n.app-icon-button {\n  box-shadow: none;\n  user-select: none;\n  background: none;\n  border: none;\n  cursor: pointer;\n  filter: none;\n  font-weight: normal;\n  height: auto;\n  line-height: inherit;\n  margin: 0;\n  min-width: 0;\n  padding: 0;\n  text-align: left;\n  text-decoration: none; }\n\n.app-action {\n  display: inline-block;\n  position: fixed;\n  bottom: 20px;\n  right: 20px; }\n\n.app-spinner {\n  height: 30px;\n  width: 30px;\n  display: inline-block; }\n\n.app-input-icon {\n  font-size: 16px; }\n\n.app-list {\n  border: 1px solid rgba(0, 0, 0, 0.12);\n  width: 350px;\n  margin: 20px; }\n\n.app-progress {\n  margin: 20px; }\n\nbody {\n  font-family: Roboto, 'Helvetica Neue', sans-serif; }\n\n* {\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\nmd-toolbar.md-matteo {\n  background: #000099;\n  color: white;\n  font-weight: bold; }\n"
 
 /***/ },
 /* 632 */
 /***/ function(module, exports) {
 
-module.exports = "\n<h1 class=\"title\">Component Router</h1>\n    <nav>\n      <a routerLink=\"/crisis-center\" routerLinkActive=\"active\"\n         [routerLinkActiveOptions]=\"{ exact: true }\">Crisis Center</a>\n      <a routerLink=\"/heroes\" routerLinkActive=\"active\">Heroes</a>\n      <a routerLink=\"/crisis-center/admin\" routerLinkActive=\"active\">Crisis Admin</a>\n      <a routerLink=\"/login\" routerLinkActive=\"active\">Login</a>\n    </nav>\n    <router-outlet></router-outlet>\n\n\n\n<md-sidenav-layout>\n  <md-sidenav #sidenav mode=\"side\" class=\"app-sidenav\">\n    <h1>\n  {{title}}\n</h1>\n  </md-sidenav>\n\n\n\n<md-toolbar color=\"primary\">\n    <button class=\"app-icon-button\" (click)=\"sidenav.toggle()\">\n      <i class=\"material-icons app-toolbar-menu\">menu</i>\n    </button>\n\n    Angular Material2 Example App\n\n    <span class=\"app-toolbar-filler\"></span>\n  </md-toolbar>\n\n  <div class=\"app-content\">\n\n    <md-card>\n      <button md-button>FLAT</button>\n      <button md-raised-button md-tooltip=\"This is a tooltip!\">RAISED</button>\n      <button md-raised-button color=\"primary\">PRIMARY RAISED</button>\n      <button md-raised-button color=\"accent\">ACCENT RAISED</button>\n    </md-card>\n\n<md-card>\n      <md-checkbox>Unchecked</md-checkbox>\n      <md-checkbox [checked]=\"true\">Checked</md-checkbox>\n      <md-checkbox [indeterminate]=\"true\">Indeterminate</md-checkbox>\n      <md-checkbox [disabled]=\"true\">Disabled</md-checkbox>\n    </md-card>\n\n    <md-card>\n      <md-radio-button name=\"symbol\">Alpha</md-radio-button>\n      <md-radio-button name=\"symbol\">Beta</md-radio-button>\n      <md-radio-button name=\"symbol\" disabled>Gamma</md-radio-button>\n    </md-card>\n\n  \n\n    \n\n    <md-card class=\"app-input-section\">\n      <md-input placeholder=\"First name\"></md-input>\n\n      <md-input #nickname placeholder=\"Nickname\" maxlength=\"50\">\n        <md-hint align=\"end\">\n          {{nickname.characterCount}} / 50\n        </md-hint>\n      </md-input>\n\n      <md-input>\n        <md-placeholder>\n          <i class=\"material-icons app-input-icon\">android</i> Favorite phone\n        </md-placeholder>\n      </md-input>\n\n      <md-input placeholder=\"Motorcycle model\">\n        <span md-prefix>\n          <i class=\"material-icons app-input-icon\">motorcycle</i>\n          &nbsp;\n        </span>\n      </md-input>\n    </md-card>\n\n    <md-card>\n      <md-list class=\"app-list\">\n        <md-list-item *ngFor=\"let food of foods\">\n          <h3 md-line>{{food.name}}</h3>\n          <p md-line class=\"demo-secondary-text\">{{food.rating}}</p>\n        </md-list-item>\n      </md-list>\n    </md-card>\n\n    <md-card>\n      <md-spinner class=\"app-spinner\"></md-spinner>\n      <md-spinner color=\"accent\" class=\"app-spinner\"></md-spinner>\n    </md-card>\n\n    <md-card>\n      <label>\n        Indeterminate progress-bar\n        <md-progress-bar\n            class=\"app-progress\"\n            mode=\"indeterminate\"\n            aria-label=\"Indeterminate progress-bar example\"></md-progress-bar>\n      </label>\n\n      <label>\n        Determinate progress bar - {{progress}}%\n        <md-progress-bar\n            class=\"app-progress\"\n            color=\"accent\"\n            mode=\"determinate\"\n            [value]=\"progress\"\n            aria-label=\"Determinate progress-bar example\"></md-progress-bar>\n      </label>\n    </md-card>\n\n    <md-card>\n      <md-tab-group>\n        <md-tab>\n          <template md-tab-label>\n            Earth\n          </template>\n          <template md-tab-content>\n            <p>EARTH</p>\n          </template>\n        </md-tab>\n        <md-tab>\n          <template md-tab-label>\n            Fire\n          </template>\n          <template md-tab-content>\n            <p>FIRE</p>\n          </template>\n        </md-tab>\n      </md-tab-group>\n    </md-card>\n\n\n    <md-card>\n      <md-icon>build</md-icon>\n    </md-card>\n\n  </div>\n\n</md-sidenav-layout>\n\n<span class=\"app-action\">\n  <button md-fab><md-icon>check circle</md-icon></button>\n</span>"
+module.exports = "<md-sidenav-layout fullscreen>\n      <md-sidenav #sidenav>\n        <md-nav-list>\n\n          <a tabindex=\"0\" md-list-item routerLink=\"/crisis-center\" routerLinkActive=\"active\" (click)=\"sidenav.close()\"\n           [routerLinkActiveOptions]=\"{ exact: true }\">\n            <md-icon md-list-icon>book</md-icon>\n            <span md-line>My Collection</span>\n            <span md-line class=\"secondary\">View your book collection!</span>\n          </a>\n          <a tabindex=\"0\" md-list-item routerLink=\"/heroes\" routerLinkActive=\"active\" (click)=\"sidenav.close()\">\n            <md-icon md-list-icon>phone</md-icon>\n            <span md-line>Browse Books</span>\n            <span md-line class=\"secondary\">Find your next book!</span>\n          </a>\n        </md-nav-list>\n      </md-sidenav>\n\n<div>\n\n      <md-toolbar color=\"matteo\">\n        <button tabindex=\"0\"                      md-icon-button (click)=\"sidenav.open()\">\n          <md-icon>menu</md-icon>\n        </button>\n        <span>Ciao Sono Qui'</span>\n      </md-toolbar>\n      <router-outlet></router-outlet>\n</div>\n   \n    </md-sidenav-layout>\n\n"
 
 /***/ },
 /* 633 */
@@ -73218,7 +73478,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var root_1 = __webpack_require__(53);
+var root_1 = __webpack_require__(54);
 var Observable_1 = __webpack_require__(4);
 var iterator_1 = __webpack_require__(263);
 /**
@@ -74881,7 +75141,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var root_1 = __webpack_require__(53);
+var root_1 = __webpack_require__(54);
 var Action_1 = __webpack_require__(669);
 /**
  * We need this JSDoc comment for affecting ESDoc.
