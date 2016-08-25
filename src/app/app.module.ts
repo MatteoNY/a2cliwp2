@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, ApplicationRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import {HTTP_PROVIDERS} from '@angular/http';
+import { HttpModule } from '@angular/http';
 
 import {MdButtonToggleModule} from '@angular2-material/button-toggle/button-toggle';
 import {MdButtonModule} from '@angular2-material/button/button';
@@ -36,6 +36,7 @@ import { AppComponent } from './app.component';
 // pages *******
 import { HeroesModule } from './heroes/heroes.module';
 import  { CrisisCenterModule } from './crisis-center/crisis-center.module';
+import { SearchModule } from './search/search.module';
 
 import { LoginComponent } from './login.component';
 
@@ -51,10 +52,12 @@ import { DialogService }  from './dialog.service';
   imports: [
     BrowserModule,
     CommonModule,
+    HttpModule,
     FormsModule,
     routing,
     HeroesModule,
     CrisisCenterModule,
+    SearchModule,
     MdButtonModule,
     MdButtonToggleModule,
     MdCardModule,
@@ -79,7 +82,7 @@ import { DialogService }  from './dialog.service';
     RtlModule,
 
   ],
-  providers: [HTTP_PROVIDERS, appRoutingProviders, DialogService],
+  providers: [appRoutingProviders, DialogService],
   entryComponents: [AppComponent],
   bootstrap: [AppComponent]
 })
