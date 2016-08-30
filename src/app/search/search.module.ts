@@ -9,11 +9,23 @@ import { SearchService } from './search.service';
 
 import { searchRouting } from './search.routing';
 
+
+import {MdButtonToggleModule} from '@angular2-material/button-toggle/button-toggle';
+import {MdButtonModule} from '@angular2-material/button/button';
+import {MdRippleModule} from '@angular2-material/core/ripple/ripple';
+
+import {OverlayModule} from '@angular2-material/core/overlay/overlay-directives';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    searchRouting
+    searchRouting,
+    MdButtonToggleModule,
+    MdButtonModule,
+    MdRippleModule,
+    OverlayModule
+    
   ],
   declarations: [
     SearchListComponent,
