@@ -6,6 +6,16 @@ import { Search, SearchService }  from './search.service';
 import { Subscription }       from 'rxjs/Subscription';
 
 
+import { Observable } from 'rxjs/Rx';
+
+import { Store } from '@ngrx/store';
+import { INCREMENT, DECREMENT, RESET } from './counter';
+
+
+interface AppState {
+  counter: number;
+}
+
 @Component({
     styleUrls: ['search.module.scss'],
     encapsulation: ViewEncapsulation.None,
@@ -24,6 +34,15 @@ import { Subscription }       from 'rxjs/Subscription';
       <button md-raised-button color="accent">ACCENT RAISED</button>-->
     </li>
     </ul>
+
+<md-card>
+
+<button (click)="increment()">Increment</button>
+        <div>Current Count: {{ counter | async }}</div>
+        <button (click)="decrement()">Decrement</button>
+
+</md-card>
+
     </div>
 
     
@@ -39,15 +58,37 @@ import { Subscription }       from 'rxjs/Subscription';
   `
 })
 export class SearchListComponent implements OnInit, OnDestroy {
-  search: Search[];
+  public search: Search[];
 
   private selectedId: number;
   private sub: Subscription;
 
+ public counter: Observable<number>;
+
   constructor(
+    public store: Store<AppState>,
     private service: SearchService,
     private route: ActivatedRoute,
-    private router: Router) {}
+    private router: Router) {
+
+    this.counter = store.select('counter');
+
+    }
+
+
+
+    increment(){
+        this.store.dispatch({ type: INCREMENT });
+    }
+
+    decrement(){
+        this.store.dispatch({ type: DECREMENT });
+    }
+
+    reset(){
+        this.store.dispatch({ type: RESET });
+    }
+
 
   ngOnInit() {
     this.sub = this.route
