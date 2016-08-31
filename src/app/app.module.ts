@@ -28,6 +28,9 @@ import {OverlayModule} from '@angular2-material/core/overlay/overlay-directives'
 import {MdMenuModule} from '@angular2-material/menu/menu';
 import {RtlModule} from '@angular2-material/core/rtl/dir';
 
+ import { Store, StoreModule } from '@ngrx/store';
+ import { counterReducer } from './search/counter';
+
 // routing
 import { routing,
          appRoutingProviders } from './app.routing';
@@ -38,6 +41,7 @@ import { AppComponent } from './app.component';
 import { HeroesModule } from './heroes/heroes.module';
 import  { CrisisCenterModule } from './crisis-center/crisis-center.module';
 import { SearchModule } from './search/search.module';
+import { AppCommonModule } from './app-common/app-common.module';
 
 import { LoginComponent } from './login.component';
 
@@ -52,6 +56,7 @@ import { DialogService }  from './dialog.service';
   ],
   imports: [
     BrowserModule,
+     StoreModule.provideStore({ counter: counterReducer }, { counter: 0 }),
     CommonModule,
     HttpModule,
     FormsModule,
@@ -59,6 +64,7 @@ import { DialogService }  from './dialog.service';
     HeroesModule,
     CrisisCenterModule,
     SearchModule,
+    AppCommonModule,
     MdButtonModule,
     MdButtonToggleModule,
     MdCardModule,

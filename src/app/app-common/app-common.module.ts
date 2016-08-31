@@ -19,19 +19,19 @@ import 'rxjs/Rx';
 //import { StoreLogMonitorComponent } from '@ngrx/store-log-monitor';
 
 
-import { SearchListComponent }    from './search-list.component';
-import { SearchDetailComponent }  from './search-detail.component';
+import { AppCommonComponent }    from './app-common.component';
 
-import { SearchService } from './search.service';
 
-import { searchRouting } from './search.routing';
+import { AppCommonService } from './app-common.service';
+
+import { appCommonRouting} from './app-common.routing';
 import { NgModule }       from '@angular/core';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    searchRouting,
+    appCommonRouting,
     MdButtonToggleModule,
     MdButtonModule,
     MdRippleModule,
@@ -48,11 +48,11 @@ import { NgModule }       from '@angular/core';
     
   ],
   declarations: [
-    SearchListComponent,
-    SearchDetailComponent
+    AppCommonComponent,
+     
   ],
   providers: [
-    SearchService
+    AppCommonService
   ]
 })
-export class SearchModule {}
+export class AppCommonModule {}
