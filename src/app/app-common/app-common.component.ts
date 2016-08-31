@@ -2,7 +2,7 @@
 import { Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
-import { Search, SearchService }  from './search.service';
+import { AppCommon, AppCommonService }  from './app-common.service';
 import { Subscription }       from 'rxjs/Subscription';
 
 import { Observable } from 'rxjs/Observable';
@@ -16,10 +16,10 @@ interface AppState {
 }
 
 @Component({
-    styleUrls: ['search.module.scss'],
+    styleUrls: ['app-common.module.scss'],
     encapsulation: ViewEncapsulation.None,
   template: `
-    <h2>Search</h2>
+    <h2>AppCommon Howdy!</h2>
 
 
  <div class="app-content">
@@ -56,8 +56,8 @@ interface AppState {
     </ul> -->
   `
 })
-export class SearchListComponent implements OnInit, OnDestroy {
-  search: Search[];
+export class AppCommonComponent implements OnInit, OnDestroy {
+  search: AppCommon[];
 
   private selectedId: number;
   private sub: Subscription;
@@ -66,7 +66,7 @@ export class SearchListComponent implements OnInit, OnDestroy {
 
   constructor(
     public store: Store<AppState>,
-    private service: SearchService,
+    private service: AppCommonService,
     private route: ActivatedRoute,
     private router: Router) {
 
@@ -103,10 +103,10 @@ export class SearchListComponent implements OnInit, OnDestroy {
     this.sub.unsubscribe();
   }
 
-  isSelected(search: Search) { return search.id === this.selectedId; }
+  isSelected(search: AppCommon) { return search.id === this.selectedId; }
 
-  onSelect(search: Search) {
-    this.router.navigate(['/search', search.id]);
+  onSelect(search: AppCommon) {
+    this.router.navigate(['/appcommon', search.id]);
   }
 
 }
